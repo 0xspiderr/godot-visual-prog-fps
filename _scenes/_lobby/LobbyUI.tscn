@@ -40,6 +40,18 @@ layout_mode = 2
 placeholder_text = "Name"
 alignment = 1
 
+[node name="IPLineEdit" type="LineEdit" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 40)
+layout_mode = 2
+placeholder_text = "enter IP address"
+alignment = 1
+
+[node name="NameDialogue" type="AcceptDialog" parent="HBoxContainer/VBoxContainer"]
+dialog_text = "You must enter a name"
+
+[node name="IPDialogue" type="AcceptDialog" parent="HBoxContainer/VBoxContainer"]
+dialog_text = "You must enter a valid ip address"
+
 [node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
 
