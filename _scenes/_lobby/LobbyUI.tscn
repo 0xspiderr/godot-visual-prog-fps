@@ -43,6 +43,7 @@ alignment = 1
 [node name="IPLineEdit" type="LineEdit" parent="HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(400, 40)
 layout_mode = 2
+text = "127.0.0.1"
 placeholder_text = "enter IP address"
 alignment = 1
 

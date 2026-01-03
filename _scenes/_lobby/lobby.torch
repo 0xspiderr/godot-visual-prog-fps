@@ -1,4 +1,4 @@
-[orchestration type="OScript" load_steps=69 format=3 uid="uid://4eafr8gubmd6"]
+[orchestration type="OScript" load_steps=86 format=3 uid="uid://4eafr8gubmd6"]
 
 [obj type="OScriptFunction" id="OScriptFunction_isaxa"]
 guid = "B7CA4779-FEC8-4E43-B489-5149C424F9C0"
@@ -25,7 +25,7 @@ guid = "BFA96155-C3D7-47BC-B0A9-019265757DD4"
 method = {
 "name": &"_register_peer",
 "args": [{
-"name": &"NewParam",
+"name": &"new_peer_info",
 "usage": 131078
 }]
 }
@@ -52,50 +52,70 @@ method = {
 user_defined = true
 id = 40
 
+[obj type="OScriptFunction" id="OScriptFunction_8rnnb"]
+guid = "D874BD70-85AE-4583-B22C-5C0A51D73F5D"
+method = {
+"name": &"_on_connected_to_server"
+}
+user_defined = true
+id = 60
+
 [obj type="OScriptGraph" id="OScriptGraph_k8brf"]
 graph_name = &"EventGraph"
-offset = Vector2(1002.7158203125, 13.296661376953125)
-zoom = 0.9090905785560608
+offset = Vector2(2480, -144.75)
 flags = 8
-nodes = Array[int]([0, 1, 3, 5, 6, 7, 8, 9, 10, 11, 13, 14])
+nodes = Array[int]([0, 1, 3, 5, 6, 7, 8, 9, 10, 11, 13, 14, 57, 58, 59, 69, 70])
 functions = Array[int]([0])
 
 [obj type="OScriptGraph" id="OScriptGraph_fvhdw"]
 graph_name = &"_on_peer_connected"
+offset = Vector2(-14.49798583984375, -405.7822265625)
+zoom = 1.3310000896453857
 flags = 22
-nodes = Array[int]([4, 21])
+nodes = Array[int]([4, 78, 79])
 functions = Array[int]([4])
 
 [obj type="OScriptGraph" id="OScriptGraph_0f0dc"]
 graph_name = &"_register_peer"
-offset = Vector2(0, -80)
+offset = Vector2(2.132080078125, -453.0822448730469)
 flags = 22
-nodes = Array[int]([12, 15, 16, 17, 18, 19, 20])
+nodes = Array[int]([12, 15, 16, 18, 20, 71, 76])
 functions = Array[int]([12])
 knots = Array[Dictionary]([{
 "id": 72057679937273874,
 "points": PackedVector2Array(1180, 280, 1600, 280)
+}, {
+"id": 144115273991979020,
+"points": PackedVector2Array(940, -160, 1580, -140)
 }])
 
 [obj type="OScriptGraph" id="OScriptGraph_8rnnb"]
 graph_name = &"host"
-offset = Vector2(1010.42431640625, -128.7542266845703)
-zoom = 1.2875422239303589
+offset = Vector2(1637.1905517578125, -432.3932800292969)
+zoom = 0.7994621992111206
 flags = 22
 nodes = Array[int]([22, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39])
 functions = Array[int]([22])
 
 [obj type="OScriptGraph" id="OScriptGraph_uepm5"]
 graph_name = &"join"
-offset = Vector2(426, -331.75)
-zoom = 0.9999997019767761
+offset = Vector2(1138.0093994140625, -450.97479248046875)
+zoom = 0.7513144612312317
 flags = 22
-nodes = Array[int]([40, 41, 42, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54])
+nodes = Array[int]([40, 41, 42, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 56])
 functions = Array[int]([40])
 knots = Array[Dictionary]([{
 "id": 144115394251063336,
 "points": PackedVector2Array(460, 360)
 }])
+
+[obj type="OScriptGraph" id="OScriptGraph_vu3qr"]
+graph_name = &"_on_connected_to_server"
+offset = Vector2(611.4978637695313, -624.3931884765625)
+zoom = 0.9090908765792847
+flags = 22
+nodes = Array[int]([60, 61, 62, 63, 66, 68, 74, 75])
+functions = Array[int]([60])
 
 [obj type="OScriptNodeEvent" id="OScriptNodeEvent_tnbpr"]
 function_id = "B7CA4779-FEC8-4E43-B489-5149C424F9C0"
@@ -375,7 +395,7 @@ pin_data = Array[Dictionary]([{
 "dir": 1,
 "flags": 4
 }, {
-"pin_name": &"NewParam",
+"pin_name": &"new_peer_info",
 "dir": 1,
 "flags": 2,
 "usage": 131078
@@ -456,32 +476,6 @@ pin_data = Array[Dictionary]([{
 "target_class": "Node"
 }])
 
-[obj type="OScriptNodeVariableSet" id="OScriptNodeVariableSet_ty1ui"]
-variable_name = &"peers"
-id = 17
-position = Vector2(1580, -60)
-pin_data = Array[Dictionary]([{
-"pin_name": &"ExecIn",
-"flags": 4
-}, {
-"pin_name": &"peers",
-"type": 27,
-"flags": 2050,
-"dv": {},
-"usage": 4102
-}, {
-"pin_name": &"ExecOut",
-"dir": 1,
-"flags": 4
-}, {
-"pin_name": &"value",
-"type": 27,
-"dir": 1,
-"flags": 1026,
-"dv": {},
-"usage": 4102
-}])
-
 [obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_v8pna"]
 function_name = &"get_remote_sender_id"
 target_class_name = "MultiplayerAPI"
@@ -495,7 +489,7 @@ method = {
 }
 chain = false
 id = 18
-position = Vector2(640, 160)
+position = Vector2(640, 180)
 pin_data = Array[Dictionary]([{
 "pin_name": &"target",
 "type": 24,
@@ -508,28 +502,8 @@ pin_data = Array[Dictionary]([{
 "pin_name": &"return_value",
 "type": 2,
 "dir": 1,
-"flags": 1026
-}])
-
-[obj type="OScriptNodeMakeDictionary" id="OScriptNodeMakeDictionary_4sv1v"]
-id = 19
-position = Vector2(1080, 40)
-pin_data = Array[Dictionary]([{
-"pin_name": &"Element_0_key",
-"flags": 2050,
-"label": "Key 0",
-"usage": 131078
-}, {
-"pin_name": &"Element_0_value",
-"flags": 2050,
-"label": "Value 0",
-"usage": 131078
-}, {
-"pin_name": &"dictionary",
-"type": 27,
-"dir": 1,
-"flags": 2,
-"dv": {}
+"flags": 1026,
+"dv": 0
 }])
 
 [obj type="OScriptNodeEmitSignal" id="OScriptNodeEmitSignal_tvhnv"]
@@ -552,64 +526,6 @@ pin_data = Array[Dictionary]([{
 "pin_name": &"peer_info",
 "flags": 2,
 "usage": 131078
-}])
-
-[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_tvhnv"]
-function_name = &"rpc_id"
-target_class_name = "Node"
-target_type = 24
-flags = 552
-method = {
-"name": &"rpc_id",
-"return": {
-"type": 2,
-"class_name": &"Error",
-"usage": 65542
-},
-"flags": 17,
-"args": [{
-"name": &"peer_id",
-"type": 2
-}, {
-"name": &"method",
-"type": 21
-}]
-}
-variable_arg_count = 0
-chain = false
-id = 21
-position = Vector2(520, 0)
-pin_data = Array[Dictionary]([{
-"pin_name": &"ExecIn",
-"flags": 4
-}, {
-"pin_name": &"ExecOut",
-"dir": 1,
-"flags": 4
-}, {
-"pin_name": &"target",
-"type": 24,
-"flags": 2050,
-"label": "Node",
-"target_class": "Node"
-}, {
-"pin_name": &"peer_id",
-"type": 2,
-"flags": 2,
-"dv": 0
-}, {
-"pin_name": &"method",
-"type": 21,
-"flags": 2,
-"dv": "_register_peer"
-}, {
-"pin_name": &"return_value",
-"type": 2,
-"dir": 1,
-"flags": 33554434,
-"label": "Error",
-"target_class": "Error",
-"usage": 65542
 }])
 
 [obj type="OScriptNodeFunctionEntry" id="OScriptNodeFunctionEntry_vu3qr"]
@@ -1116,6 +1032,7 @@ pin_data = Array[Dictionary]([{
 "dir": 1,
 "flags": 1026,
 "target_class": "ENetMultiplayerPeer",
+"dv": null,
 "usage": 4098
 }])
 
@@ -1251,6 +1168,7 @@ pin_data = Array[Dictionary]([{
 "dir": 1,
 "flags": 2,
 "target_class": "MultiplayerAPI",
+"dv": null,
 "hint": 17,
 "hint_string": "MultiplayerAPI",
 "usage": 0
@@ -1281,7 +1199,7 @@ property = {
 "usage": 0
 }
 id = 52
-position = Vector2(2600, 220)
+position = Vector2(2700, 180)
 pin_data = Array[Dictionary]([{
 "pin_name": &"ExecIn",
 "flags": 4
@@ -1290,12 +1208,14 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "MultiplayerAPI",
-"target_class": "MultiplayerAPI"
+"target_class": "MultiplayerAPI",
+"dv": null
 }, {
 "pin_name": &"multiplayer_peer",
 "type": 24,
 "flags": 2,
 "target_class": "MultiplayerPeer",
+"dv": null,
 "hint": 17,
 "hint_string": "MultiplayerPeer",
 "usage": 0
@@ -1363,6 +1283,473 @@ pin_data = Array[Dictionary]([{
 "dv": ""
 }])
 
+[obj type="OScriptNodeVariableGet" id="OScriptNodeVariableGet_uepm5"]
+variable_name = &"peer"
+id = 56
+position = Vector2(2400, 500)
+pin_data = Array[Dictionary]([{
+"pin_name": &"value",
+"type": 24,
+"dir": 1,
+"flags": 2050,
+"label": "peer",
+"target_class": "ENetMultiplayerPeer",
+"dv": null,
+"usage": 4098
+}])
+
+[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_6f16p"]
+function_name = &"connect"
+target_class_name = "Object"
+target_type = 24
+flags = 520
+method = {
+"name": &"connect",
+"return": {
+"type": 2,
+"class_name": &"Error",
+"usage": 65542
+},
+"default_args": [0],
+"args": [{
+"name": &"signal",
+"type": 21
+}, {
+"name": &"callable",
+"type": 25
+}, {
+"name": &"flags",
+"type": 2
+}]
+}
+chain = false
+id = 57
+position = Vector2(3440, 360)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}, {
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "Object",
+"target_class": "Object",
+"dv": null
+}, {
+"pin_name": &"signal",
+"type": 21,
+"flags": 2,
+"dv": "connected_to_server"
+}, {
+"pin_name": &"callable",
+"type": 25,
+"flags": 2,
+"dv": Callable()
+}, {
+"pin_name": &"flags",
+"type": 2,
+"flags": 2,
+"dv": 0
+}, {
+"pin_name": &"return_value",
+"type": 2,
+"dir": 1,
+"flags": 33554434,
+"label": "Error",
+"target_class": "Error",
+"usage": 65542
+}])
+
+[obj type="OScriptNodePropertyGet" id="OScriptNodePropertyGet_8tft5"]
+mode = 1
+target_class = &"Node"
+property_name = &"multiplayer"
+property_hint = "MultiplayerAPI"
+property = {
+"name": &"multiplayer",
+"type": 24,
+"class_name": &"MultiplayerAPI",
+"hint": 17,
+"hint_string": "MultiplayerAPI",
+"usage": 0
+}
+id = 58
+position = Vector2(2840, 740)
+pin_data = Array[Dictionary]([{
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "Node",
+"target_class": "Node"
+}, {
+"pin_name": &"multiplayer",
+"type": 24,
+"dir": 1,
+"flags": 2,
+"target_class": "MultiplayerAPI",
+"dv": null,
+"hint": 17,
+"hint_string": "MultiplayerAPI",
+"usage": 0
+}])
+
+[obj type="OScriptNodeAutoload" id="OScriptNodeAutoload_0sjfg"]
+autoload = "Lobby"
+id = 59
+position = Vector2(2440, 740)
+pin_data = Array[Dictionary]([{
+"pin_name": &"autoload",
+"type": 24,
+"dir": 1,
+"flags": 2050,
+"label": "Lobby",
+"target_class": "Node"
+}])
+
+[obj type="OScriptNodeFunctionEntry" id="OScriptNodeFunctionEntry_82htt"]
+function_id = "D874BD70-85AE-4583-B22C-5C0A51D73F5D"
+id = 60
+position = Vector2(280, -60)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}])
+
+[obj type="OScriptNodePropertyGet" id="OScriptNodePropertyGet_idc83"]
+mode = 1
+target_class = &"Node"
+property_name = &"multiplayer"
+property_hint = "MultiplayerAPI"
+property = {
+"name": &"multiplayer",
+"type": 24,
+"class_name": &"MultiplayerAPI",
+"hint": 17,
+"hint_string": "MultiplayerAPI",
+"usage": 0
+}
+id = 61
+position = Vector2(0, 240)
+pin_data = Array[Dictionary]([{
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "Node",
+"target_class": "Node",
+"dv": null
+}, {
+"pin_name": &"multiplayer",
+"type": 24,
+"dir": 1,
+"flags": 2,
+"target_class": "MultiplayerAPI",
+"dv": null,
+"hint": 17,
+"hint_string": "MultiplayerAPI",
+"usage": 0
+}])
+
+[obj type="OScriptNodeSelf" id="OScriptNodeSelf_q3swe"]
+id = 62
+position = Vector2(-260, 240)
+pin_data = Array[Dictionary]([{
+"pin_name": &"self",
+"type": 24,
+"dir": 1,
+"flags": 2,
+"target_class": "Node",
+"dv": null
+}])
+
+[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_fitqh"]
+function_name = &"get_unique_id"
+target_class_name = "MultiplayerAPI"
+target_type = 24
+flags = 520
+method = {
+"name": &"get_unique_id",
+"return": {
+"type": 2
+}
+}
+chain = false
+id = 63
+position = Vector2(420, 240)
+pin_data = Array[Dictionary]([{
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "MultiplayerAPI",
+"target_class": "MultiplayerAPI",
+"dv": null,
+"hint": 17,
+"hint_string": "MultiplayerAPI"
+}, {
+"pin_name": &"return_value",
+"type": 2,
+"dir": 1,
+"flags": 1026,
+"dv": 0
+}])
+
+[obj type="OScriptNodeVariableGet" id="OScriptNodeVariableGet_xt1uf"]
+variable_name = &"peer_info"
+id = 66
+position = Vector2(480, 360)
+pin_data = Array[Dictionary]([{
+"pin_name": &"value",
+"type": 27,
+"dir": 1,
+"flags": 2050,
+"label": "peer_info",
+"dv": {},
+"usage": 4102
+}])
+
+[obj type="OScriptNodeEmitSignal" id="OScriptNodeEmitSignal_wm80e"]
+signal_name = "peer_connected_ui"
+id = 68
+position = Vector2(1900, 0)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}, {
+"pin_name": &"peer_id",
+"type": 2,
+"flags": 2,
+"dv": 0
+}, {
+"pin_name": &"peer_info",
+"flags": 2,
+"usage": 131078
+}])
+
+[obj type="OScriptNodeComposeFrom" id="OScriptNodeComposeFrom_ly424"]
+id = 69
+position = Vector2(2660, 880)
+pin_data = Array[Dictionary]([{
+"pin_name": &"object",
+"type": 24,
+"flags": 2,
+"dv": null
+}, {
+"pin_name": &"method",
+"type": 21,
+"flags": 2,
+"dv": &"_on_connected_to_server"
+}, {
+"pin_name": &"value",
+"type": 25,
+"dir": 1,
+"flags": 2,
+"dv": Callable()
+}])
+
+[obj type="OScriptNodeSelf" id="OScriptNodeSelf_uepm5"]
+id = 70
+position = Vector2(2420, 900)
+pin_data = Array[Dictionary]([{
+"pin_name": &"self",
+"type": 24,
+"dir": 1,
+"flags": 2,
+"target_class": "Node",
+"dv": null
+}])
+
+[obj type="OScriptNodeVariableGet" id="OScriptNodeVariableGet_0sjfg"]
+variable_name = &"peers"
+id = 71
+position = Vector2(1000, -300)
+pin_data = Array[Dictionary]([{
+"pin_name": &"value",
+"type": 27,
+"dir": 1,
+"flags": 2050,
+"label": "peers",
+"dv": {},
+"usage": 4102
+}])
+
+[obj type="OScriptNodeDictionarySet" id="OScriptNodeDictionarySet_ly424"]
+id = 74
+position = Vector2(1340, -120)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"target",
+"type": 27,
+"flags": 2,
+"dv": {}
+}, {
+"pin_name": &"key",
+"flags": 2,
+"usage": 131078
+}, {
+"pin_name": &"value",
+"flags": 2,
+"usage": 131078
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}, {
+"pin_name": &"dictionary",
+"type": 27,
+"dir": 1,
+"flags": 2
+}, {
+"pin_name": &"replaced",
+"type": 1,
+"dir": 1,
+"flags": 2
+}, {
+"pin_name": &"old_value",
+"dir": 1,
+"flags": 2,
+"usage": 131078
+}])
+
+[obj type="OScriptNodeVariableGet" id="OScriptNodeVariableGet_82htt"]
+variable_name = &"peers"
+id = 75
+position = Vector2(900, -220)
+pin_data = Array[Dictionary]([{
+"pin_name": &"value",
+"type": 27,
+"dir": 1,
+"flags": 2050,
+"label": "peers",
+"dv": {},
+"usage": 4102
+}])
+
+[obj type="OScriptNodeDictionarySet" id="OScriptNodeDictionarySet_uepm5"]
+id = 76
+position = Vector2(1340, -60)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"target",
+"type": 27,
+"flags": 2,
+"dv": {}
+}, {
+"pin_name": &"key",
+"flags": 2,
+"usage": 131078
+}, {
+"pin_name": &"value",
+"flags": 2,
+"usage": 131078
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}, {
+"pin_name": &"dictionary",
+"type": 27,
+"dir": 1,
+"flags": 2
+}, {
+"pin_name": &"replaced",
+"type": 1,
+"dir": 1,
+"flags": 2
+}, {
+"pin_name": &"old_value",
+"dir": 1,
+"flags": 2,
+"usage": 131078
+}])
+
+[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_8tft5"]
+function_name = &"rpc_id"
+target_class_name = "Node"
+target_type = 24
+flags = 552
+method = {
+"name": &"rpc_id",
+"return": {
+"type": 2,
+"class_name": &"Error",
+"usage": 65542
+},
+"flags": 17,
+"args": [{
+"name": &"peer_id",
+"type": 2
+}, {
+"name": &"method",
+"type": 21
+}]
+}
+variable_arg_count = 1
+chain = false
+id = 78
+position = Vector2(540, 0)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}, {
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "Node",
+"target_class": "Node"
+}, {
+"pin_name": &"peer_id",
+"type": 2,
+"flags": 2,
+"dv": 0
+}, {
+"pin_name": &"method",
+"type": 21,
+"flags": 2,
+"dv": "_register_peer"
+}, {
+"pin_name": &"arg3",
+"flags": 2,
+"usage": 131078
+}, {
+"pin_name": &"return_value",
+"type": 2,
+"dir": 1,
+"flags": 33554434,
+"label": "Error",
+"target_class": "Error",
+"usage": 65542
+}])
+
+[obj type="OScriptNodeVariableGet" id="OScriptNodeVariableGet_idc83"]
+variable_name = &"peer_info"
+id = 79
+position = Vector2(140, 220)
+pin_data = Array[Dictionary]([{
+"pin_name": &"value",
+"type": 27,
+"dir": 1,
+"flags": 2050,
+"label": "peer_info",
+"dv": {},
+"usage": 4102
+}])
+
 [obj type="OScriptSignal" id="OScriptSignal_tvhnv"]
 method = {
 "name": &"peer_connected_ui",
@@ -1428,8 +1815,8 @@ default_value = {}
 [resource]
 base_type = &"Node"
 variables = Array[OScriptVariable]([SubResource("OScriptVariable_33rl5"), SubResource("OScriptVariable_v7uxy"), SubResource("OScriptVariable_1vn5e"), SubResource("OScriptVariable_6f16p"), SubResource("OScriptVariable_idc83"), SubResource("OScriptVariable_q3swe")])
-functions = Array[OScriptFunction]([SubResource("OScriptFunction_isaxa"), SubResource("OScriptFunction_dy72c"), SubResource("OScriptFunction_k56rh"), SubResource("OScriptFunction_uepm5"), SubResource("OScriptFunction_ly424")])
+functions = Array[OScriptFunction]([SubResource("OScriptFunction_isaxa"), SubResource("OScriptFunction_dy72c"), SubResource("OScriptFunction_k56rh"), SubResource("OScriptFunction_uepm5"), SubResource("OScriptFunction_ly424"), SubResource("OScriptFunction_8rnnb")])
 signals = Array[OScriptSignal]([SubResource("OScriptSignal_tvhnv"), SubResource("OScriptSignal_ly424")])
-connections = Array[int]([7, 0, 1, 0, 0, 0, 3, 0, 6, 0, 5, 0, 3, 0, 8, 0, 10, 0, 9, 0, 16, 0, 15, 0, 12, 0, 17, 0, 15, 0, 18, 0, 18, 0, 19, 0, 17, 0, 20, 0, 4, 0, 21, 0, 22, 0, 25, 0, 32, 0, 26, 0, 26, 0, 29, 0, 39, 0, 30, 0, 29, 0, 31, 0, 25, 0, 32, 0, 31, 0, 34, 0, 36, 0, 35, 0, 34, 0, 38, 0, 45, 0, 41, 0, 40, 1, 42, 0, 40, 0, 45, 0, 45, 1, 46, 0, 46, 0, 47, 0, 47, 0, 48, 0, 51, 0, 50, 0, 48, 0, 52, 0, 41, 0, 53, 0, 1, 0, 3, 1, 11, 0, 9, 1, 19, 0, 17, 1, 12, 1, 19, 1, 18, 0, 20, 1, 32, 1, 26, 1, 26, 1, 29, 1, 30, 0, 31, 1, 25, 1, 32, 1, 35, 0, 34, 1, 37, 0, 35, 1, 42, 0, 41, 1, 46, 1, 47, 1, 47, 1, 48, 1, 50, 0, 52, 1, 13, 0, 9, 2, 17, 1, 20, 2, 4, 1, 21, 2, 27, 0, 26, 2, 33, 0, 31, 2, 34, 1, 38, 2, 40, 1, 48, 2, 5, 0, 3, 3, 9, 0, 8, 3, 14, 0, 9, 3, 28, 0, 26, 3, 49, 0, 48, 3, 54, 0, 53, 3])
-nodes = Array[OScriptNode]([SubResource("OScriptNodeEvent_tnbpr"), SubResource("OScriptNodePropertyGet_rxwll"), SubResource("OScriptNodeCallMemberFunction_ocgbo"), SubResource("OScriptNodeFunctionEntry_ybifj"), SubResource("OScriptNodeComposeFrom_vn7p6"), SubResource("OScriptNodeSelf_4bucn"), SubResource("OScriptNodeAutoload_k56rh"), SubResource("OScriptNodeCallMemberFunction_ty1ui"), SubResource("OScriptNodeMakeDictionary_v8pna"), SubResource("OScriptNodeComposeFrom_4sv1v"), SubResource("OScriptNodeComposeFrom_qphcx"), SubResource("OScriptNodeFunctionEntry_0mb7l"), SubResource("OScriptNodeComposeFrom_k56rh"), SubResource("OScriptNodeComposeFrom_0f0dc"), SubResource("OScriptNodePropertyGet_k56rh"), SubResource("OScriptNodeSelf_0f0dc"), SubResource("OScriptNodeVariableSet_ty1ui"), SubResource("OScriptNodeCallMemberFunction_v8pna"), SubResource("OScriptNodeMakeDictionary_4sv1v"), SubResource("OScriptNodeEmitSignal_tvhnv"), SubResource("OScriptNodeCallMemberFunction_tvhnv"), SubResource("OScriptNodeFunctionEntry_vu3qr"), SubResource("OScriptNodeNew_ly424"), SubResource("OScriptNodeCallMemberFunction_uepm5"), SubResource("OScriptNodeVariableGet_8rnnb"), SubResource("OScriptNodeVariableGet_vu3qr"), SubResource("OScriptNodeCallBuiltinFunction_ly424"), SubResource("OScriptNodePropertyGet_uepm5"), SubResource("OScriptNodePropertySet_8rnnb"), SubResource("OScriptNodeVariableSet_vu3qr"), SubResource("OScriptNodeVariableGet_6f16p"), SubResource("OScriptNodeVariableSet_8tft5"), SubResource("OScriptNodeMakeDictionary_0sjfg"), SubResource("OScriptNodeComposeFrom_82htt"), SubResource("OScriptNodeVariableGet_ly424"), SubResource("OScriptNodeEmitSignal_ly424"), SubResource("OScriptNodeSelf_ly424"), SubResource("OScriptNodeFunctionEntry_8rnnb"), SubResource("OScriptNodeBranch_ly424"), SubResource("OScriptNodeCallMemberFunction_8rnnb"), SubResource("OScriptNodeSequence_ly424"), SubResource("OScriptNodeNew_uepm5"), SubResource("OScriptNodeVariableSet_8rnnb"), SubResource("OScriptNodeCallMemberFunction_vu3qr"), SubResource("OScriptNodeVariableGet_8tft5"), SubResource("OScriptNodePropertyGet_0sjfg"), SubResource("OScriptNodeSelf_82htt"), SubResource("OScriptNodePropertySet_idc83"), SubResource("OScriptNodeCallMemberFunction_ly424"), SubResource("OScriptNodeComposeFrom_uepm5")])
-graphs = Array[OScriptGraph]([SubResource("OScriptGraph_k8brf"), SubResource("OScriptGraph_fvhdw"), SubResource("OScriptGraph_0f0dc"), SubResource("OScriptGraph_8rnnb"), SubResource("OScriptGraph_uepm5")])
+connections = Array[int]([7, 0, 1, 0, 0, 0, 3, 0, 6, 0, 5, 0, 3, 0, 8, 0, 10, 0, 9, 0, 16, 0, 15, 0, 15, 0, 18, 0, 76, 0, 20, 0, 22, 0, 25, 0, 32, 0, 26, 0, 26, 0, 29, 0, 39, 0, 30, 0, 29, 0, 31, 0, 25, 0, 32, 0, 31, 0, 34, 0, 36, 0, 35, 0, 34, 0, 38, 0, 45, 0, 41, 0, 40, 1, 42, 0, 40, 0, 45, 0, 45, 1, 46, 0, 46, 0, 47, 0, 47, 0, 48, 0, 51, 0, 50, 0, 48, 0, 52, 0, 41, 0, 53, 0, 8, 0, 57, 0, 59, 0, 58, 0, 62, 0, 61, 0, 61, 0, 63, 0, 74, 0, 68, 0, 70, 0, 69, 0, 60, 0, 74, 0, 12, 0, 76, 0, 4, 0, 78, 0, 1, 0, 3, 1, 11, 0, 9, 1, 18, 0, 20, 1, 32, 1, 26, 1, 26, 1, 29, 1, 30, 0, 31, 1, 25, 1, 32, 1, 35, 0, 34, 1, 37, 0, 35, 1, 42, 0, 41, 1, 46, 1, 47, 1, 47, 1, 48, 1, 50, 0, 52, 1, 58, 0, 57, 1, 63, 0, 68, 1, 75, 0, 74, 1, 71, 0, 76, 1, 13, 0, 9, 2, 12, 1, 20, 2, 27, 0, 26, 2, 33, 0, 31, 2, 34, 1, 38, 2, 40, 1, 48, 2, 56, 0, 52, 2, 66, 0, 68, 2, 63, 0, 74, 2, 18, 0, 76, 2, 4, 1, 78, 2, 5, 0, 3, 3, 9, 0, 8, 3, 14, 0, 9, 3, 28, 0, 26, 3, 49, 0, 48, 3, 54, 0, 53, 3, 69, 0, 57, 3, 66, 0, 74, 3, 12, 1, 76, 3, 79, 0, 78, 4])
+nodes = Array[OScriptNode]([SubResource("OScriptNodeEvent_tnbpr"), SubResource("OScriptNodePropertyGet_rxwll"), SubResource("OScriptNodeCallMemberFunction_ocgbo"), SubResource("OScriptNodeFunctionEntry_ybifj"), SubResource("OScriptNodeComposeFrom_vn7p6"), SubResource("OScriptNodeSelf_4bucn"), SubResource("OScriptNodeAutoload_k56rh"), SubResource("OScriptNodeCallMemberFunction_ty1ui"), SubResource("OScriptNodeMakeDictionary_v8pna"), SubResource("OScriptNodeComposeFrom_4sv1v"), SubResource("OScriptNodeComposeFrom_qphcx"), SubResource("OScriptNodeFunctionEntry_0mb7l"), SubResource("OScriptNodeComposeFrom_k56rh"), SubResource("OScriptNodeComposeFrom_0f0dc"), SubResource("OScriptNodePropertyGet_k56rh"), SubResource("OScriptNodeSelf_0f0dc"), SubResource("OScriptNodeCallMemberFunction_v8pna"), SubResource("OScriptNodeEmitSignal_tvhnv"), SubResource("OScriptNodeFunctionEntry_vu3qr"), SubResource("OScriptNodeNew_ly424"), SubResource("OScriptNodeCallMemberFunction_uepm5"), SubResource("OScriptNodeVariableGet_8rnnb"), SubResource("OScriptNodeVariableGet_vu3qr"), SubResource("OScriptNodeCallBuiltinFunction_ly424"), SubResource("OScriptNodePropertyGet_uepm5"), SubResource("OScriptNodePropertySet_8rnnb"), SubResource("OScriptNodeVariableSet_vu3qr"), SubResource("OScriptNodeVariableGet_6f16p"), SubResource("OScriptNodeVariableSet_8tft5"), SubResource("OScriptNodeMakeDictionary_0sjfg"), SubResource("OScriptNodeComposeFrom_82htt"), SubResource("OScriptNodeVariableGet_ly424"), SubResource("OScriptNodeEmitSignal_ly424"), SubResource("OScriptNodeSelf_ly424"), SubResource("OScriptNodeFunctionEntry_8rnnb"), SubResource("OScriptNodeBranch_ly424"), SubResource("OScriptNodeCallMemberFunction_8rnnb"), SubResource("OScriptNodeSequence_ly424"), SubResource("OScriptNodeNew_uepm5"), SubResource("OScriptNodeVariableSet_8rnnb"), SubResource("OScriptNodeCallMemberFunction_vu3qr"), SubResource("OScriptNodeVariableGet_8tft5"), SubResource("OScriptNodePropertyGet_0sjfg"), SubResource("OScriptNodeSelf_82htt"), SubResource("OScriptNodePropertySet_idc83"), SubResource("OScriptNodeCallMemberFunction_ly424"), SubResource("OScriptNodeComposeFrom_uepm5"), SubResource("OScriptNodeVariableGet_uepm5"), SubResource("OScriptNodeCallMemberFunction_6f16p"), SubResource("OScriptNodePropertyGet_8tft5"), SubResource("OScriptNodeAutoload_0sjfg"), SubResource("OScriptNodeFunctionEntry_82htt"), SubResource("OScriptNodePropertyGet_idc83"), SubResource("OScriptNodeSelf_q3swe"), SubResource("OScriptNodeCallMemberFunction_fitqh"), SubResource("OScriptNodeVariableGet_xt1uf"), SubResource("OScriptNodeEmitSignal_wm80e"), SubResource("OScriptNodeComposeFrom_ly424"), SubResource("OScriptNodeSelf_uepm5"), SubResource("OScriptNodeVariableGet_0sjfg"), SubResource("OScriptNodeDictionarySet_ly424"), SubResource("OScriptNodeVariableGet_82htt"), SubResource("OScriptNodeDictionarySet_uepm5"), SubResource("OScriptNodeCallMemberFunction_8tft5"), SubResource("OScriptNodeVariableGet_idc83")])
+graphs = Array[OScriptGraph]([SubResource("OScriptGraph_k8brf"), SubResource("OScriptGraph_fvhdw"), SubResource("OScriptGraph_0f0dc"), SubResource("OScriptGraph_8rnnb"), SubResource("OScriptGraph_uepm5"), SubResource("OScriptGraph_vu3qr")])
