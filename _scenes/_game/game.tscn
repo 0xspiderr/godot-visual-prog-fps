@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://qfbnpinb1fjh"]
+
+[ext_resource type="Script" uid="uid://dufijv5a0i3ms" path="res://_scenes/_game/game.torch" id="1_rqurh"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_rqurh"]
+size = Vector2(40, 40)
+
+[node name="Game" type="Node3D"]
+script = ExtResource("1_rqurh")
+
+[node name="Players" type="Node" parent="."]
+
+[node name="Environment" type="Node" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment"]
+mesh = SubResource("PlaneMesh_rqurh")
+
+[node name="PlayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("uid://re874jahqghw")
+spawn_path = NodePath("../Players")
+spawn_limit = 5

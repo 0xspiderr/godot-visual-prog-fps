@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b64fo023b0300"]
 
-[ext_resource type="Script" uid="uid://boydb6g0tf2jw" path="res://_scenes/_lobby/lobby_ui.torch" id="1_ly424"]
+[ext_resource type="Script" uid="uid://boydb6g0tf2jw" path="res://_scenes/_lobby/lobby_ui.torch" id="1_e7ysg"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ly424"]
 
@@ -15,7 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ly424")
+script = ExtResource("1_e7ysg")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -79,9 +79,11 @@ placeholder_text = "enter IP address"
 alignment = 1
 
 [node name="NameDialogue" type="AcceptDialog" parent="HBoxContainer/HBoxContainer2/VBoxContainer"]
+unique_name_in_owner = true
 dialog_text = "You must enter a name"
 
 [node name="IPDialogue" type="AcceptDialog" parent="HBoxContainer/HBoxContainer2/VBoxContainer"]
+unique_name_in_owner = true
 dialog_text = "You must enter a valid ip address"
 
 [node name="VSeparator" type="VSeparator" parent="HBoxContainer/HBoxContainer2/VBoxContainer"]
@@ -147,3 +149,4 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_uepm5")
 
 [connection signal="pressed" from="HBoxContainer/HBoxContainer2/VBoxContainer/HostBtn" to="." method="_on_host_btn_pressed"]
 [connection signal="pressed" from="HBoxContainer/HBoxContainer2/VBoxContainer/JoinBtn" to="." method="_on_join_btn_pressed"]
+[connection signal="pressed" from="HBoxContainer/HBoxContainer/VBoxContainer2/StartGameBtn" to="." method="_on_start_game_btn_pressed"]
