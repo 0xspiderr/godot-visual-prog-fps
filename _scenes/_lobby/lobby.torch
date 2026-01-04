@@ -139,15 +139,14 @@ functions = Array[int]([60])
 
 [obj type="OScriptGraph" id="OScriptGraph_i3agv"]
 graph_name = &"load_game"
-offset = Vector2(-282.5882568359375, -452.9613037109375)
+offset = Vector2(-330, -478.75)
 flags = 22
 nodes = Array[int]([80, 81, 82])
 functions = Array[int]([80])
 
 [obj type="OScriptGraph" id="OScriptGraph_561wg"]
 graph_name = &"peer_loaded"
-offset = Vector2(3682.43701171875, -261.9021301269531)
-zoom = 1.100000023841858
+offset = Vector2(2932, -555.550048828125)
 flags = 22
 nodes = Array[int]([100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 123, 124, 127])
 functions = Array[int]([100])
