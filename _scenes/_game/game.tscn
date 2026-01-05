@@ -1,12 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://qfbnpinb1fjh"]
+[gd_scene load_steps=6 format=3 uid="uid://qfbnpinb1fjh"]
 
 [ext_resource type="Script" uid="uid://dufijv5a0i3ms" path="res://_scenes/_game/game.torch" id="1_rqurh"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rqurh"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_561wg"]
+sky_material = SubResource("ProceduralSkyMaterial_rqurh")
+
+[sub_resource type="Environment" id="Environment_g37hr"]
+background_mode = 2
+sky = SubResource("Sky_561wg")
+tonemap_mode = 2
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_rqurh"]
 size = Vector2(40, 40)
 
 [node name="Game" type="Node3D"]
 script = ExtResource("1_rqurh")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_g37hr")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
 
 [node name="Players" type="Node" parent="."]
 

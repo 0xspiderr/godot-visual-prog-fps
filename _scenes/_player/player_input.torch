@@ -1,0 +1,154 @@
+[orchestration type="OScript" load_steps=10 format=3 uid="uid://dto4bgxd03djq"]
+
+[obj type="OScriptFunction" id="OScriptFunction_0txgl"]
+guid = "A9305326-FA69-4280-A689-1E29267DB18B"
+method = {
+"name": &"_ready",
+"flags": 8
+}
+id = 0
+
+[obj type="OScriptFunction" id="OScriptFunction_0jjom"]
+guid = "10AFA805-2A52-41EC-996E-470C84F68BDB"
+method = {
+"name": &"_enter_tree",
+"flags": 8
+}
+id = 1
+
+[obj type="OScriptGraph" id="OScriptGraph_0txgl"]
+graph_name = &"EventGraph"
+offset = Vector2(-1163.8289794921875, -853.48876953125)
+zoom = 1.100000023841858
+flags = 8
+nodes = Array[int]([0, 1, 2, 3, 4, 5])
+functions = Array[int]([0, 1])
+
+[obj type="OScriptNodeEvent" id="OScriptNodeEvent_isaxa"]
+function_id = "A9305326-FA69-4280-A689-1E29267DB18B"
+id = 0
+position = Vector2(-520, -80)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}])
+
+[obj type="OScriptNodeEvent" id="OScriptNodeEvent_fp7a6"]
+function_id = "10AFA805-2A52-41EC-996E-470C84F68BDB"
+id = 1
+position = Vector2(-440, -420)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}])
+
+[obj type="OScriptNodeSelf" id="OScriptNodeSelf_xt7i4"]
+id = 2
+position = Vector2(-360, -320)
+pin_data = Array[Dictionary]([{
+"pin_name": &"self",
+"type": 24,
+"dir": 1,
+"flags": 2,
+"target_class": "MultiplayerSynchronizer",
+"dv": null
+}])
+
+[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_0jjom"]
+function_name = &"set_multiplayer_authority"
+target_class_name = "Node"
+target_type = 24
+flags = 520
+method = {
+"name": &"set_multiplayer_authority",
+"default_args": [true],
+"args": [{
+"name": &"id",
+"type": 2
+}, {
+"name": &"recursive",
+"type": 1
+}]
+}
+chain = false
+id = 3
+position = Vector2(120, -420)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}, {
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "Node",
+"target_class": "Node",
+"dv": null
+}, {
+"pin_name": &"id",
+"type": 2,
+"flags": 2,
+"dv": 0
+}, {
+"pin_name": &"recursive",
+"type": 1,
+"flags": 2,
+"dv": true,
+"gdv": true
+}])
+
+[obj type="OScriptNodeSceneNode" id="OScriptNodeSceneNode_fp7a6"]
+node_path = NodePath(".")
+target_class_name = "CharacterBody3D"
+id = 4
+position = Vector2(-900, -200)
+pin_data = Array[Dictionary]([{
+"pin_name": &".",
+"type": 24,
+"dir": 1,
+"flags": 2050,
+"target_class": "CharacterBody3D",
+"dv": null
+}])
+
+[obj type="OScriptNodePropertyGet" id="OScriptNodePropertyGet_ymqtv"]
+mode = 1
+target_class = &"CharacterBody3D"
+property_name = &"player_id"
+property = {
+"name": &"player_id",
+"type": 2,
+"class_name": &"",
+"hint": 0,
+"hint_string": "",
+"usage": 4102
+}
+id = 5
+position = Vector2(-500, -200)
+pin_data = Array[Dictionary]([{
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "CharacterBody3D",
+"target_class": "CharacterBody3D",
+"dv": null
+}, {
+"pin_name": &"player_id",
+"type": 2,
+"dir": 1,
+"flags": 2,
+"dv": 0,
+"usage": 4102
+}])
+
+[resource]
+base_type = &"MultiplayerSynchronizer"
+functions = Array[OScriptFunction]([SubResource("OScriptFunction_0txgl"), SubResource("OScriptFunction_0jjom")])
+connections = Array[int]([1, 0, 3, 0, 4, 0, 5, 0, 2, 0, 3, 1, 5, 0, 3, 2])
+nodes = Array[OScriptNode]([SubResource("OScriptNodeEvent_isaxa"), SubResource("OScriptNodeEvent_fp7a6"), SubResource("OScriptNodeSelf_xt7i4"), SubResource("OScriptNodeCallMemberFunction_0jjom"), SubResource("OScriptNodeSceneNode_fp7a6"), SubResource("OScriptNodePropertyGet_ymqtv")])
+graphs = Array[OScriptGraph]([SubResource("OScriptGraph_0txgl")])

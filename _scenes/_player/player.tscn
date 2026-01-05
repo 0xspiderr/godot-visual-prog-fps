@@ -1,16 +1,34 @@
-[gd_scene load_steps=3 format=3 uid="uid://re874jahqghw"]
+[gd_scene load_steps=6 format=3 uid="uid://re874jahqghw"]
+
+[ext_resource type="Script" uid="uid://brdlonvlivfhq" path="res://_scenes/_player/player.torch" id="1_0jjom"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_0jjom"]
+properties/0/path = NodePath(".:player_id")
+properties/0/spawn = false
+properties/0/replication_mode = 2
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_xt7i4"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vpg6s"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_xt7i4"]
 
 [node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_0jjom")
+
+[node name="ServerSync" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_0jjom")
+
+[node name="PlayerInputSync" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_xt7i4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_vpg6s")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("CapsuleMesh_xt7i4")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
