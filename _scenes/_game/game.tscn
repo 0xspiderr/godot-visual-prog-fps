@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://qfbnpinb1fjh"]
+[gd_scene load_steps=7 format=3 uid="uid://qfbnpinb1fjh"]
 
 [ext_resource type="Script" uid="uid://dufijv5a0i3ms" path="res://_scenes/_game/game.torch" id="1_rqurh"]
 
@@ -14,11 +14,18 @@ background_mode = 2
 sky = SubResource("Sky_561wg")
 tonemap_mode = 2
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_rqurh"]
+size = Vector3(100, 1, 100)
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_rqurh"]
-size = Vector2(40, 40)
+size = Vector2(100, 100)
 
 [node name="Game" type="Node3D"]
 script = ExtResource("1_rqurh")
+
+[node name="PlayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("uid://re874jahqghw")
+spawn_path = NodePath("../Players")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_g37hr")
@@ -31,7 +38,13 @@ shadow_enabled = true
 
 [node name="Environment" type="Node" parent="."]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.924758, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/StaticBody3D"]
+shape = SubResource("BoxShape3D_rqurh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/StaticBody3D"]
 mesh = SubResource("PlaneMesh_rqurh")
 
 [node name="SpawnPoints" type="Node" parent="."]
@@ -50,8 +63,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 4)
 
 [node name="Marker3D5" type="Marker3D" parent="SpawnPoints"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -4)
-
-[node name="PlayerSpawner" type="MultiplayerSpawner" parent="."]
-_spawnable_scenes = PackedStringArray("uid://re874jahqghw")
-spawn_path = NodePath("../Players")
-spawn_limit = 5

@@ -131,23 +131,23 @@ knots = Array[Dictionary]([{
 
 [obj type="OScriptGraph" id="OScriptGraph_vu3qr"]
 graph_name = &"_on_connected_to_server"
-offset = Vector2(611.4978637695313, -200)
-zoom = 0.9090908765792848
+offset = Vector2(-639.7366333007813, -522.4750366210938)
+zoom = 0.5644738674163818
 flags = 22
 nodes = Array[int]([60, 61, 62, 63, 66, 68, 74, 75])
 functions = Array[int]([60])
 
 [obj type="OScriptGraph" id="OScriptGraph_i3agv"]
 graph_name = &"load_game"
-offset = Vector2(-433, -402)
+offset = Vector2(-192.5999755859375, -208.29998779296875)
+zoom = 1.100000023841858
 flags = 22
 nodes = Array[int]([80, 81, 82])
 functions = Array[int]([80])
 
 [obj type="OScriptGraph" id="OScriptGraph_561wg"]
 graph_name = &"peer_loaded"
-offset = Vector2(982.793212890625, -446.0082702636719)
-zoom = 0.8264462351799011
+offset = Vector2(2873, -363.75)
 flags = 22
 nodes = Array[int]([100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 123, 124, 127])
 functions = Array[int]([100])
