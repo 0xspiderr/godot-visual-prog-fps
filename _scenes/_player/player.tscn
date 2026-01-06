@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://re874jahqghw"]
+[gd_scene load_steps=10 format=3 uid="uid://re874jahqghw"]
 
 [ext_resource type="Script" uid="uid://brdlonvlivfhq" path="res://_scenes/_player/player.torch" id="1_0jjom"]
 [ext_resource type="Script" uid="uid://dto4bgxd03djq" path="res://_scenes/_player/player_input.torch" id="2_0jjom"]
+[ext_resource type="PackedScene" uid="uid://6s5t6dwugms2" path="res://_scenes/_guns/gun.tscn" id="3_fp7a6"]
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_0jjom"]
 properties/0/path = NodePath(".:player_id")
@@ -14,14 +15,8 @@ properties/2/path = NodePath(".:velocity")
 properties/2/spawn = true
 properties/2/replication_mode = 1
 properties/3/path = NodePath(".:rotation")
-properties/3/spawn = true
-properties/3/replication_mode = 2
-properties/4/path = NodePath("Camera3D:rotation")
-properties/4/spawn = true
-properties/4/replication_mode = 2
-properties/5/path = NodePath(".:direction")
-properties/5/spawn = true
-properties/5/replication_mode = 1
+properties/3/spawn = false
+properties/3/replication_mode = 1
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_xt7i4"]
 properties/0/path = NodePath("PlayerInputSync:direction")
@@ -30,10 +25,19 @@ properties/0/replication_mode = 2
 properties/1/path = NodePath("PlayerInputSync:look")
 properties/1/spawn = false
 properties/1/replication_mode = 2
+properties/2/path = NodePath("PlayerInputSync:rotation")
+properties/2/spawn = false
+properties/2/replication_mode = 2
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vpg6s"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_xt7i4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fp7a6"]
+albedo_color = Color(1, 0, 0.56078434, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fp7a6"]
+material = SubResource("StandardMaterial3D_fp7a6")
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_0jjom")
@@ -53,3 +57,10 @@ mesh = SubResource("CapsuleMesh_xt7i4")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+
+[node name="Gun" parent="." instance=ExtResource("3_fp7a6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24931526, 0, -0.9787208)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.71461093, 0, 0, 0, 0.32881522, 0, 0, 0, 0.25136077, 0, 0.48248374, -0.41437435)
+mesh = SubResource("BoxMesh_fp7a6")
