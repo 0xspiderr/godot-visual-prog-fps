@@ -3,21 +3,21 @@
 [ext_resource type="Script" uid="uid://brdlonvlivfhq" path="res://_scenes/_player/player.torch" id="1_0jjom"]
 [ext_resource type="Script" uid="uid://dto4bgxd03djq" path="res://_scenes/_player/player_input.torch" id="2_0jjom"]
 
-[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_xt7i4"]
-properties/0/path = NodePath(".:direction")
-properties/0/spawn = false
-properties/0/replication_mode = 2
-
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_0jjom"]
 properties/0/path = NodePath(".:player_id")
+properties/0/spawn = true
+properties/0/replication_mode = 0
+properties/1/path = NodePath(".:position")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+properties/2/path = NodePath(".:velocity")
+properties/2/spawn = true
+properties/2/replication_mode = 1
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_xt7i4"]
+properties/0/path = NodePath("PlayerInputSync:direction")
 properties/0/spawn = false
-properties/0/replication_mode = 2
-properties/1/path = NodePath(".:velocity")
-properties/1/spawn = false
-properties/1/replication_mode = 2
-properties/2/path = NodePath(".:position")
-properties/2/spawn = false
-properties/2/replication_mode = 2
+properties/0/replication_mode = 1
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vpg6s"]
 
@@ -26,12 +26,12 @@ properties/2/replication_mode = 2
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_0jjom")
 
+[node name="ServerSync" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_0jjom")
+
 [node name="PlayerInputSync" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_xt7i4")
 script = ExtResource("2_0jjom")
-
-[node name="ServerSync" type="MultiplayerSynchronizer" parent="."]
-replication_config = SubResource("SceneReplicationConfig_0jjom")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_vpg6s")

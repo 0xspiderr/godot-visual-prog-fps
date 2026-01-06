@@ -24,6 +24,10 @@ Lobby="*res://_scenes/_lobby/lobby.torch"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 
+[physics]
+
+3d/default_gravity=15.0
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

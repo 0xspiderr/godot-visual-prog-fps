@@ -1,4 +1,4 @@
-[orchestration type="OScript" load_steps=89 format=3 uid="uid://brdlonvlivfhq"]
+[orchestration type="OScript" load_steps=83 format=3 uid="uid://brdlonvlivfhq"]
 
 [obj type="OScriptFunction" id="OScriptFunction_isaxa"]
 guid = "4B4F5C95-0896-4784-BDDA-5086357910CC"
@@ -30,10 +30,10 @@ id = 88
 
 [obj type="OScriptGraph" id="OScriptGraph_x8yju"]
 graph_name = &"EventGraph"
-offset = Vector2(-1429.7091064453125, -627.3092041015625)
+offset = Vector2(-2024.4827880859375, 488.714111328125)
 zoom = 0.8028879165649414
 flags = 8
-nodes = Array[int]([0, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 23, 25, 26, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 84, 85, 86, 87, 88, 89])
+nodes = Array[int]([0, 4, 5, 7, 8, 9, 10, 11, 16, 17, 18, 19, 23, 25, 26, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 74, 76, 78, 79, 80, 81, 84, 85, 86, 87, 88, 89, 90, 91, 92, 94, 95, 96, 97, 98, 99])
 functions = Array[int]([0, 16, 88])
 
 [obj type="OScriptNodeEvent" id="OScriptNodeEvent_dy72c"]
@@ -48,7 +48,7 @@ pin_data = Array[Dictionary]([{
 
 [obj type="OScriptNodeBranch" id="OScriptNodeBranch_0jjom"]
 id = 4
-position = Vector2(960, 460)
+position = Vector2(-760, 520)
 pin_data = Array[Dictionary]([{
 "pin_name": &"ExecIn",
 "flags": 516,
@@ -77,7 +77,7 @@ right_type = 2
 right_type_name = &"int"
 return_type = 1
 id = 5
-position = Vector2(680, 760)
+position = Vector2(-1040, 820)
 pin_data = Array[Dictionary]([{
 "pin_name": &"a",
 "type": 2,
@@ -107,7 +107,7 @@ property = {
 "usage": 0
 }
 id = 7
-position = Vector2(-60, 1080)
+position = Vector2(-1780, 1140)
 pin_data = Array[Dictionary]([{
 "pin_name": &"target",
 "type": 24,
@@ -127,7 +127,7 @@ pin_data = Array[Dictionary]([{
 
 [obj type="OScriptNodeSelf" id="OScriptNodeSelf_783ln"]
 id = 8
-position = Vector2(-280, 1080)
+position = Vector2(-2000, 1140)
 pin_data = Array[Dictionary]([{
 "pin_name": &"self",
 "type": 24,
@@ -149,7 +149,7 @@ method = {
 }
 chain = false
 id = 9
-position = Vector2(320, 980)
+position = Vector2(-1400, 1040)
 pin_data = Array[Dictionary]([{
 "pin_name": &"target",
 "type": 24,
@@ -169,7 +169,7 @@ pin_data = Array[Dictionary]([{
 node_path = NodePath("Camera3D")
 target_class_name = "Camera3D"
 id = 10
-position = Vector2(1200, 700)
+position = Vector2(-520, 760)
 pin_data = Array[Dictionary]([{
 "pin_name": &"Camera3D",
 "type": 24,
@@ -191,7 +191,7 @@ property = {
 "usage": 6
 }
 id = 11
-position = Vector2(1580, 460)
+position = Vector2(-140, 520)
 pin_data = Array[Dictionary]([{
 "pin_name": &"ExecIn",
 "flags": 4
@@ -212,109 +212,10 @@ pin_data = Array[Dictionary]([{
 "flags": 4
 }])
 
-[obj type="OScriptNodePropertyGet" id="OScriptNodePropertyGet_0jjom"]
-mode = 1
-target_class = &"Node"
-property_name = &"name"
-property = {
-"name": &"name",
-"type": 21,
-"class_name": &"",
-"hint": 0,
-"hint_string": "",
-"usage": 0
-}
-id = 12
-position = Vector2(-880, 700)
-pin_data = Array[Dictionary]([{
-"pin_name": &"target",
-"type": 24,
-"flags": 2050,
-"label": "Node",
-"target_class": "Node"
-}, {
-"pin_name": &"name",
-"type": 21,
-"dir": 1,
-"flags": 2,
-"dv": &"",
-"usage": 0
-}])
-
-[obj type="OScriptNodeSelf" id="OScriptNodeSelf_fp7a6"]
-id = 13
-position = Vector2(-1120, 700)
-pin_data = Array[Dictionary]([{
-"pin_name": &"self",
-"type": 24,
-"dir": 1,
-"flags": 2,
-"target_class": "CharacterBody3D"
-}])
-
-[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_ymqtv"]
-function_name = &"to_int"
-target_type = 21
-flags = 522
-method = {
-"name": &"to_int",
-"return": {
-"type": 2
-},
-"flags": 5
-}
-chain = false
-id = 14
-position = Vector2(-440, 600)
-pin_data = Array[Dictionary]([{
-"pin_name": &"ExecIn",
-"flags": 4
-}, {
-"pin_name": &"ExecOut",
-"dir": 1,
-"flags": 4
-}, {
-"pin_name": &"target",
-"type": 21,
-"flags": 2058,
-"label": "String Name"
-}, {
-"pin_name": &"return_value",
-"type": 2,
-"dir": 1,
-"flags": 1026
-}])
-
-[obj type="OScriptNodeVariableSet" id="OScriptNodeVariableSet_nw736"]
-variable_name = &"player_id"
-id = 15
-position = Vector2(-60, 600)
-pin_data = Array[Dictionary]([{
-"pin_name": &"ExecIn",
-"flags": 4
-}, {
-"pin_name": &"player_id",
-"type": 2,
-"flags": 2050,
-"dv": 0,
-"usage": 4102
-}, {
-"pin_name": &"ExecOut",
-"dir": 1,
-"flags": 4
-}, {
-"pin_name": &"value",
-"type": 2,
-"dir": 1,
-"flags": 1026,
-"dv": 0,
-"usage": 4102
-}])
-
 [obj type="OScriptNodeEvent" id="OScriptNodeEvent_ybifj"]
 function_id = "803589C2-9247-480B-8387-630DB0848D1C"
 id = 16
-position = Vector2(-1840, 1360)
+position = Vector2(-2340, 1360)
 pin_data = Array[Dictionary]([{
 "pin_name": &"ExecOut",
 "dir": 1,
@@ -323,13 +224,12 @@ pin_data = Array[Dictionary]([{
 "pin_name": &"delta",
 "type": 3,
 "dir": 1,
-"flags": 2,
-"dv": 0.0
+"flags": 2
 }])
 
 [obj type="OScriptNodeBranch" id="OScriptNodeBranch_vn7p6"]
 id = 17
-position = Vector2(-340, 1340)
+position = Vector2(40, 1300)
 pin_data = Array[Dictionary]([{
 "pin_name": &"ExecIn",
 "flags": 516,
@@ -363,20 +263,18 @@ method = {
 }
 chain = false
 id = 18
-position = Vector2(-1040, 1760)
+position = Vector2(-1140, 1900)
 pin_data = Array[Dictionary]([{
 "pin_name": &"target",
 "type": 24,
 "flags": 2050,
 "label": "CharacterBody3D",
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }, {
 "pin_name": &"return_value",
 "type": 1,
 "dir": 1,
-"flags": 1026,
-"dv": false
+"flags": 1026
 }])
 
 [obj type="OScriptNodePropertySet" id="OScriptNodePropertySet_33rl5"]
@@ -393,7 +291,7 @@ property = {
 "usage": 2
 }
 id = 19
-position = Vector2(1220, 1340)
+position = Vector2(1180, 1340)
 pin_data = Array[Dictionary]([{
 "pin_name": &"ExecIn",
 "flags": 4
@@ -402,8 +300,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "CharacterBody3D",
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }, {
 "pin_name": &"velocity",
 "type": 9,
@@ -437,8 +334,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "CharacterBody3D",
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }, {
 "pin_name": &"velocity",
 "type": 9,
@@ -480,7 +376,7 @@ pin_data = Array[Dictionary]([{
 
 [obj type="OScriptNodeBranch" id="OScriptNodeBranch_76w1s"]
 id = 26
-position = Vector2(-660, 2060)
+position = Vector2(-620, 2060)
 pin_data = Array[Dictionary]([{
 "pin_name": &"ExecIn",
 "flags": 516,
@@ -510,8 +406,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "MultiplayerSynchronizer",
-"dv": null
+"target_class": "MultiplayerSynchronizer"
 }])
 
 [obj type="OScriptNodePropertyGet" id="OScriptNodePropertyGet_kwclw"]
@@ -533,8 +428,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "MultiplayerSynchronizer",
-"target_class": "MultiplayerSynchronizer",
-"dv": null
+"target_class": "MultiplayerSynchronizer"
 }, {
 "pin_name": &"jumping",
 "type": 1,
@@ -564,14 +458,12 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "CharacterBody3D",
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }, {
 "pin_name": &"return_value",
 "type": 1,
 "dir": 1,
-"flags": 1026,
-"dv": false
+"flags": 1026
 }])
 
 [obj type="OScriptNodeOperator" id="OScriptNodeOperator_1u1qb"]
@@ -588,19 +480,16 @@ position = Vector2(-1000, 2120)
 pin_data = Array[Dictionary]([{
 "pin_name": &"a",
 "type": 1,
-"flags": 2,
-"dv": false
+"flags": 2
 }, {
 "pin_name": &"b",
 "type": 1,
-"flags": 2,
-"dv": false
+"flags": 2
 }, {
 "pin_name": &"result",
 "type": 1,
 "dir": 1,
-"flags": 2,
-"dv": false
+"flags": 2
 }])
 
 [obj type="OScriptNodePropertySet" id="OScriptNodePropertySet_47b14"]
@@ -617,7 +506,7 @@ property = {
 "usage": 2
 }
 id = 32
-position = Vector2(-240, 2060)
+position = Vector2(120, 2060)
 pin_data = Array[Dictionary]([{
 "pin_name": &"ExecIn",
 "flags": 4
@@ -626,8 +515,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "CharacterBody3D",
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }, {
 "pin_name": &"velocity",
 "type": 9,
@@ -690,8 +578,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "MultiplayerSynchronizer",
-"dv": null
+"target_class": "MultiplayerSynchronizer"
 }])
 
 [obj type="OScriptNodePropertySet" id="OScriptNodePropertySet_ymqtv"]
@@ -707,7 +594,7 @@ property = {
 "usage": 4102
 }
 id = 36
-position = Vector2(-320, 2720)
+position = Vector2(-260, 2800)
 pin_data = Array[Dictionary]([{
 "pin_name": &"ExecIn",
 "flags": 4
@@ -716,8 +603,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "MultiplayerSynchronizer",
-"target_class": "MultiplayerSynchronizer",
-"dv": null
+"target_class": "MultiplayerSynchronizer"
 }, {
 "pin_name": &"jumping",
 "type": 1,
@@ -739,8 +625,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }])
 
 [obj type="OScriptNodeSceneNode" id="OScriptNodeSceneNode_ymqtv"]
@@ -753,8 +638,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }])
 
 [obj type="OScriptNodeSceneNode" id="OScriptNodeSceneNode_nw736"]
@@ -767,8 +651,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }])
 
 [obj type="OScriptNodeSceneNode" id="OScriptNodeSceneNode_783ln"]
@@ -781,22 +664,20 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }])
 
 [obj type="OScriptNodeSceneNode" id="OScriptNodeSceneNode_0txgl"]
 node_path = NodePath(".")
 target_class_name = "CharacterBody3D"
 id = 42
-position = Vector2(-1380, 1660)
+position = Vector2(-1460, 1980)
 pin_data = Array[Dictionary]([{
 "pin_name": &".",
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }])
 
 [obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_0jjom"]
@@ -812,7 +693,7 @@ method = {
 }
 chain = false
 id = 43
-position = Vector2(-620, 3580)
+position = Vector2(-560, 3580)
 pin_data = Array[Dictionary]([{
 "pin_name": &"ExecIn",
 "flags": 4
@@ -825,8 +706,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "CharacterBody3D",
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }, {
 "pin_name": &"return_value",
 "type": 1,
@@ -844,8 +724,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }])
 
 [obj type="OScriptNodeOperator" id="OScriptNodeOperator_0jjom"]
@@ -856,18 +735,16 @@ left_type = 1
 left_type_name = &"bool"
 return_type = 1
 id = 45
-position = Vector2(-540, 1560)
+position = Vector2(-540, 1620)
 pin_data = Array[Dictionary]([{
 "pin_name": &"a",
 "type": 1,
-"flags": 2,
-"dv": false
+"flags": 2
 }, {
 "pin_name": &"result",
 "type": 1,
 "dir": 1,
-"flags": 2,
-"dv": false
+"flags": 2
 }])
 
 [obj type="OScriptNodeVariableSet" id="OScriptNodeVariableSet_0jjom"]
@@ -898,7 +775,7 @@ pin_data = Array[Dictionary]([{
 
 [obj type="OScriptNodeComposeFrom" id="OScriptNodeComposeFrom_fp7a6"]
 id = 47
-position = Vector2(-820, 3260)
+position = Vector2(-1700, 3240)
 pin_data = Array[Dictionary]([{
 "pin_name": &"x",
 "type": 3,
@@ -926,14 +803,13 @@ pin_data = Array[Dictionary]([{
 node_path = NodePath("PlayerInputSync")
 target_class_name = "MultiplayerSynchronizer"
 id = 48
-position = Vector2(-2080, 3440)
+position = Vector2(-2960, 3420)
 pin_data = Array[Dictionary]([{
 "pin_name": &"PlayerInputSync",
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "MultiplayerSynchronizer",
-"dv": null
+"target_class": "MultiplayerSynchronizer"
 }])
 
 [obj type="OScriptNodePropertyGet" id="OScriptNodePropertyGet_y6ngt"]
@@ -949,14 +825,13 @@ property = {
 "usage": 4102
 }
 id = 49
-position = Vector2(-1740, 3380)
+position = Vector2(-2620, 3360)
 pin_data = Array[Dictionary]([{
 "pin_name": &"target",
 "type": 24,
 "flags": 2050,
 "label": "MultiplayerSynchronizer",
-"target_class": "MultiplayerSynchronizer",
-"dv": null
+"target_class": "MultiplayerSynchronizer"
 }, {
 "pin_name": &"direction",
 "type": 5,
@@ -968,7 +843,7 @@ pin_data = Array[Dictionary]([{
 
 [obj type="OScriptNodeDecompose" id="OScriptNodeDecompose_uhsyf"]
 id = 50
-position = Vector2(-1180, 3200)
+position = Vector2(-2060, 3180)
 pin_data = Array[Dictionary]([{
 "pin_name": &"value",
 "type": 5,
@@ -1013,14 +888,12 @@ pin_data = Array[Dictionary]([{
 "pin_name": &"target",
 "type": 9,
 "flags": 2058,
-"label": "Vector3",
-"dv": Vector3(0, 0, 0)
+"label": "Vector3"
 }, {
 "pin_name": &"return_value",
 "type": 9,
 "dir": 1,
-"flags": 1026,
-"dv": Vector3(0, 0, 0)
+"flags": 1026
 }])
 
 [obj type="OScriptNodeBranch" id="OScriptNodeBranch_4uvnj"]
@@ -1043,34 +916,6 @@ pin_data = Array[Dictionary]([{
 "pin_name": &"false",
 "dir": 1,
 "flags": 516
-}])
-
-[obj type="OScriptNodeOperator" id="OScriptNodeOperator_gpd1u"]
-op = 1
-code = &"!="
-name = &"Not Equal"
-left_type = 9
-left_type_name = &"Vector3"
-right_type = 9
-right_type_name = &"Vector3"
-return_type = 1
-id = 53
-position = Vector2(420, 3260)
-pin_data = Array[Dictionary]([{
-"pin_name": &"a",
-"type": 9,
-"flags": 2,
-"dv": Vector3(0, 0, 0)
-}, {
-"pin_name": &"b",
-"type": 9,
-"flags": 2
-}, {
-"pin_name": &"result",
-"type": 1,
-"dir": 1,
-"flags": 2,
-"dv": false
 }])
 
 [obj type="OScriptNodePropertySet" id="OScriptNodePropertySet_5g7p1"]
@@ -1096,8 +941,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "CharacterBody3D",
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }, {
 "pin_name": &"velocity",
 "type": 9,
@@ -1121,8 +965,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }])
 
 [obj type="OScriptNodeComposeFrom" id="OScriptNodeComposeFrom_ltd1u"]
@@ -1207,19 +1050,16 @@ position = Vector2(1500, 3380)
 pin_data = Array[Dictionary]([{
 "pin_name": &"a",
 "type": 3,
-"flags": 2,
-"dv": 0.0
+"flags": 2
 }, {
 "pin_name": &"b",
 "type": 3,
-"flags": 2,
-"dv": 0.0
+"flags": 2
 }, {
 "pin_name": &"result",
 "type": 3,
 "dir": 1,
-"flags": 2,
-"dv": 0.0
+"flags": 2
 }])
 
 [obj type="OScriptNodeVariableGet" id="OScriptNodeVariableGet_yw7n4"]
@@ -1249,19 +1089,16 @@ position = Vector2(1500, 3580)
 pin_data = Array[Dictionary]([{
 "pin_name": &"a",
 "type": 3,
-"flags": 2,
-"dv": 0.0
+"flags": 2
 }, {
 "pin_name": &"b",
 "type": 3,
-"flags": 2,
-"dv": 0.0
+"flags": 2
 }, {
 "pin_name": &"result",
 "type": 3,
 "dir": 1,
-"flags": 2,
-"dv": 0.0
+"flags": 2
 }])
 
 [obj type="OScriptNodePropertySet" id="OScriptNodePropertySet_70ydi"]
@@ -1287,8 +1124,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "CharacterBody3D",
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }, {
 "pin_name": &"velocity",
 "type": 9,
@@ -1325,8 +1161,7 @@ position = Vector2(1500, 3840)
 pin_data = Array[Dictionary]([{
 "pin_name": &"from",
 "type": 3,
-"flags": 2,
-"dv": 0.0
+"flags": 2
 }, {
 "pin_name": &"to",
 "type": 3,
@@ -1340,8 +1175,7 @@ pin_data = Array[Dictionary]([{
 "pin_name": &"return_value",
 "type": 3,
 "dir": 1,
-"flags": 1026,
-"dv": 0.0
+"flags": 1026
 }])
 
 [obj type="OScriptNodeVariableGet" id="OScriptNodeVariableGet_wacjo"]
@@ -1435,13 +1269,11 @@ position = Vector2(1500, 4140)
 pin_data = Array[Dictionary]([{
 "pin_name": &"from",
 "type": 3,
-"flags": 2,
-"dv": 0.0
+"flags": 2
 }, {
 "pin_name": &"to",
 "type": 3,
-"flags": 2,
-"dv": 0.0
+"flags": 2
 }, {
 "pin_name": &"delta",
 "type": 3,
@@ -1451,138 +1283,7 @@ pin_data = Array[Dictionary]([{
 "pin_name": &"return_value",
 "type": 3,
 "dir": 1,
-"flags": 1026,
-"dv": 0.0
-}])
-
-[obj type="OScriptNodePropertyGet" id="OScriptNodePropertyGet_fp7a6"]
-mode = 1
-target_class = &"CharacterBody3D"
-property_name = &"velocity"
-property_hint = "suffix:m/s"
-property = {
-"name": &"velocity",
-"type": 9,
-"class_name": &"",
-"hint": 0,
-"hint_string": "suffix:m/s",
-"usage": 2
-}
-id = 68
-position = Vector2(-1780, 3040)
-pin_data = Array[Dictionary]([{
-"pin_name": &"target",
-"type": 24,
-"flags": 2050,
-"label": "CharacterBody3D",
-"target_class": "CharacterBody3D",
-"dv": null
-}, {
-"pin_name": &"velocity",
-"type": 9,
-"dir": 1,
-"flags": 2,
-"dv": Vector3(0, 0, 0),
-"hint_string": "suffix:m/s",
-"usage": 2
-}])
-
-[obj type="OScriptNodeSceneNode" id="OScriptNodeSceneNode_y6ngt"]
-node_path = NodePath(".")
-target_class_name = "CharacterBody3D"
-id = 69
-position = Vector2(-2080, 3040)
-pin_data = Array[Dictionary]([{
-"pin_name": &".",
-"type": 24,
-"dir": 1,
-"flags": 2050,
-"target_class": "CharacterBody3D",
-"dv": null
-}])
-
-[obj type="OScriptNodeDecompose" id="OScriptNodeDecompose_jsh5u"]
-id = 70
-position = Vector2(-1260, 2980)
-pin_data = Array[Dictionary]([{
-"pin_name": &"value",
-"type": 9,
-"flags": 10,
-"dv": Vector3(0, 0, 0)
-}, {
-"pin_name": &"x",
-"type": 3,
-"dir": 1,
-"flags": 2
-}, {
-"pin_name": &"y",
-"type": 3,
-"dir": 1,
-"flags": 2,
-"dv": 0.0
-}, {
-"pin_name": &"z",
-"type": 3,
-"dir": 1,
-"flags": 2
-}])
-
-[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_fp7a6"]
-function_name = &"get_gravity"
-target_class_name = "PhysicsBody3D"
-target_type = 24
-flags = 522
-method = {
-"name": &"get_gravity",
-"return": {
-"type": 9
-},
-"flags": 5
-}
-chain = false
-id = 71
-position = Vector2(-1140, 1880)
-pin_data = Array[Dictionary]([{
-"pin_name": &"target",
-"type": 24,
-"flags": 2050,
-"label": "PhysicsBody3D",
-"target_class": "PhysicsBody3D"
-}, {
-"pin_name": &"return_value",
-"type": 9,
-"dir": 1,
-"flags": 1026,
-"dv": Vector3(0, 0, 0)
-}])
-
-[obj type="OScriptNodeOperator" id="OScriptNodeOperator_ymqtv"]
-op = 8
-code = &"*"
-name = &"Multiply"
-left_type = 3
-left_type_name = &"float"
-right_type = 9
-right_type_name = &"Vector3"
-return_type = 9
-id = 73
-position = Vector2(-520, 1700)
-pin_data = Array[Dictionary]([{
-"pin_name": &"a",
-"type": 3,
-"flags": 2,
-"dv": 0.0
-}, {
-"pin_name": &"b",
-"type": 9,
-"flags": 2,
-"dv": Vector3(0, 0, 0)
-}, {
-"pin_name": &"result",
-"type": 9,
-"dir": 1,
-"flags": 2,
-"dv": Vector3(0, 0, 0)
+"flags": 1026
 }])
 
 [obj type="OScriptNodeDecompose" id="OScriptNodeDecompose_0jjom"]
@@ -1613,32 +1314,6 @@ pin_data = Array[Dictionary]([{
 "dv": 0.0
 }])
 
-[obj type="OScriptNodeDecompose" id="OScriptNodeDecompose_fp7a6"]
-id = 75
-position = Vector2(60, 1600)
-pin_data = Array[Dictionary]([{
-"pin_name": &"value",
-"type": 9,
-"flags": 10,
-"dv": Vector3(0, 0, 0)
-}, {
-"pin_name": &"x",
-"type": 3,
-"dir": 1,
-"flags": 2
-}, {
-"pin_name": &"y",
-"type": 3,
-"dir": 1,
-"flags": 2,
-"dv": 0.0
-}, {
-"pin_name": &"z",
-"type": 3,
-"dir": 1,
-"flags": 2
-}])
-
 [obj type="OScriptNodeComposeFrom" id="OScriptNodeComposeFrom_ymqtv"]
 id = 76
 position = Vector2(860, 1620)
@@ -1665,35 +1340,6 @@ pin_data = Array[Dictionary]([{
 "dv": Vector3(0, 0, 0)
 }])
 
-[obj type="OScriptNodeOperator" id="OScriptNodeOperator_nw736"]
-op = 6
-code = &"+"
-name = &"Addition"
-left_type = 3
-left_type_name = &"float"
-right_type = 3
-right_type_name = &"float"
-return_type = 3
-id = 77
-position = Vector2(500, 1640)
-pin_data = Array[Dictionary]([{
-"pin_name": &"a",
-"type": 3,
-"flags": 2,
-"dv": 0.0
-}, {
-"pin_name": &"b",
-"type": 3,
-"flags": 2,
-"dv": 0.0
-}, {
-"pin_name": &"result",
-"type": 3,
-"dir": 1,
-"flags": 2,
-"dv": 0.0
-}])
-
 [obj type="OScriptNodePropertyGet" id="OScriptNodePropertyGet_ymqtv"]
 mode = 1
 target_class = &"CharacterBody3D"
@@ -1714,8 +1360,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "CharacterBody3D",
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }, {
 "pin_name": &"velocity",
 "type": 9,
@@ -1730,14 +1375,13 @@ pin_data = Array[Dictionary]([{
 node_path = NodePath(".")
 target_class_name = "CharacterBody3D"
 id = 79
-position = Vector2(-1780, 2640)
+position = Vector2(-1900, 2600)
 pin_data = Array[Dictionary]([{
 "pin_name": &".",
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }])
 
 [obj type="OScriptNodeDecompose" id="OScriptNodeDecompose_4uvnj"]
@@ -1777,36 +1421,20 @@ right_type = 3
 right_type_name = &"float"
 return_type = 3
 id = 81
-position = Vector2(-1200, 1500)
+position = Vector2(-1180, 1680)
 pin_data = Array[Dictionary]([{
 "pin_name": &"a",
 "type": 3,
-"flags": 2,
-"dv": 0.0
+"flags": 2
 }, {
 "pin_name": &"b",
 "type": 3,
-"flags": 2,
-"dv": 0.0
+"flags": 2
 }, {
 "pin_name": &"result",
 "type": 3,
 "dir": 1,
-"flags": 2,
-"dv": 0.0
-}])
-
-[obj type="OScriptNodeVariableGet" id="OScriptNodeVariableGet_rqurh"]
-variable_name = &"FALL_SPEED"
-id = 82
-position = Vector2(-1720, 1580)
-pin_data = Array[Dictionary]([{
-"pin_name": &"value",
-"type": 3,
-"dir": 1,
-"flags": 2050,
-"label": "FALL_SPEED",
-"usage": 4102
+"flags": 2
 }])
 
 [obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_561wg"]
@@ -1840,8 +1468,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node",
-"target_class": "Node",
-"dv": null
+"target_class": "Node"
 }, {
 "pin_name": &"id",
 "type": 2,
@@ -1908,7 +1535,7 @@ method = {
 }
 chain = false
 id = 87
-position = Vector2(-800, 0)
+position = Vector2(-780, 120)
 pin_data = Array[Dictionary]([{
 "pin_name": &"ExecIn",
 "flags": 4
@@ -1925,8 +1552,7 @@ pin_data = Array[Dictionary]([{
 "pin_name": &"return_value",
 "type": 2,
 "dir": 1,
-"flags": 1026,
-"dv": 0
+"flags": 1026
 }])
 
 [obj type="OScriptNodeEvent" id="OScriptNodeEvent_fp7a6"]
@@ -1949,7 +1575,236 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "MultiplayerSynchronizer",
+"target_class": "MultiplayerSynchronizer"
+}])
+
+[obj type="OScriptNodeEngineSingleton" id="OScriptNodeEngineSingleton_0jjom"]
+singleton = "ProjectSettings"
+id = 90
+position = Vector2(-2520, 1760)
+pin_data = Array[Dictionary]([{
+"pin_name": &"singleton",
+"type": 24,
+"dir": 1,
+"flags": 2050,
+"label": "ProjectSettings",
+"target_class": "ProjectSettings"
+}])
+
+[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_nw736"]
+function_name = &"get_setting"
+target_class_name = "ProjectSettings"
+target_type = 24
+flags = 522
+method = {
+"name": &"get_setting",
+"return": {
+"usage": 131078
+},
+"flags": 5,
+"default_args": [null],
+"args": [{
+"name": &"name",
+"type": 4
+}, {
+"name": &"default_value",
+"usage": 131078
+}]
+}
+chain = false
+id = 91
+position = Vector2(-1940, 1680)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}, {
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "ProjectSettings",
+"target_class": "ProjectSettings"
+}, {
+"pin_name": &"name",
+"type": 4,
+"flags": 2,
+"dv": "physics/3d/default_gravity"
+}, {
+"pin_name": &"default_value",
+"flags": 2,
+"usage": 131078
+}, {
+"pin_name": &"return_value",
+"dir": 1,
+"flags": 1026,
+"usage": 131078
+}])
+
+[obj type="OScriptNodeOperator" id="OScriptNodeOperator_ymqtv"]
+op = 7
+code = &"-"
+name = &"Subtract"
+left_type = 3
+left_type_name = &"float"
+right_type = 3
+right_type_name = &"float"
+return_type = 3
+id = 92
+position = Vector2(240, 1620)
+pin_data = Array[Dictionary]([{
+"pin_name": &"a",
+"type": 3,
+"flags": 2
+}, {
+"pin_name": &"b",
+"type": 3,
+"flags": 2
+}, {
+"pin_name": &"result",
+"type": 3,
+"dir": 1,
+"flags": 2
+}])
+
+[obj type="OScriptNodeVariableGet" id="OScriptNodeVariableGet_0jjom"]
+variable_name = &"player_id"
+id = 94
+position = Vector2(-1440, 820)
+pin_data = Array[Dictionary]([{
+"pin_name": &"value",
+"type": 2,
+"dir": 1,
+"flags": 2050,
+"label": "player_id",
+"dv": 0,
+"usage": 4102
+}])
+
+[obj type="OScriptNodeOperator" id="OScriptNodeOperator_nw736"]
+op = 8
+code = &"*"
+name = &"Multiply"
+left_type = 17
+left_type_name = &"Basis"
+right_type = 9
+right_type_name = &"Vector3"
+return_type = 9
+id = 95
+position = Vector2(-1120, 3200)
+pin_data = Array[Dictionary]([{
+"pin_name": &"a",
+"type": 17,
+"flags": 2
+}, {
+"pin_name": &"b",
+"type": 9,
+"flags": 2
+}, {
+"pin_name": &"result",
+"type": 9,
+"dir": 1,
+"flags": 2
+}])
+
+[obj type="OScriptNodeCallBuiltinFunction" id="OScriptNodeCallBuiltinFunction_0jjom"]
+function_name = &"print"
+flags = 33
+method = {
+"name": &"print",
+"flags": 17,
+"args": [{
+"name": &"arg1",
+"usage": 131078
+}]
+}
+variable_arg_count = 0
+id = 96
+position = Vector2(-240, 2040)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}, {
+"pin_name": &"arg1",
+"flags": 2,
+"usage": 131078
+}])
+
+[obj type="OScriptNodePropertyGet" id="OScriptNodePropertyGet_0jjom"]
+mode = 1
+target_class = &"CharacterBody3D"
+property_name = &"velocity"
+property_hint = "suffix:m/s"
+property = {
+"name": &"velocity",
+"type": 9,
+"class_name": &"",
+"hint": 0,
+"hint_string": "suffix:m/s",
+"usage": 2
+}
+id = 97
+position = Vector2(200, 3420)
+pin_data = Array[Dictionary]([{
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "CharacterBody3D",
+"target_class": "CharacterBody3D",
+"dv": null
+}, {
+"pin_name": &"velocity",
+"type": 9,
+"dir": 1,
+"flags": 2,
+"dv": Vector3(0, 0, 0),
+"hint_string": "suffix:m/s",
+"usage": 2
+}])
+
+[obj type="OScriptNodeDecompose" id="OScriptNodeDecompose_fp7a6"]
+id = 98
+position = Vector2(660, 3320)
+pin_data = Array[Dictionary]([{
+"pin_name": &"value",
+"type": 9,
+"flags": 10,
+"dv": Vector3(0, 0, 0)
+}, {
+"pin_name": &"x",
+"type": 3,
+"dir": 1,
+"flags": 2
+}, {
+"pin_name": &"y",
+"type": 3,
+"dir": 1,
+"flags": 2,
+"dv": 0.0
+}, {
+"pin_name": &"z",
+"type": 3,
+"dir": 1,
+"flags": 2
+}])
+
+[obj type="OScriptNodeSceneNode" id="OScriptNodeSceneNode_y6ngt"]
+node_path = NodePath(".")
+target_class_name = "CharacterBody3D"
+id = 99
+position = Vector2(-160, 3500)
+pin_data = Array[Dictionary]([{
+"pin_name": &".",
+"type": 24,
+"dir": 1,
+"flags": 2050,
+"target_class": "CharacterBody3D",
 "dv": null
 }])
 
@@ -1967,15 +1822,7 @@ category = "Default"
 constant = true
 classification = "type:float"
 type = 3
-default_value = 5000.0
-
-[obj type="OScriptVariable" id="OScriptVariable_2ubvf"]
-name = "GRAVITY"
-category = "Default"
-constant = true
-classification = "type:float"
-type = 3
-default_value = 9.8
+default_value = 5.0
 
 [obj type="OScriptVariable" id="OScriptVariable_sg2er"]
 name = "direction"
@@ -1992,17 +1839,10 @@ classification = "type:float"
 type = 3
 default_value = 15.0
 
-[obj type="OScriptVariable" id="OScriptVariable_561wg"]
-name = "FALL_SPEED"
-category = "Default"
-classification = "type:float"
-type = 3
-default_value = 0.5
-
 [resource]
 base_type = &"CharacterBody3D"
-variables = Array[OScriptVariable]([SubResource("OScriptVariable_0dopj"), SubResource("OScriptVariable_w4gld"), SubResource("OScriptVariable_2ubvf"), SubResource("OScriptVariable_sg2er"), SubResource("OScriptVariable_m7kyt"), SubResource("OScriptVariable_561wg")])
+variables = Array[OScriptVariable]([SubResource("OScriptVariable_0dopj"), SubResource("OScriptVariable_w4gld"), SubResource("OScriptVariable_sg2er"), SubResource("OScriptVariable_m7kyt")])
 functions = Array[OScriptFunction]([SubResource("OScriptFunction_isaxa"), SubResource("OScriptFunction_ocgbo"), SubResource("OScriptFunction_0jjom")])
-connections = Array[int]([15, 0, 4, 0, 15, 1, 5, 0, 8, 0, 7, 0, 7, 0, 9, 0, 4, 0, 11, 0, 13, 0, 12, 0, 0, 0, 14, 0, 14, 0, 15, 0, 25, 0, 17, 0, 42, 0, 18, 0, 17, 0, 19, 0, 38, 0, 23, 0, 16, 0, 25, 0, 25, 1, 26, 0, 27, 0, 28, 0, 41, 0, 30, 0, 28, 0, 31, 0, 26, 0, 32, 0, 80, 0, 34, 0, 25, 2, 36, 0, 25, 4, 43, 0, 18, 0, 45, 0, 51, 0, 46, 0, 50, 0, 47, 0, 48, 0, 49, 0, 49, 0, 50, 0, 25, 3, 51, 0, 46, 0, 52, 0, 46, 1, 53, 0, 52, 0, 54, 0, 59, 0, 56, 0, 57, 0, 58, 0, 58, 0, 59, 0, 60, 0, 61, 0, 52, 1, 62, 0, 65, 0, 63, 0, 64, 0, 65, 0, 63, 0, 66, 0, 65, 2, 67, 0, 69, 0, 68, 0, 68, 0, 70, 0, 81, 0, 73, 0, 23, 0, 74, 0, 73, 0, 75, 0, 74, 0, 76, 0, 75, 1, 77, 0, 79, 0, 78, 0, 78, 0, 80, 0, 16, 1, 81, 0, 87, 0, 84, 0, 86, 0, 85, 0, 88, 0, 87, 0, 5, 0, 4, 1, 9, 0, 5, 1, 10, 0, 11, 1, 12, 0, 14, 1, 14, 1, 15, 1, 45, 0, 17, 1, 37, 0, 19, 1, 31, 0, 26, 1, 30, 0, 31, 1, 39, 0, 32, 1, 33, 0, 34, 1, 35, 0, 36, 1, 44, 0, 43, 1, 51, 1, 46, 1, 70, 1, 47, 1, 47, 0, 51, 1, 53, 0, 52, 1, 55, 0, 54, 1, 58, 1, 56, 1, 60, 0, 59, 1, 58, 2, 61, 1, 55, 0, 62, 1, 65, 1, 66, 1, 71, 0, 73, 1, 77, 0, 76, 1, 74, 1, 77, 1, 82, 0, 81, 1, 89, 0, 84, 1, 85, 0, 87, 1, 76, 0, 19, 2, 34, 0, 32, 2, 80, 2, 34, 2, 50, 1, 47, 2, 56, 0, 54, 2, 61, 0, 56, 2, 66, 0, 62, 2, 60, 0, 63, 2, 67, 0, 66, 2, 60, 0, 67, 2, 74, 2, 76, 2, 87, 1, 84, 2])
-nodes = Array[OScriptNode]([SubResource("OScriptNodeEvent_dy72c"), SubResource("OScriptNodeBranch_0jjom"), SubResource("OScriptNodeOperator_fp7a6"), SubResource("OScriptNodePropertyGet_nw736"), SubResource("OScriptNodeSelf_783ln"), SubResource("OScriptNodeCallMemberFunction_rq208"), SubResource("OScriptNodeSceneNode_jibhk"), SubResource("OScriptNodePropertySet_1obox"), SubResource("OScriptNodePropertyGet_0jjom"), SubResource("OScriptNodeSelf_fp7a6"), SubResource("OScriptNodeCallMemberFunction_ymqtv"), SubResource("OScriptNodeVariableSet_nw736"), SubResource("OScriptNodeEvent_ybifj"), SubResource("OScriptNodeBranch_vn7p6"), SubResource("OScriptNodeCallMemberFunction_4bucn"), SubResource("OScriptNodePropertySet_33rl5"), SubResource("OScriptNodePropertyGet_u8owd"), SubResource("OScriptNodeSequence_kim2o"), SubResource("OScriptNodeBranch_76w1s"), SubResource("OScriptNodeSceneNode_iaxyj"), SubResource("OScriptNodePropertyGet_kwclw"), SubResource("OScriptNodeCallMemberFunction_2q445"), SubResource("OScriptNodeOperator_1u1qb"), SubResource("OScriptNodePropertySet_47b14"), SubResource("OScriptNodeVariableGet_3lmvj"), SubResource("OScriptNodeComposeFrom_ge4su"), SubResource("OScriptNodeSceneNode_fp7a6"), SubResource("OScriptNodePropertySet_ymqtv"), SubResource("OScriptNodeSceneNode_0jjom"), SubResource("OScriptNodeSceneNode_ymqtv"), SubResource("OScriptNodeSceneNode_nw736"), SubResource("OScriptNodeSceneNode_783ln"), SubResource("OScriptNodeSceneNode_0txgl"), SubResource("OScriptNodeCallMemberFunction_0jjom"), SubResource("OScriptNodeSceneNode_rq208"), SubResource("OScriptNodeOperator_0jjom"), SubResource("OScriptNodeVariableSet_0jjom"), SubResource("OScriptNodeComposeFrom_fp7a6"), SubResource("OScriptNodeSceneNode_1obox"), SubResource("OScriptNodePropertyGet_y6ngt"), SubResource("OScriptNodeDecompose_uhsyf"), SubResource("OScriptNodeCallMemberFunction_jsh5u"), SubResource("OScriptNodeBranch_4uvnj"), SubResource("OScriptNodeOperator_gpd1u"), SubResource("OScriptNodePropertySet_5g7p1"), SubResource("OScriptNodeSceneNode_i1vgo"), SubResource("OScriptNodeComposeFrom_ltd1u"), SubResource("OScriptNodeVariableGet_bvugk"), SubResource("OScriptNodeDecompose_eura2"), SubResource("OScriptNodeOperator_dfa5x"), SubResource("OScriptNodeVariableGet_yw7n4"), SubResource("OScriptNodeOperator_65mag"), SubResource("OScriptNodePropertySet_70ydi"), SubResource("OScriptNodeCallBuiltinFunction_gm4no"), SubResource("OScriptNodeVariableGet_wacjo"), SubResource("OScriptNodeDecompose_xesl1"), SubResource("OScriptNodeComposeFrom_psauq"), SubResource("OScriptNodeCallBuiltinFunction_g4vcl"), SubResource("OScriptNodePropertyGet_fp7a6"), SubResource("OScriptNodeSceneNode_y6ngt"), SubResource("OScriptNodeDecompose_jsh5u"), SubResource("OScriptNodeCallMemberFunction_fp7a6"), SubResource("OScriptNodeOperator_ymqtv"), SubResource("OScriptNodeDecompose_0jjom"), SubResource("OScriptNodeDecompose_fp7a6"), SubResource("OScriptNodeComposeFrom_ymqtv"), SubResource("OScriptNodeOperator_nw736"), SubResource("OScriptNodePropertyGet_ymqtv"), SubResource("OScriptNodeSceneNode_uhsyf"), SubResource("OScriptNodeDecompose_4uvnj"), SubResource("OScriptNodeOperator_783ln"), SubResource("OScriptNodeVariableGet_rqurh"), SubResource("OScriptNodeCallMemberFunction_561wg"), SubResource("OScriptNodePropertyGet_g37hr"), SubResource("OScriptNodeSelf_l4dva"), SubResource("OScriptNodeCallMemberFunction_fpbr3"), SubResource("OScriptNodeEvent_fp7a6"), SubResource("OScriptNodeSceneNode_jsh5u")])
+connections = Array[int]([0, 0, 4, 0, 94, 0, 5, 0, 8, 0, 7, 0, 7, 0, 9, 0, 4, 0, 11, 0, 25, 0, 17, 0, 42, 0, 18, 0, 17, 0, 19, 0, 38, 0, 23, 0, 91, 0, 25, 0, 25, 1, 26, 0, 27, 0, 28, 0, 41, 0, 30, 0, 28, 0, 31, 0, 96, 0, 32, 0, 80, 0, 34, 0, 25, 2, 36, 0, 25, 4, 43, 0, 18, 0, 45, 0, 51, 0, 46, 0, 50, 0, 47, 0, 48, 0, 49, 0, 49, 0, 50, 0, 25, 3, 51, 0, 46, 0, 52, 0, 52, 0, 54, 0, 59, 0, 56, 0, 57, 0, 58, 0, 58, 0, 59, 0, 60, 0, 61, 0, 52, 1, 62, 0, 65, 0, 63, 0, 64, 0, 65, 0, 63, 0, 66, 0, 65, 2, 67, 0, 23, 0, 74, 0, 74, 0, 76, 0, 79, 0, 78, 0, 78, 0, 80, 0, 16, 1, 81, 0, 87, 0, 84, 0, 86, 0, 85, 0, 88, 0, 87, 0, 16, 0, 91, 0, 74, 1, 92, 0, 26, 0, 96, 0, 99, 0, 97, 0, 97, 0, 98, 0, 5, 0, 4, 1, 9, 0, 5, 1, 10, 0, 11, 1, 45, 0, 17, 1, 37, 0, 19, 1, 31, 0, 26, 1, 30, 0, 31, 1, 39, 0, 32, 1, 33, 0, 34, 1, 35, 0, 36, 1, 44, 0, 43, 1, 51, 1, 46, 1, 95, 0, 51, 1, 46, 1, 52, 1, 55, 0, 54, 1, 98, 1, 56, 1, 60, 0, 59, 1, 58, 2, 61, 1, 55, 0, 62, 1, 98, 1, 66, 1, 92, 0, 76, 1, 91, 1, 81, 1, 89, 0, 84, 1, 85, 0, 87, 1, 90, 0, 91, 1, 81, 0, 92, 1, 47, 0, 95, 1, 34, 0, 96, 1, 76, 0, 19, 2, 34, 0, 32, 2, 80, 2, 34, 2, 50, 1, 47, 2, 56, 0, 54, 2, 61, 0, 56, 2, 66, 0, 62, 2, 60, 0, 63, 2, 67, 0, 66, 2, 60, 0, 67, 2, 74, 2, 76, 2, 87, 1, 84, 2])
+nodes = Array[OScriptNode]([SubResource("OScriptNodeEvent_dy72c"), SubResource("OScriptNodeBranch_0jjom"), SubResource("OScriptNodeOperator_fp7a6"), SubResource("OScriptNodePropertyGet_nw736"), SubResource("OScriptNodeSelf_783ln"), SubResource("OScriptNodeCallMemberFunction_rq208"), SubResource("OScriptNodeSceneNode_jibhk"), SubResource("OScriptNodePropertySet_1obox"), SubResource("OScriptNodeEvent_ybifj"), SubResource("OScriptNodeBranch_vn7p6"), SubResource("OScriptNodeCallMemberFunction_4bucn"), SubResource("OScriptNodePropertySet_33rl5"), SubResource("OScriptNodePropertyGet_u8owd"), SubResource("OScriptNodeSequence_kim2o"), SubResource("OScriptNodeBranch_76w1s"), SubResource("OScriptNodeSceneNode_iaxyj"), SubResource("OScriptNodePropertyGet_kwclw"), SubResource("OScriptNodeCallMemberFunction_2q445"), SubResource("OScriptNodeOperator_1u1qb"), SubResource("OScriptNodePropertySet_47b14"), SubResource("OScriptNodeVariableGet_3lmvj"), SubResource("OScriptNodeComposeFrom_ge4su"), SubResource("OScriptNodeSceneNode_fp7a6"), SubResource("OScriptNodePropertySet_ymqtv"), SubResource("OScriptNodeSceneNode_0jjom"), SubResource("OScriptNodeSceneNode_ymqtv"), SubResource("OScriptNodeSceneNode_nw736"), SubResource("OScriptNodeSceneNode_783ln"), SubResource("OScriptNodeSceneNode_0txgl"), SubResource("OScriptNodeCallMemberFunction_0jjom"), SubResource("OScriptNodeSceneNode_rq208"), SubResource("OScriptNodeOperator_0jjom"), SubResource("OScriptNodeVariableSet_0jjom"), SubResource("OScriptNodeComposeFrom_fp7a6"), SubResource("OScriptNodeSceneNode_1obox"), SubResource("OScriptNodePropertyGet_y6ngt"), SubResource("OScriptNodeDecompose_uhsyf"), SubResource("OScriptNodeCallMemberFunction_jsh5u"), SubResource("OScriptNodeBranch_4uvnj"), SubResource("OScriptNodePropertySet_5g7p1"), SubResource("OScriptNodeSceneNode_i1vgo"), SubResource("OScriptNodeComposeFrom_ltd1u"), SubResource("OScriptNodeVariableGet_bvugk"), SubResource("OScriptNodeDecompose_eura2"), SubResource("OScriptNodeOperator_dfa5x"), SubResource("OScriptNodeVariableGet_yw7n4"), SubResource("OScriptNodeOperator_65mag"), SubResource("OScriptNodePropertySet_70ydi"), SubResource("OScriptNodeCallBuiltinFunction_gm4no"), SubResource("OScriptNodeVariableGet_wacjo"), SubResource("OScriptNodeDecompose_xesl1"), SubResource("OScriptNodeComposeFrom_psauq"), SubResource("OScriptNodeCallBuiltinFunction_g4vcl"), SubResource("OScriptNodeDecompose_0jjom"), SubResource("OScriptNodeComposeFrom_ymqtv"), SubResource("OScriptNodePropertyGet_ymqtv"), SubResource("OScriptNodeSceneNode_uhsyf"), SubResource("OScriptNodeDecompose_4uvnj"), SubResource("OScriptNodeOperator_783ln"), SubResource("OScriptNodeCallMemberFunction_561wg"), SubResource("OScriptNodePropertyGet_g37hr"), SubResource("OScriptNodeSelf_l4dva"), SubResource("OScriptNodeCallMemberFunction_fpbr3"), SubResource("OScriptNodeEvent_fp7a6"), SubResource("OScriptNodeSceneNode_jsh5u"), SubResource("OScriptNodeEngineSingleton_0jjom"), SubResource("OScriptNodeCallMemberFunction_nw736"), SubResource("OScriptNodeOperator_ymqtv"), SubResource("OScriptNodeVariableGet_0jjom"), SubResource("OScriptNodeOperator_nw736"), SubResource("OScriptNodeCallBuiltinFunction_0jjom"), SubResource("OScriptNodePropertyGet_0jjom"), SubResource("OScriptNodeDecompose_fp7a6"), SubResource("OScriptNodeSceneNode_y6ngt")])
 graphs = Array[OScriptGraph]([SubResource("OScriptGraph_x8yju")])
