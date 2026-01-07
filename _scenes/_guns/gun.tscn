@@ -1,9 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://6s5t6dwugms2"]
+[gd_scene load_steps=3 format=3 uid="uid://6s5t6dwugms2"]
+
+[ext_resource type="Script" uid="uid://p1rr1y8yta4h" path="res://_scenes/_guns/gun.torch" id="1_adhah"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_xywfx"]
 
 [node name="Gun" type="Node3D"]
+script = ExtResource("1_adhah")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.2382868, 0, 0, 0, 0.21244287, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("BoxMesh_xywfx")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+target_position = Vector3(0, 0, 1000)

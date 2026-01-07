@@ -17,6 +17,9 @@ properties/2/replication_mode = 1
 properties/3/path = NodePath(".:rotation")
 properties/3/spawn = false
 properties/3/replication_mode = 1
+properties/4/path = NodePath("Camera3D:rotation")
+properties/4/spawn = false
+properties/4/replication_mode = 2
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_xt7i4"]
 properties/0/path = NodePath("PlayerInputSync:direction")
@@ -53,11 +56,11 @@ shape = SubResource("CapsuleShape3D_vpg6s")
 mesh = SubResource("CapsuleMesh_xt7i4")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4420432, -0.4135812)
 
 [node name="Gun" parent="." instance=ExtResource("3_fp7a6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24931526, 0, -0.9787208)
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.71461093, 0, 0, 0, 0.32881522, 0, 0, 0, 0.25136077, 0, 0.48248374, -0.41437435)
+transform = Transform3D(0.71457815, 0, 0.0024084663, 0, 0.32881522, 0, -0.0068471953, 0, 0.25134924, 0, 0.48248374, -0.39528707)
 mesh = SubResource("BoxMesh_fp7a6")
