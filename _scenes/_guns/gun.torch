@@ -1,9 +1,12 @@
-[orchestration type="OScript" load_steps=22 format=3 uid="uid://p1rr1y8yta4h"]
+[orchestration type="OScript" load_steps=19 format=3 uid="uid://p1rr1y8yta4h"]
 
 [obj type="OScriptFunction" id="OScriptFunction_fp7a6"]
 guid = "45FD2542-DCA4-480C-8ECC-C6B31FF40861"
 method = {
-"name": &"fire"
+"name": &"fire",
+"return": {
+"name": &"return_value"
+}
 }
 user_defined = true
 id = 0
@@ -16,10 +19,10 @@ flags = 8
 
 [obj type="OScriptGraph" id="OScriptGraph_ymqtv"]
 graph_name = &"fire"
-offset = Vector2(-317.13360595703125, -322.83074951171875)
+offset = Vector2(450.236083984375, -694.7825317382813)
 zoom = 0.9999997019767761
 flags = 22
-nodes = Array[int]([0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16])
+nodes = Array[int]([0, 1, 3, 4, 7, 8, 9, 10, 11, 12, 13])
 functions = Array[int]([0])
 
 [obj type="OScriptNodeFunctionEntry" id="OScriptNodeFunctionEntry_nw736"]
@@ -31,231 +34,104 @@ pin_data = Array[Dictionary]([{
 "flags": 4
 }])
 
-[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_783ln"]
-function_name = &"get_world_3d"
-target_class_name = "Node3D"
-target_type = 24
-flags = 522
-method = {
-"name": &"get_world_3d",
-"return": {
-"type": 24,
-"class_name": &"World3D",
-"hint": 17,
-"hint_string": "World3D"
-},
-"flags": 5
-}
-chain = false
+[obj type="OScriptNodeVariableGet" id="OScriptNodeVariableGet_fp7a6"]
+variable_name = &"cam"
 id = 1
-position = Vector2(2580, 280)
+position = Vector2(-220, -160)
+pin_data = Array[Dictionary]([{
+"pin_name": &"value",
+"type": 24,
+"dir": 1,
+"flags": 2050,
+"label": "cam",
+"target_class": "Camera3D",
+"dv": null,
+"hint": 34,
+"hint_string": "Camera3D",
+"usage": 4102
+}])
+
+[obj type="OScriptNodePropertyGet" id="OScriptNodePropertyGet_ymqtv"]
+mode = 1
+target_class = &"Node3D"
+property_name = &"global_position"
+property = {
+"name": &"global_position",
+"type": 9,
+"class_name": &"",
+"hint": 0,
+"hint_string": "",
+"usage": 0
+}
+id = 3
+position = Vector2(100, -160)
 pin_data = Array[Dictionary]([{
 "pin_name": &"target",
 "type": 24,
 "flags": 2050,
 "label": "Node3D",
-"target_class": "Node3D"
-}, {
-"pin_name": &"return_value",
-"type": 24,
-"dir": 1,
-"flags": 2,
-"label": "World3D",
-"target_class": "World3D",
-"dv": null,
-"hint": 17,
-"hint_string": "World3D"
-}])
-
-[obj type="OScriptNodePropertyGet" id="OScriptNodePropertyGet_rq208"]
-mode = 1
-target_class = &"World3D"
-property_name = &"direct_space_state"
-property_hint = "PhysicsDirectSpaceState3D"
-property = {
-"name": &"direct_space_state",
-"type": 24,
-"class_name": &"PhysicsDirectSpaceState3D",
-"hint": 17,
-"hint_string": "PhysicsDirectSpaceState3D",
-"usage": 0
-}
-id = 2
-position = Vector2(2980, 280)
-pin_data = Array[Dictionary]([{
-"pin_name": &"target",
-"type": 24,
-"flags": 2050,
-"label": "World3D",
-"target_class": "World3D",
+"target_class": "Node3D",
 "dv": null
 }, {
-"pin_name": &"direct_space_state",
-"type": 24,
+"pin_name": &"global_position",
+"type": 9,
 "dir": 1,
 "flags": 2,
-"target_class": "PhysicsDirectSpaceState3D",
-"dv": null,
-"hint": 17,
-"hint_string": "PhysicsDirectSpaceState3D",
+"dv": Vector3(0, 0, 0),
 "usage": 0
 }])
 
-[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_jibhk"]
-function_name = &"get_viewport"
-target_class_name = "Node"
-target_type = 24
-flags = 522
-method = {
-"name": &"get_viewport",
-"return": {
-"type": 24,
-"class_name": &"Viewport"
-},
-"flags": 5
-}
-chain = false
-id = 3
-position = Vector2(0, 300)
-pin_data = Array[Dictionary]([{
-"pin_name": &"target",
-"type": 24,
-"flags": 2050,
-"label": "Node",
-"target_class": "Node"
-}, {
-"pin_name": &"return_value",
-"type": 24,
-"dir": 1,
-"flags": 2,
-"label": "Viewport",
-"target_class": "Viewport",
-"dv": null
-}])
-
-[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_1obox"]
-function_name = &"get_mouse_position"
-target_class_name = "Viewport"
-target_type = 24
-flags = 522
-method = {
-"name": &"get_mouse_position",
-"return": {
-"type": 5
-},
-"flags": 5
-}
-chain = false
+[obj type="OScriptNodeVariableSet" id="OScriptNodeVariableSet_nw736"]
+variable_name = &"shot_start"
 id = 4
-position = Vector2(540, 300)
-pin_data = Array[Dictionary]([{
-"pin_name": &"target",
-"type": 24,
-"flags": 2050,
-"label": "Viewport",
-"target_class": "Viewport",
-"dv": null
-}, {
-"pin_name": &"return_value",
-"type": 5,
-"dir": 1,
-"flags": 1026,
-"dv": Vector2(0, 0)
-}])
-
-[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_uhsyf"]
-function_name = &"project_ray_origin"
-target_class_name = "Camera3D"
-target_type = 24
-flags = 522
-method = {
-"name": &"project_ray_origin",
-"return": {
-"type": 9
-},
-"flags": 5,
-"args": [{
-"name": &"screen_point",
-"type": 5
-}]
-}
-chain = false
-id = 6
-position = Vector2(920, 0)
+position = Vector2(580, 0)
 pin_data = Array[Dictionary]([{
 "pin_name": &"ExecIn",
 "flags": 4
+}, {
+"pin_name": &"shot_start",
+"type": 9,
+"flags": 2050,
+"usage": 4102
 }, {
 "pin_name": &"ExecOut",
 "dir": 1,
 "flags": 4
 }, {
-"pin_name": &"target",
-"type": 24,
-"flags": 2050,
-"label": "Camera3D",
-"target_class": "Camera3D",
-"dv": null
-}, {
-"pin_name": &"screen_point",
-"type": 5,
-"flags": 2,
-"dv": Vector2(0, 0)
-}, {
-"pin_name": &"return_value",
+"pin_name": &"value",
 "type": 9,
 "dir": 1,
 "flags": 1026,
-"dv": Vector3(0, 0, 0)
+"usage": 4102
 }])
 
-[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_jsh5u"]
-function_name = &"project_ray_normal"
-target_class_name = "Camera3D"
-target_type = 24
-flags = 522
-method = {
-"name": &"project_ray_normal",
-"return": {
-"type": 9
-},
-"flags": 5,
-"args": [{
-"name": &"screen_point",
-"type": 5
-}]
-}
-chain = false
+[obj type="OScriptNodeDecompose" id="OScriptNodeDecompose_rq208"]
 id = 7
-position = Vector2(1440, -20)
+position = Vector2(560, -360)
 pin_data = Array[Dictionary]([{
-"pin_name": &"ExecIn",
-"flags": 4
+"pin_name": &"value",
+"type": 17,
+"flags": 10,
+"dv": Basis(1, 0, 0, 0, 1, 0, 0, 0, 1)
 }, {
-"pin_name": &"ExecOut",
-"dir": 1,
-"flags": 4
-}, {
-"pin_name": &"target",
-"type": 24,
-"flags": 2050,
-"label": "Camera3D",
-"target_class": "Camera3D",
-"dv": null
-}, {
-"pin_name": &"screen_point",
-"type": 5,
-"flags": 2,
-"dv": Vector2(0, 0)
-}, {
-"pin_name": &"return_value",
+"pin_name": &"x",
 "type": 9,
 "dir": 1,
-"flags": 1026,
+"flags": 2
+}, {
+"pin_name": &"y",
+"type": 9,
+"dir": 1,
+"flags": 2
+}, {
+"pin_name": &"z",
+"type": 9,
+"dir": 1,
+"flags": 2,
 "dv": Vector3(0, 0, 0)
 }])
 
-[obj type="OScriptNodeOperator" id="OScriptNodeOperator_fp7a6"]
+[obj type="OScriptNodeOperator" id="OScriptNodeOperator_jibhk"]
 op = 8
 code = &"*"
 name = &"Multiply"
@@ -265,7 +141,89 @@ right_type = 9
 right_type_name = &"Vector3"
 return_type = 9
 id = 8
-position = Vector2(1900, 180)
+position = Vector2(1020, -360)
+pin_data = Array[Dictionary]([{
+"pin_name": &"a",
+"type": 3,
+"flags": 2,
+"dv": -1.0
+}, {
+"pin_name": &"b",
+"type": 9,
+"flags": 2,
+"dv": Vector3(0, 0, 0)
+}, {
+"pin_name": &"result",
+"type": 9,
+"dir": 1,
+"flags": 2,
+"dv": Vector3(0, 0, 0)
+}])
+
+[obj type="OScriptNodeVariableSet" id="OScriptNodeVariableSet_1obox"]
+variable_name = &"shot_end"
+id = 9
+position = Vector2(2320, 0)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"shot_end",
+"type": 9,
+"flags": 2050,
+"usage": 4102
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}, {
+"pin_name": &"value",
+"type": 9,
+"dir": 1,
+"flags": 1026,
+"usage": 4102
+}])
+
+[obj type="OScriptNodeOperator" id="OScriptNodeOperator_y6ngt"]
+op = 6
+code = &"+"
+name = &"Addition"
+left_type = 9
+left_type_name = &"Vector3"
+right_type = 9
+right_type_name = &"Vector3"
+return_type = 9
+id = 10
+position = Vector2(1840, -360)
+pin_data = Array[Dictionary]([{
+"pin_name": &"a",
+"type": 9,
+"flags": 2,
+"dv": Vector3(0, 0, 0)
+}, {
+"pin_name": &"b",
+"type": 9,
+"flags": 2,
+"dv": Vector3(0, 0, 0)
+}, {
+"pin_name": &"result",
+"type": 9,
+"dir": 1,
+"flags": 2,
+"dv": Vector3(0, 0, 0)
+}])
+
+[obj type="OScriptNodeOperator" id="OScriptNodeOperator_uhsyf"]
+op = 8
+code = &"*"
+name = &"Multiply"
+left_type = 3
+left_type_name = &"float"
+right_type = 9
+right_type_name = &"Vector3"
+return_type = 9
+id = 11
+position = Vector2(1460, -360)
 pin_data = Array[Dictionary]([{
 "pin_name": &"a",
 "type": 3,
@@ -284,10 +242,10 @@ pin_data = Array[Dictionary]([{
 "dv": Vector3(0, 0, 0)
 }])
 
-[obj type="OScriptNodeVariableGet" id="OScriptNodeVariableGet_ymqtv"]
+[obj type="OScriptNodeVariableGet" id="OScriptNodeVariableGet_jsh5u"]
 variable_name = &"RAY_LENGTH"
-id = 9
-position = Vector2(1460, -180)
+id = 12
+position = Vector2(1140, -500)
 pin_data = Array[Dictionary]([{
 "pin_name": &"value",
 "type": 2,
@@ -298,239 +256,34 @@ pin_data = Array[Dictionary]([{
 "usage": 4102
 }])
 
-[obj type="OScriptNodeOperator" id="OScriptNodeOperator_nw736"]
-op = 6
-code = &"+"
-name = &"Addition"
-left_type = 9
-left_type_name = &"Vector3"
-right_type = 9
-right_type_name = &"Vector3"
-return_type = 9
-id = 10
-position = Vector2(2240, 40)
-pin_data = Array[Dictionary]([{
-"pin_name": &"a",
-"type": 9,
-"flags": 2,
-"dv": Vector3(0, 0, 0)
-}, {
-"pin_name": &"b",
-"type": 9,
-"flags": 2,
-"dv": Vector3(0, 0, 0)
-}, {
-"pin_name": &"result",
-"type": 9,
-"dir": 1,
-"flags": 2,
-"dv": Vector3(0, 0, 0)
-}])
-
-[obj type="OScriptNodeCallStaticFunction" id="OScriptNodeCallStaticFunction_783ln"]
-class_name = &"PhysicsRayQueryParameters3D"
-function_name = &"create"
-id = 11
-position = Vector2(2540, -40)
-pin_data = Array[Dictionary]([{
-"pin_name": &"ExecIn",
-"flags": 4
-}, {
-"pin_name": &"ExecOut",
-"dir": 1,
-"flags": 4
-}, {
-"pin_name": &"from",
-"type": 9,
-"flags": 2,
-"dv": Vector3(0, 0, 0)
-}, {
-"pin_name": &"to",
-"type": 9,
-"flags": 2,
-"dv": Vector3(0, 0, 0)
-}, {
-"pin_name": &"collision_mask",
-"type": 2,
-"flags": 2,
-"dv": 4294967295
-}, {
-"pin_name": &"exclude",
-"type": 28,
-"flags": 2,
-"dv": Array[RID]([]),
-"hint": 31,
-"hint_string": "RID"
-}, {
-"pin_name": &"return_value",
-"type": 24,
-"dir": 1,
-"flags": 2,
-"label": "PhysicsRayQueryParameters3D",
-"target_class": "PhysicsRayQueryParameters3D",
-"dv": null,
-"hint": 17,
-"hint_string": "PhysicsRayQueryParameters3D"
-}])
-
-[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_rq208"]
-function_name = &"intersect_ray"
-target_class_name = "PhysicsDirectSpaceState3D"
-target_type = 24
-flags = 520
-method = {
-"name": &"intersect_ray",
-"return": {
-"type": 27
-},
-"args": [{
-"name": &"parameters",
-"type": 24,
-"class_name": &"PhysicsRayQueryParameters3D",
-"hint": 17,
-"hint_string": "PhysicsRayQueryParameters3D"
-}]
+[obj type="OScriptNodePropertyGet" id="OScriptNodePropertyGet_fp7a6"]
+mode = 1
+target_class = &"Node3D"
+property_name = &"global_basis"
+property = {
+"name": &"global_basis",
+"type": 17,
+"class_name": &"",
+"hint": 0,
+"hint_string": "",
+"usage": 0
 }
-chain = false
-id = 12
-position = Vector2(3600, -40)
+id = 13
+position = Vector2(80, -320)
 pin_data = Array[Dictionary]([{
-"pin_name": &"ExecIn",
-"flags": 4
-}, {
-"pin_name": &"ExecOut",
-"dir": 1,
-"flags": 4
-}, {
 "pin_name": &"target",
 "type": 24,
 "flags": 2050,
-"label": "PhysicsDirectSpaceState3D",
-"target_class": "PhysicsDirectSpaceState3D",
+"label": "Node3D",
+"target_class": "Node3D",
 "dv": null
 }, {
-"pin_name": &"parameters",
-"type": 24,
-"flags": 2,
-"target_class": "PhysicsRayQueryParameters3D",
-"dv": null,
-"hint": 17,
-"hint_string": "PhysicsRayQueryParameters3D"
-}, {
-"pin_name": &"return_value",
-"type": 27,
-"dir": 1,
-"flags": 1026,
-"dv": {}
-}])
-
-[obj type="OScriptNodeCallBuiltinFunction" id="OScriptNodeCallBuiltinFunction_jibhk"]
-function_name = &"print"
-flags = 33
-method = {
-"name": &"print",
-"flags": 17,
-"args": [{
-"name": &"arg1",
-"usage": 131078
-}]
-}
-variable_arg_count = 0
-id = 13
-position = Vector2(4640, -60)
-pin_data = Array[Dictionary]([{
-"pin_name": &"ExecIn",
-"flags": 4
-}, {
-"pin_name": &"ExecOut",
-"dir": 1,
-"flags": 4
-}, {
-"pin_name": &"arg1",
-"flags": 2,
-"usage": 131078
-}])
-
-[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_y6ngt"]
-function_name = &"get"
-target_type = 27
-flags = 522
-method = {
-"name": &"get",
-"return": {
-"usage": 131078
-},
-"flags": 5,
-"args": [{
-"name": &"key",
-"usage": 131078
-}, {
-"name": &"default",
-"usage": 131078
-}]
-}
-chain = false
-id = 14
-position = Vector2(4220, -40)
-pin_data = Array[Dictionary]([{
-"pin_name": &"ExecIn",
-"flags": 4
-}, {
-"pin_name": &"ExecOut",
-"dir": 1,
-"flags": 4
-}, {
-"pin_name": &"target",
-"type": 27,
-"flags": 2058,
-"label": "Dictionary",
-"dv": {}
-}, {
-"pin_name": &"key",
-"flags": 2,
-"usage": 131078
-}, {
-"pin_name": &"default",
-"flags": 2,
-"usage": 131078
-}, {
-"pin_name": &"return_value",
-"dir": 1,
-"flags": 1026,
-"usage": 131078
-}])
-
-[obj type="OScriptNodeComposeFrom" id="OScriptNodeComposeFrom_uhsyf"]
-id = 15
-position = Vector2(3800, 220)
-pin_data = Array[Dictionary]([{
-"pin_name": &"from",
-"type": 4,
-"flags": 2,
-"dv": "collider"
-}, {
-"pin_name": &"value",
-"type": 4,
+"pin_name": &"global_basis",
+"type": 17,
 "dir": 1,
 "flags": 2,
-"dv": ""
-}])
-
-[obj type="OScriptNodeVariableGet" id="OScriptNodeVariableGet_fp7a6"]
-variable_name = &"cam"
-id = 16
-position = Vector2(540, -140)
-pin_data = Array[Dictionary]([{
-"pin_name": &"value",
-"type": 24,
-"dir": 1,
-"flags": 2050,
-"label": "cam",
-"target_class": "Camera3D",
-"dv": null,
-"hint": 34,
-"hint_string": "Camera3D",
-"usage": 4102
+"dv": Basis(1, 0, 0, 0, 1, 0, 0, 0, 1),
+"usage": 0
 }])
 
 [obj type="OScriptVariable" id="OScriptVariable_4uvnj"]
@@ -548,10 +301,26 @@ exported = true
 classification = "class:Camera3D"
 type = 24
 
+[obj type="OScriptVariable" id="OScriptVariable_gpd1u"]
+name = "shot_start"
+category = "Default"
+exported = true
+classification = "type:Vector3"
+type = 9
+default_value = Vector3(0, 0, 0)
+
+[obj type="OScriptVariable" id="OScriptVariable_5g7p1"]
+name = "shot_end"
+category = "Default"
+exported = true
+classification = "type:Vector3"
+type = 9
+default_value = Vector3(0, 0, 0)
+
 [resource]
 base_type = &"Node3D"
-variables = Array[OScriptVariable]([SubResource("OScriptVariable_4uvnj"), SubResource("OScriptVariable_ymqtv")])
+variables = Array[OScriptVariable]([SubResource("OScriptVariable_4uvnj"), SubResource("OScriptVariable_ymqtv"), SubResource("OScriptVariable_gpd1u"), SubResource("OScriptVariable_5g7p1")])
 functions = Array[OScriptFunction]([SubResource("OScriptFunction_fp7a6")])
-connections = Array[int]([1, 0, 2, 0, 3, 0, 4, 0, 0, 0, 6, 0, 6, 0, 7, 0, 9, 0, 8, 0, 6, 1, 10, 0, 7, 0, 11, 0, 11, 0, 12, 0, 14, 0, 13, 0, 12, 0, 14, 0, 16, 0, 6, 1, 16, 0, 7, 1, 7, 1, 8, 1, 8, 0, 10, 1, 6, 1, 11, 1, 2, 0, 12, 1, 14, 1, 13, 1, 12, 1, 14, 1, 4, 0, 6, 2, 4, 0, 7, 2, 10, 0, 11, 2, 11, 1, 12, 2, 15, 0, 14, 2])
-nodes = Array[OScriptNode]([SubResource("OScriptNodeFunctionEntry_nw736"), SubResource("OScriptNodeCallMemberFunction_783ln"), SubResource("OScriptNodePropertyGet_rq208"), SubResource("OScriptNodeCallMemberFunction_jibhk"), SubResource("OScriptNodeCallMemberFunction_1obox"), SubResource("OScriptNodeCallMemberFunction_uhsyf"), SubResource("OScriptNodeCallMemberFunction_jsh5u"), SubResource("OScriptNodeOperator_fp7a6"), SubResource("OScriptNodeVariableGet_ymqtv"), SubResource("OScriptNodeOperator_nw736"), SubResource("OScriptNodeCallStaticFunction_783ln"), SubResource("OScriptNodeCallMemberFunction_rq208"), SubResource("OScriptNodeCallBuiltinFunction_jibhk"), SubResource("OScriptNodeCallMemberFunction_y6ngt"), SubResource("OScriptNodeComposeFrom_uhsyf"), SubResource("OScriptNodeVariableGet_fp7a6")])
+connections = Array[int]([1, 0, 3, 0, 0, 0, 4, 0, 13, 0, 7, 0, 4, 0, 9, 0, 11, 0, 10, 0, 12, 0, 11, 0, 1, 0, 13, 0, 3, 0, 4, 1, 7, 2, 8, 1, 10, 0, 9, 1, 4, 1, 10, 1, 8, 0, 11, 1])
+nodes = Array[OScriptNode]([SubResource("OScriptNodeFunctionEntry_nw736"), SubResource("OScriptNodeVariableGet_fp7a6"), SubResource("OScriptNodePropertyGet_ymqtv"), SubResource("OScriptNodeVariableSet_nw736"), SubResource("OScriptNodeDecompose_rq208"), SubResource("OScriptNodeOperator_jibhk"), SubResource("OScriptNodeVariableSet_1obox"), SubResource("OScriptNodeOperator_y6ngt"), SubResource("OScriptNodeOperator_uhsyf"), SubResource("OScriptNodeVariableGet_jsh5u"), SubResource("OScriptNodePropertyGet_fp7a6")])
 graphs = Array[OScriptGraph]([SubResource("OScriptGraph_xywfx"), SubResource("OScriptGraph_ymqtv")])
