@@ -1,8 +1,36 @@
-[gd_scene load_steps=3 format=3 uid="uid://6s5t6dwugms2"]
+[gd_scene load_steps=8 format=3 uid="uid://6s5t6dwugms2"]
 
 [ext_resource type="Script" uid="uid://p1rr1y8yta4h" path="res://_scenes/_guns/gun.torch" id="1_adhah"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_xywfx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_adhah"]
+albedo_color = Color(1, 1, 0.7490196, 1)
+emission_enabled = true
+emission = Color(1, 0.26666668, 0, 1)
+emission_energy_multiplier = 3.0
+
+[sub_resource type="Curve" id="Curve_o8fpq"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.55431753, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_embfb"]
+curve = SubResource("Curve_o8fpq")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_v6jub"]
+direction = Vector3(0, 0, -1)
+spread = 20.0
+initial_velocity_min = 6.0
+initial_velocity_max = 8.0
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_embfb")
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_adhah"]
+radius = 0.1
+radial_steps = 4
+sections = 4
+section_length = 0.1
+section_rings = 5
 
 [node name="Gun" type="Node3D"]
 script = ExtResource("1_adhah")
@@ -11,5 +39,19 @@ script = ExtResource("1_adhah")
 transform = Transform3D(0.2382868, 0, 0, 0, 0.21244287, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("BoxMesh_xywfx")
 
-[node name="RayCast3D" type="RayCast3D" parent="."]
-target_position = Vector3(0, 0, 1000)
+[node name="GunBarrel" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5673005)
+
+[node name="MuzzleFlash" type="GPUParticles3D" parent="GunBarrel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.14373851)
+material_override = SubResource("StandardMaterial3D_adhah")
+gi_lightmap_texel_scale = 0.5
+emitting = false
+amount = 20
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+local_coords = true
+transform_align = 3
+process_material = SubResource("ParticleProcessMaterial_v6jub")
+draw_pass_1 = SubResource("TubeTrailMesh_adhah")
