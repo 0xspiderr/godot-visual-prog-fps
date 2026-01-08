@@ -32,15 +32,16 @@ sections = 4
 section_length = 0.1
 section_rings = 5
 
-[node name="Gun" type="Node3D"]
+[node name="Gun" type="Node3D" node_paths=PackedStringArray("gun_barrel_end")]
 script = ExtResource("1_adhah")
+gun_barrel_end = NodePath("GunBarrel")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.2382868, 0, 0, 0, 0.21244287, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("BoxMesh_xywfx")
 
 [node name="GunBarrel" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5673005)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.51005423)
 
 [node name="MuzzleFlash" type="GPUParticles3D" parent="GunBarrel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.14373851)

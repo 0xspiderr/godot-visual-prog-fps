@@ -1,4 +1,4 @@
-[orchestration type="OScript" load_steps=24 format=3 uid="uid://p1rr1y8yta4h"]
+[orchestration type="OScript" load_steps=39 format=3 uid="uid://p1rr1y8yta4h"]
 
 [obj type="OScriptFunction" id="OScriptFunction_fp7a6"]
 guid = "45FD2542-DCA4-480C-8ECC-C6B31FF40861"
@@ -26,26 +26,35 @@ method = {
 user_defined = true
 id = 16
 
+[obj type="OScriptFunction" id="OScriptFunction_peupl"]
+guid = "30141947-6AAD-4838-8535-C14B7D3E69F1"
+method = {
+"name": &"_ready",
+"flags": 8
+}
+id = 19
+
 [obj type="OScriptGraph" id="OScriptGraph_xywfx"]
 graph_name = &"EventGraph"
-offset = Vector2(-6, 0)
-zoom = 0.9090908765792848
+offset = Vector2(480.4801025390625, -191.572021484375)
 flags = 8
+nodes = Array[int]([19, 20, 21, 33, 34])
+functions = Array[int]([19])
 
 [obj type="OScriptGraph" id="OScriptGraph_ymqtv"]
 graph_name = &"fire"
-offset = Vector2(514.0416259765625, -375.6572265625)
-zoom = 0.7513144612312317
+offset = Vector2(669.720458984375, -575.7552490234375)
+zoom = 0.9090905785560608
 flags = 22
 nodes = Array[int]([0, 1, 3, 4, 7, 8, 9, 10, 11, 12, 13])
 functions = Array[int]([0])
 
 [obj type="OScriptGraph" id="OScriptGraph_isaxa"]
 graph_name = &"play_fire_effects"
-offset = Vector2(-296, 0)
-zoom = 1.3310000896453855
+offset = Vector2(1592.78076171875, -438.9478454589844)
+zoom = 0.8028879165649414
 flags = 22
-nodes = Array[int]([16, 17, 18])
+nodes = Array[int]([16, 17, 18, 25, 26, 27, 37, 38, 39, 40])
 functions = Array[int]([16])
 
 [obj type="OScriptNodeFunctionEntry" id="OScriptNodeFunctionEntry_nw736"]
@@ -311,12 +320,14 @@ pin_data = Array[Dictionary]([{
 "pin_name": &"vfx_start_pos",
 "type": 9,
 "dir": 1,
-"flags": 2
+"flags": 2,
+"dv": Vector3(0, 0, 0)
 }, {
 "pin_name": &"vfx_destination_pos",
 "type": 9,
 "dir": 1,
-"flags": 2
+"flags": 2,
+"dv": Vector3(0, 0, 0)
 }])
 
 [obj type="OScriptNodeSceneNode" id="OScriptNodeSceneNode_o8fpq"]
@@ -347,7 +358,7 @@ method = {
 }
 chain = false
 id = 18
-position = Vector2(540, 0)
+position = Vector2(540, -140)
 pin_data = Array[Dictionary]([{
 "pin_name": &"ExecIn",
 "flags": 4
@@ -366,6 +377,348 @@ pin_data = Array[Dictionary]([{
 "type": 1,
 "flags": 2,
 "dv": false
+}])
+
+[obj type="OScriptNodeEvent" id="OScriptNodeEvent_m70fm"]
+function_id = "30141947-6AAD-4838-8535-C14B7D3E69F1"
+id = 19
+position = Vector2(560, 240)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}])
+
+[obj type="OScriptNodeVariableSet" id="OScriptNodeVariableSet_v3wk2"]
+variable_name = &"bullet_trail_tscn"
+id = 20
+position = Vector2(1060, 240)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"bullet_trail_tscn",
+"type": 24,
+"flags": 2050,
+"target_class": "PackedScene",
+"hint": 17,
+"hint_string": "PackedScene",
+"usage": 4102
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}, {
+"pin_name": &"value",
+"type": 24,
+"dir": 1,
+"flags": 1026,
+"target_class": "PackedScene",
+"hint": 17,
+"hint_string": "PackedScene",
+"usage": 4102
+}])
+
+[obj type="OScriptNodePreload" id="OScriptNodePreload_04sib"]
+path = "res://_scenes/_guns/bullet_trail.tscn"
+id = 21
+position = Vector2(460, 480)
+pin_data = Array[Dictionary]([{
+"pin_name": &"path",
+"type": 24,
+"dir": 1,
+"flags": 2050,
+"label": "res://_scenes/_guns/bullet_trail.tscn",
+"target_class": "PackedScene",
+"dv": "",
+"gdv": ""
+}])
+
+[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_j3rvg"]
+function_name = &"get_tree"
+target_class_name = "Node"
+target_type = 24
+flags = 522
+method = {
+"name": &"get_tree",
+"return": {
+"type": 24,
+"class_name": &"SceneTree"
+},
+"flags": 5
+}
+chain = false
+id = 25
+position = Vector2(2160, 300)
+pin_data = Array[Dictionary]([{
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "Node",
+"target_class": "Node"
+}, {
+"pin_name": &"return_value",
+"type": 24,
+"dir": 1,
+"flags": 2,
+"label": "SceneTree",
+"target_class": "SceneTree",
+"dv": null
+}])
+
+[obj type="OScriptNodePropertyGet" id="OScriptNodePropertyGet_248ev"]
+mode = 1
+target_class = &"SceneTree"
+property_name = &"root"
+property_hint = "Node"
+property = {
+"name": &"root",
+"type": 24,
+"class_name": &"Node",
+"hint": 17,
+"hint_string": "Node",
+"usage": 0
+}
+id = 26
+position = Vector2(2540, 300)
+pin_data = Array[Dictionary]([{
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "SceneTree",
+"target_class": "SceneTree",
+"dv": null
+}, {
+"pin_name": &"root",
+"type": 24,
+"dir": 1,
+"flags": 2,
+"target_class": "Node",
+"dv": null,
+"hint": 17,
+"hint_string": "Node",
+"usage": 0
+}])
+
+[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_m2gw5"]
+function_name = &"add_child"
+target_class_name = "Node"
+target_type = 24
+flags = 520
+method = {
+"name": &"add_child",
+"default_args": [false, 0],
+"args": [{
+"name": &"node",
+"type": 24,
+"class_name": &"Node"
+}, {
+"name": &"force_readable_name",
+"type": 1
+}, {
+"name": &"internal",
+"type": 2,
+"class_name": &"Node.InternalMode",
+"usage": 65542
+}]
+}
+chain = false
+id = 27
+position = Vector2(3220, -240)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}, {
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "Node",
+"target_class": "Node",
+"dv": null
+}, {
+"pin_name": &"node",
+"type": 24,
+"flags": 2,
+"target_class": "Node",
+"dv": null
+}, {
+"pin_name": &"force_readable_name",
+"type": 1,
+"flags": 2,
+"dv": true
+}, {
+"pin_name": &"internal",
+"type": 2,
+"flags": 33554434,
+"target_class": "Node.InternalMode",
+"dv": 0,
+"usage": 65542
+}])
+
+[obj type="OScriptNodeSceneNode" id="OScriptNodeSceneNode_fp7a6"]
+node_path = NodePath("GunBarrel")
+target_class_name = "Marker3D"
+id = 33
+position = Vector2(1220, 80)
+pin_data = Array[Dictionary]([{
+"pin_name": &"GunBarrel",
+"type": 24,
+"dir": 1,
+"flags": 2050,
+"target_class": "Marker3D",
+"dv": null
+}])
+
+[obj type="OScriptNodeVariableSet" id="OScriptNodeVariableSet_ymqtv"]
+variable_name = &"gun_barrel_end"
+id = 34
+position = Vector2(1680, 240)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"gun_barrel_end",
+"type": 24,
+"flags": 2050,
+"target_class": "Marker3D",
+"hint": 34,
+"hint_string": "Marker3D",
+"usage": 4102
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}, {
+"pin_name": &"value",
+"type": 24,
+"dir": 1,
+"flags": 1026,
+"target_class": "Marker3D",
+"hint": 34,
+"hint_string": "Marker3D",
+"usage": 4102
+}])
+
+[obj type="OScriptNodeInstantiateScene" id="OScriptNodeInstantiateScene_peupl"]
+scene = "res://_scenes/_guns/bullet_trail.tscn"
+id = 37
+position = Vector2(1560, -120)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"scene",
+"type": 4,
+"flags": 8388610,
+"dv": "res://_scenes/_guns/bullet_trail.tscn",
+"hint": 13,
+"hint_string": "*.scn,*.tscn"
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}, {
+"pin_name": &"scene_root",
+"type": 24,
+"dir": 1,
+"flags": 2,
+"target_class": "MeshInstance3D",
+"dv": null
+}])
+
+[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_peupl"]
+function_name = &"init"
+target_class_name = "MeshInstance3D"
+target_type = 24
+flags = 520
+method = {
+"name": &"init",
+"args": [{
+"name": &"start",
+"type": 9
+}, {
+"name": &"end",
+"type": 9
+}]
+}
+chain = false
+id = 38
+position = Vector2(3980, -60)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}, {
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "MeshInstance3D",
+"target_class": "MeshInstance3D",
+"dv": null
+}, {
+"pin_name": &"start",
+"type": 9,
+"flags": 2,
+"dv": Vector3(0, 0, 0)
+}, {
+"pin_name": &"end",
+"type": 9,
+"flags": 2,
+"dv": Vector3(0, 0, 0)
+}])
+
+[obj type="OScriptNodeVariableGet" id="OScriptNodeVariableGet_peupl"]
+variable_name = &"gun_barrel_end"
+id = 39
+position = Vector2(3300, 400)
+pin_data = Array[Dictionary]([{
+"pin_name": &"value",
+"type": 24,
+"dir": 1,
+"flags": 2050,
+"label": "gun_barrel_end",
+"target_class": "Marker3D",
+"dv": null,
+"hint": 34,
+"hint_string": "Marker3D",
+"usage": 4102
+}])
+
+[obj type="OScriptNodePropertyGet" id="OScriptNodePropertyGet_m70fm"]
+mode = 1
+target_class = &"Node3D"
+property_name = &"global_position"
+property = {
+"name": &"global_position",
+"type": 9,
+"class_name": &"",
+"hint": 0,
+"hint_string": "",
+"usage": 0
+}
+id = 40
+position = Vector2(3500, 280)
+pin_data = Array[Dictionary]([{
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "Node3D",
+"target_class": "Node3D",
+"dv": null
+}, {
+"pin_name": &"global_position",
+"type": 9,
+"dir": 1,
+"flags": 2,
+"dv": Vector3(0, 0, 0),
+"usage": 0
 }])
 
 [obj type="OScriptVariable" id="OScriptVariable_4uvnj"]
@@ -399,10 +752,23 @@ classification = "type:Vector3"
 type = 9
 default_value = Vector3(0, 0, 0)
 
+[obj type="OScriptVariable" id="OScriptVariable_31fig"]
+name = "bullet_trail_tscn"
+category = "Default"
+classification = "class:PackedScene"
+type = 24
+
+[obj type="OScriptVariable" id="OScriptVariable_nw736"]
+name = "gun_barrel_end"
+category = "Default"
+exported = true
+classification = "class:Marker3D"
+type = 24
+
 [resource]
 base_type = &"Node3D"
-variables = Array[OScriptVariable]([SubResource("OScriptVariable_4uvnj"), SubResource("OScriptVariable_ymqtv"), SubResource("OScriptVariable_gpd1u"), SubResource("OScriptVariable_5g7p1")])
-functions = Array[OScriptFunction]([SubResource("OScriptFunction_fp7a6"), SubResource("OScriptFunction_0txgl")])
-connections = Array[int]([1, 0, 3, 0, 0, 0, 4, 0, 13, 0, 7, 0, 4, 0, 9, 0, 11, 0, 10, 0, 12, 0, 11, 0, 1, 0, 13, 0, 16, 0, 18, 0, 3, 0, 4, 1, 7, 2, 8, 1, 10, 0, 9, 1, 4, 1, 10, 1, 8, 0, 11, 1, 17, 0, 18, 1])
-nodes = Array[OScriptNode]([SubResource("OScriptNodeFunctionEntry_nw736"), SubResource("OScriptNodeVariableGet_fp7a6"), SubResource("OScriptNodePropertyGet_ymqtv"), SubResource("OScriptNodeVariableSet_nw736"), SubResource("OScriptNodeDecompose_rq208"), SubResource("OScriptNodeOperator_jibhk"), SubResource("OScriptNodeVariableSet_1obox"), SubResource("OScriptNodeOperator_y6ngt"), SubResource("OScriptNodeOperator_uhsyf"), SubResource("OScriptNodeVariableGet_jsh5u"), SubResource("OScriptNodePropertyGet_fp7a6"), SubResource("OScriptNodeFunctionEntry_dy72c"), SubResource("OScriptNodeSceneNode_o8fpq"), SubResource("OScriptNodeCallMemberFunction_embfb")])
+variables = Array[OScriptVariable]([SubResource("OScriptVariable_4uvnj"), SubResource("OScriptVariable_ymqtv"), SubResource("OScriptVariable_gpd1u"), SubResource("OScriptVariable_5g7p1"), SubResource("OScriptVariable_31fig"), SubResource("OScriptVariable_nw736")])
+functions = Array[OScriptFunction]([SubResource("OScriptFunction_fp7a6"), SubResource("OScriptFunction_0txgl"), SubResource("OScriptFunction_peupl")])
+connections = Array[int]([1, 0, 3, 0, 0, 0, 4, 0, 13, 0, 7, 0, 4, 0, 9, 0, 11, 0, 10, 0, 12, 0, 11, 0, 1, 0, 13, 0, 16, 0, 18, 0, 19, 0, 20, 0, 25, 0, 26, 0, 37, 0, 27, 0, 20, 0, 34, 0, 18, 0, 37, 0, 27, 0, 38, 0, 39, 0, 40, 0, 3, 0, 4, 1, 7, 2, 8, 1, 10, 0, 9, 1, 4, 1, 10, 1, 8, 0, 11, 1, 17, 0, 18, 1, 21, 0, 20, 1, 26, 0, 27, 1, 33, 0, 34, 1, 37, 1, 38, 1, 37, 1, 27, 2, 40, 0, 38, 2, 16, 2, 38, 3])
+nodes = Array[OScriptNode]([SubResource("OScriptNodeFunctionEntry_nw736"), SubResource("OScriptNodeVariableGet_fp7a6"), SubResource("OScriptNodePropertyGet_ymqtv"), SubResource("OScriptNodeVariableSet_nw736"), SubResource("OScriptNodeDecompose_rq208"), SubResource("OScriptNodeOperator_jibhk"), SubResource("OScriptNodeVariableSet_1obox"), SubResource("OScriptNodeOperator_y6ngt"), SubResource("OScriptNodeOperator_uhsyf"), SubResource("OScriptNodeVariableGet_jsh5u"), SubResource("OScriptNodePropertyGet_fp7a6"), SubResource("OScriptNodeFunctionEntry_dy72c"), SubResource("OScriptNodeSceneNode_o8fpq"), SubResource("OScriptNodeCallMemberFunction_embfb"), SubResource("OScriptNodeEvent_m70fm"), SubResource("OScriptNodeVariableSet_v3wk2"), SubResource("OScriptNodePreload_04sib"), SubResource("OScriptNodeCallMemberFunction_j3rvg"), SubResource("OScriptNodePropertyGet_248ev"), SubResource("OScriptNodeCallMemberFunction_m2gw5"), SubResource("OScriptNodeSceneNode_fp7a6"), SubResource("OScriptNodeVariableSet_ymqtv"), SubResource("OScriptNodeInstantiateScene_peupl"), SubResource("OScriptNodeCallMemberFunction_peupl"), SubResource("OScriptNodeVariableGet_peupl"), SubResource("OScriptNodePropertyGet_m70fm")])
 graphs = Array[OScriptGraph]([SubResource("OScriptGraph_xywfx"), SubResource("OScriptGraph_ymqtv"), SubResource("OScriptGraph_isaxa")])

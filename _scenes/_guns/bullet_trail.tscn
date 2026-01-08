@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://h1qkx4w1ca2p"]
+
+[ext_resource type="Script" uid="uid://ds6jdw6hkufsi" path="res://_scenes/_guns/bullet_trail.torch" id="1_peupl"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_by56l"]
+size = Vector3(0.05, 0.05, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_peupl"]
+transparency = 1
+cull_mode = 2
+albedo_color = Color(1, 0.5529412, 0.13725491, 1)
+emission_enabled = true
+emission = Color(1, 0.5529412, 0.13725491, 1)
+emission_energy_multiplier = 3.0
+
+[node name="BulletTrail" type="MeshInstance3D"]
+mesh = SubResource("BoxMesh_by56l")
+surface_material_override/0 = SubResource("StandardMaterial3D_peupl")
+script = ExtResource("1_peupl")
