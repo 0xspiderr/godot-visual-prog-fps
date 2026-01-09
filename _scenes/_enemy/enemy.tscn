@@ -22,9 +22,11 @@ properties/1/replication_mode = 1
 script = ExtResource("1_qjg7x")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_2xg73")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("CapsuleMesh_qjg7x")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]

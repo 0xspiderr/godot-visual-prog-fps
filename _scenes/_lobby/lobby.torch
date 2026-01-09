@@ -147,8 +147,8 @@ functions = Array[int]([80])
 
 [obj type="OScriptGraph" id="OScriptGraph_561wg"]
 graph_name = &"peer_loaded"
-offset = Vector2(3226.170654296875, -442.6025390625)
-zoom = 0.8264462351799011
+offset = Vector2(2721.46142578125, -453.89044189453125)
+zoom = 0.7513145804405212
 flags = 22
 nodes = Array[int]([100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 123, 124, 127, 128, 129, 130])
 functions = Array[int]([100])
