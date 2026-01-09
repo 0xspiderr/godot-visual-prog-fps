@@ -43,15 +43,14 @@ functions = Array[int]([19])
 
 [obj type="OScriptGraph" id="OScriptGraph_ymqtv"]
 graph_name = &"fire"
-offset = Vector2(669.720458984375, -454.5452880859375)
-zoom = 0.9090905785560608
+offset = Vector2(945.379150390625, -594.3295288085938)
 flags = 22
 nodes = Array[int]([0, 1, 3, 4, 7, 8, 9, 10, 11, 12, 13])
 functions = Array[int]([0])
 
 [obj type="OScriptGraph" id="OScriptGraph_isaxa"]
 graph_name = &"play_fire_effects"
-offset = Vector2(1592.78076171875, -192.69309997558594)
+offset = Vector2(1629.78076171875, -343.693115234375)
 zoom = 0.8028879165649414
 flags = 22
 nodes = Array[int]([16, 17, 18, 25, 26, 27, 37, 38, 39, 40])

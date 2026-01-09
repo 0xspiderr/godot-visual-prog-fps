@@ -42,7 +42,7 @@ functions = Array[int]([0])
 
 [obj type="OScriptGraph" id="OScriptGraph_561wg"]
 graph_name = &"spawn_players"
-offset = Vector2(-684.16650390625, -520.3482666015625)
+offset = Vector2(31.48651123046875, -569.4970703125)
 zoom = 0.6830132007598877
 flags = 22
 nodes = Array[int]([15, 16, 22, 23, 26, 27, 28, 39, 41, 42, 43, 45, 46, 47, 48, 49, 50, 51, 52, 53])

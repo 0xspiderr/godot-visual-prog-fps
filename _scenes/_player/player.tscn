@@ -50,17 +50,19 @@ replication_config = SubResource("SceneReplicationConfig_xt7i4")
 script = ExtResource("2_0jjom")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_vpg6s")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("CapsuleMesh_xt7i4")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4420432, -0.4135812)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4420432, -0.4135812)
 
 [node name="Gun" parent="." instance=ExtResource("3_fp7a6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24931526, 0, -0.9787208)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24931526, 1, -0.9787208)
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.71457815, 0, 0.0024084663, 0, 0.32881522, 0, -0.0068471953, 0, 0.25134924, 0, 0.48248374, -0.39528707)
+transform = Transform3D(0.71457815, 0, 0.0024084663, 0, 0.32881522, 0, -0.0068471953, 0, 0.25134924, 0, 1.4824837, -0.39528707)
 mesh = SubResource("BoxMesh_fp7a6")
