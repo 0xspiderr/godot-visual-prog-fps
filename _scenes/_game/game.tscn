@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://qfbnpinb1fjh"]
+[gd_scene load_steps=10 format=3 uid="uid://qfbnpinb1fjh"]
 
 [ext_resource type="Script" uid="uid://dufijv5a0i3ms" path="res://_scenes/_game/game.torch" id="1_rqurh"]
 [ext_resource type="Texture2D" uid="uid://daji8qnf878be" path="res://_scenes/_game/kenney_crosshair-pack/PNG/Outline/crosshair009.png" id="2_561wg"]
+[ext_resource type="Texture2D" uid="uid://dviegyw3ycy2l" path="res://addons/kenney_prototype_textures/dark/texture_08.png" id="2_g37hr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rqurh"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -21,12 +22,21 @@ size = Vector3(50, 1, 50)
 [sub_resource type="PlaneMesh" id="PlaneMesh_rqurh"]
 size = Vector2(50, 50)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l4dva"]
+albedo_texture = ExtResource("2_g37hr")
+uv1_scale = Vector3(50, 50, 50)
+
 [node name="Game" type="Node3D"]
 script = ExtResource("1_rqurh")
 
 [node name="PlayerSpawner" type="MultiplayerSpawner" parent="."]
 _spawnable_scenes = PackedStringArray("uid://re874jahqghw")
 spawn_path = NodePath("../Players")
+
+[node name="EnemySpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("uid://dem1gnhl52cad")
+spawn_path = NodePath("../Enemies")
+spawn_limit = 10
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_g37hr")
@@ -37,6 +47,8 @@ shadow_enabled = true
 
 [node name="Players" type="Node" parent="."]
 
+[node name="Enemies" type="Node" parent="."]
+
 [node name="Environment" type="Node" parent="."]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment"]
@@ -46,6 +58,7 @@ shape = SubResource("BoxShape3D_rqurh")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/StaticBody3D"]
 mesh = SubResource("PlaneMesh_rqurh")
+surface_material_override/0 = SubResource("StandardMaterial3D_l4dva")
 
 [node name="SpawnPoints" type="Node" parent="."]
 

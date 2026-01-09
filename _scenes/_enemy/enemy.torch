@@ -1,0 +1,149 @@
+[orchestration type="OScript" load_steps=8 format=3 uid="uid://lncp4knkxf7u"]
+
+[obj type="OScriptFunction" id="OScriptFunction_0txgl"]
+guid = "8BFA4C53-BCC5-4C0D-A61E-833DABABD30E"
+method = {
+"name": &"_ready",
+"flags": 8
+}
+id = 0
+
+[obj type="OScriptGraph" id="OScriptGraph_qjg7x"]
+graph_name = &"EventGraph"
+offset = Vector2(-139.89715576171875, 177.03729248046875)
+zoom = 1.2100000381469727
+flags = 8
+nodes = Array[int]([0, 1, 2, 3, 4])
+functions = Array[int]([0])
+
+[obj type="OScriptNodeEvent" id="OScriptNodeEvent_isaxa"]
+function_id = "8BFA4C53-BCC5-4C0D-A61E-833DABABD30E"
+id = 0
+position = Vector2(360, 480)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}])
+
+[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_dy72c"]
+function_name = &"set_physics_process"
+target_class_name = "Node"
+target_type = 24
+flags = 520
+method = {
+"name": &"set_physics_process",
+"args": [{
+"name": &"enable",
+"type": 1
+}]
+}
+chain = false
+id = 1
+position = Vector2(1000, 460)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}, {
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "Node",
+"target_class": "Node",
+"dv": null
+}, {
+"pin_name": &"enable",
+"type": 1,
+"flags": 2,
+"dv": false
+}])
+
+[obj type="OScriptNodeSceneNode" id="OScriptNodeSceneNode_fvhdw"]
+node_path = NodePath(".")
+target_class_name = "CharacterBody3D"
+id = 2
+position = Vector2(-100, 620)
+pin_data = Array[Dictionary]([{
+"pin_name": &".",
+"type": 24,
+"dir": 1,
+"flags": 2050,
+"target_class": "CharacterBody3D",
+"dv": null
+}])
+
+[obj type="OScriptNodePropertyGet" id="OScriptNodePropertyGet_tnbpr"]
+mode = 1
+target_class = &"Node"
+property_name = &"multiplayer"
+property_hint = "MultiplayerAPI"
+property = {
+"name": &"multiplayer",
+"type": 24,
+"class_name": &"MultiplayerAPI",
+"hint": 17,
+"hint_string": "MultiplayerAPI",
+"usage": 0
+}
+id = 3
+position = Vector2(180, 780)
+pin_data = Array[Dictionary]([{
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "Node",
+"target_class": "Node",
+"dv": null
+}, {
+"pin_name": &"multiplayer",
+"type": 24,
+"dir": 1,
+"flags": 2,
+"target_class": "MultiplayerAPI",
+"dv": null,
+"hint": 17,
+"hint_string": "MultiplayerAPI",
+"usage": 0
+}])
+
+[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_rxwll"]
+function_name = &"is_server"
+target_class_name = "MultiplayerAPI"
+target_type = 24
+flags = 520
+method = {
+"name": &"is_server",
+"return": {
+"type": 1
+}
+}
+chain = false
+id = 4
+position = Vector2(560, 780)
+pin_data = Array[Dictionary]([{
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "MultiplayerAPI",
+"target_class": "MultiplayerAPI",
+"dv": null,
+"hint": 17,
+"hint_string": "MultiplayerAPI"
+}, {
+"pin_name": &"return_value",
+"type": 1,
+"dir": 1,
+"flags": 1026,
+"dv": false
+}])
+
+[resource]
+base_type = &"CharacterBody3D"
+functions = Array[OScriptFunction]([SubResource("OScriptFunction_0txgl")])
+connections = Array[int]([0, 0, 1, 0, 2, 0, 3, 0, 3, 0, 4, 0, 2, 0, 1, 1, 4, 0, 1, 2])
+nodes = Array[OScriptNode]([SubResource("OScriptNodeEvent_isaxa"), SubResource("OScriptNodeCallMemberFunction_dy72c"), SubResource("OScriptNodeSceneNode_fvhdw"), SubResource("OScriptNodePropertyGet_tnbpr"), SubResource("OScriptNodeCallMemberFunction_rxwll")])
+graphs = Array[OScriptGraph]([SubResource("OScriptGraph_qjg7x")])

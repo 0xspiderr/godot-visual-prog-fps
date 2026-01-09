@@ -71,7 +71,7 @@ functions = Array[int]([0, 16, 88])
 
 [obj type="OScriptGraph" id="OScriptGraph_ymqtv"]
 graph_name = &"server_fire"
-offset = Vector2(1933.1591796875, -588.7893676757813)
+offset = Vector2(1933.1591796875, -231.4049530029297)
 zoom = 0.8264462351799011
 flags = 22
 nodes = Array[int]([163, 164, 165, 166, 186, 187, 188, 189, 190, 191, 192, 193, 210, 211, 212, 213])
@@ -89,7 +89,7 @@ knots = Array[Dictionary]([{
 
 [obj type="OScriptGraph" id="OScriptGraph_433cc"]
 graph_name = &"broadcast_fire_vfx"
-offset = Vector2(480.6859130859375, -258.8511962890625)
+offset = Vector2(480.6859130859375, -16.5289249420166)
 zoom = 0.8264462351799011
 flags = 22
 nodes = Array[int]([194, 195, 196, 197, 198, 199, 200, 201, 214, 215])
@@ -2122,14 +2122,12 @@ pin_data = Array[Dictionary]([{
 "pin_name": &"shot_start",
 "type": 9,
 "dir": 1,
-"flags": 2,
-"dv": Vector3(0, 0, 0)
+"flags": 2
 }, {
 "pin_name": &"shot_end",
 "type": 9,
 "dir": 1,
-"flags": 2,
-"dv": Vector3(0, 0, 0)
+"flags": 2
 }])
 
 [obj type="OScriptNodeBranch" id="OScriptNodeBranch_783ln"]
@@ -2653,20 +2651,17 @@ pin_data = Array[Dictionary]([{
 "pin_name": &"shot_start",
 "type": 9,
 "dir": 1,
-"flags": 2,
-"dv": Vector3(0, 0, 0)
+"flags": 2
 }, {
 "pin_name": &"shot_end",
 "type": 9,
 "dir": 1,
-"flags": 2,
-"dv": Vector3(0, 0, 0)
+"flags": 2
 }, {
 "pin_name": &"sender",
 "type": 2,
 "dir": 1,
-"flags": 2,
-"dv": 0
+"flags": 2
 }])
 
 [obj type="OScriptNodeBranch" id="OScriptNodeBranch_43cd7"]
@@ -2711,15 +2706,13 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node",
-"target_class": "Node",
-"dv": null
+"target_class": "Node"
 }, {
 "pin_name": &"multiplayer",
 "type": 24,
 "dir": 1,
 "flags": 2,
 "target_class": "MultiplayerAPI",
-"dv": null,
 "hint": 17,
 "hint_string": "MultiplayerAPI",
 "usage": 0
@@ -2745,15 +2738,13 @@ pin_data = Array[Dictionary]([{
 "flags": 2050,
 "label": "MultiplayerAPI",
 "target_class": "MultiplayerAPI",
-"dv": null,
 "hint": 17,
 "hint_string": "MultiplayerAPI"
 }, {
 "pin_name": &"return_value",
 "type": 2,
 "dir": 1,
-"flags": 1026,
-"dv": 0
+"flags": 1026
 }])
 
 [obj type="OScriptNodeOperator" id="OScriptNodeOperator_k2cia"]
@@ -2770,19 +2761,16 @@ position = Vector2(520, 280)
 pin_data = Array[Dictionary]([{
 "pin_name": &"a",
 "type": 2,
-"flags": 2,
-"dv": 0
+"flags": 2
 }, {
 "pin_name": &"b",
 "type": 2,
-"flags": 2,
-"dv": 0
+"flags": 2
 }, {
 "pin_name": &"result",
 "type": 1,
 "dir": 1,
-"flags": 2,
-"dv": false
+"flags": 2
 }])
 
 [obj type="OScriptNodeSelf" id="OScriptNodeSelf_fp7a6"]
@@ -2793,8 +2781,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2,
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }])
 
 [obj type="OScriptNodeSceneNode" id="OScriptNodeSceneNode_gpd1u"]
@@ -2807,8 +2794,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "Node3D",
-"dv": null
+"target_class": "Node3D"
 }])
 
 [obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_5g7p1"]
@@ -2841,8 +2827,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node3D",
-"target_class": "Node3D",
-"dv": null
+"target_class": "Node3D"
 }, {
 "pin_name": &"vfx_start_pos",
 "type": 9,
@@ -3116,15 +3101,13 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node",
-"target_class": "Node",
-"dv": null
+"target_class": "Node"
 }, {
 "pin_name": &"multiplayer",
 "type": 24,
 "dir": 1,
 "flags": 2,
 "target_class": "MultiplayerAPI",
-"dv": null,
 "hint": 17,
 "hint_string": "MultiplayerAPI",
 "usage": 0
@@ -3150,15 +3133,13 @@ pin_data = Array[Dictionary]([{
 "flags": 2050,
 "label": "MultiplayerAPI",
 "target_class": "MultiplayerAPI",
-"dv": null,
 "hint": 17,
 "hint_string": "MultiplayerAPI"
 }, {
 "pin_name": &"return_value",
 "type": 2,
 "dir": 1,
-"flags": 1026,
-"dv": 0
+"flags": 1026
 }])
 
 [obj type="OScriptNodeSelf" id="OScriptNodeSelf_gpd1u"]
@@ -3169,8 +3150,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2,
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }])
 
 [obj type="OScriptNodePropertyGet" id="OScriptNodePropertyGet_uhsyf"]
@@ -3193,15 +3173,13 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node3D",
-"target_class": "Node3D",
-"dv": null
+"target_class": "Node3D"
 }, {
 "pin_name": &"gun_barrel_end",
 "type": 24,
 "dir": 1,
 "flags": 2,
 "target_class": "Marker3D",
-"dv": null,
 "hint": 34,
 "hint_string": "Marker3D",
 "usage": 4102
@@ -3226,8 +3204,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node3D",
-"target_class": "Node3D",
-"dv": null
+"target_class": "Node3D"
 }, {
 "pin_name": &"global_position",
 "type": 9,
