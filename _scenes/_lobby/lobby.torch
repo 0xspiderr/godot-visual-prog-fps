@@ -111,7 +111,7 @@ knots = Array[Dictionary]([{
 
 [obj type="OScriptGraph" id="OScriptGraph_8rnnb"]
 graph_name = &"host"
-offset = Vector2(334.26495361328125, -517.3261108398438)
+offset = Vector2(334.26495361328125, -68.30132293701172)
 zoom = 0.6830132007598877
 flags = 22
 nodes = Array[int]([22, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39])
@@ -147,7 +147,7 @@ functions = Array[int]([80])
 
 [obj type="OScriptGraph" id="OScriptGraph_561wg"]
 graph_name = &"peer_loaded"
-offset = Vector2(2721.46142578125, -453.89044189453125)
+offset = Vector2(2721.46142578125, -105.18404388427734)
 zoom = 0.7513145804405212
 flags = 22
 nodes = Array[int]([100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 123, 124, 127, 128, 129, 130])

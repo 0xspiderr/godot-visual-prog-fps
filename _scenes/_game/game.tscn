@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://qfbnpinb1fjh"]
+[gd_scene load_steps=11 format=3 uid="uid://qfbnpinb1fjh"]
 
 [ext_resource type="Script" uid="uid://dufijv5a0i3ms" path="res://_scenes/_game/game.torch" id="1_rqurh"]
 [ext_resource type="Texture2D" uid="uid://daji8qnf878be" path="res://_scenes/_game/kenney_crosshair-pack/PNG/Outline/crosshair009.png" id="2_561wg"]
@@ -15,6 +15,10 @@ sky_material = SubResource("ProceduralSkyMaterial_rqurh")
 background_mode = 2
 sky = SubResource("Sky_561wg")
 tonemap_mode = 2
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_g37hr"]
+vertices = PackedVector3Array(-24.5, 1, -24.5, -24.5, 1, 24.5, 24.5, 1, 24.5, 24.5, 1, -24.5)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rqurh"]
 size = Vector3(50, 1, 50)
@@ -48,17 +52,6 @@ shadow_enabled = true
 [node name="Players" type="Node" parent="."]
 
 [node name="Enemies" type="Node" parent="."]
-
-[node name="Environment" type="Node" parent="."]
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Environment"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/StaticBody3D"]
-shape = SubResource("BoxShape3D_rqurh")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/StaticBody3D"]
-mesh = SubResource("PlaneMesh_rqurh")
-surface_material_override/0 = SubResource("StandardMaterial3D_l4dva")
 
 [node name="SpawnPoints" type="Node" parent="."]
 
@@ -132,3 +125,18 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("2_561wg")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+navigation_mesh = SubResource("NavigationMesh_g37hr")
+
+[node name="Environment" type="Node" parent="NavigationRegion3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/Environment"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Environment/StaticBody3D"]
+shape = SubResource("BoxShape3D_rqurh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Environment/StaticBody3D"]
+mesh = SubResource("PlaneMesh_rqurh")
+surface_material_override/0 = SubResource("StandardMaterial3D_l4dva")

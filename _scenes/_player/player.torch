@@ -63,16 +63,16 @@ id = 194
 
 [obj type="OScriptGraph" id="OScriptGraph_x8yju"]
 graph_name = &"EventGraph"
-offset = Vector2(-462.0716552734375, 1815.97900390625)
-zoom = 0.7298980951309204
+offset = Vector2(-1426.64794921875, 1934.48095703125)
+zoom = 0.8028879165649414
 flags = 8
 nodes = Array[int]([0, 4, 5, 7, 8, 9, 10, 11, 16, 17, 18, 19, 23, 25, 26, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 42, 43, 44, 45, 46, 48, 52, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 74, 76, 78, 79, 80, 81, 84, 85, 86, 87, 88, 89, 90, 91, 92, 94, 96, 97, 98, 99, 146, 147, 148, 149, 150, 151, 153, 154, 155, 156, 157, 159, 160, 161, 162, 173, 174, 175, 176, 177, 178, 184, 185, 202, 203, 204, 205, 206, 207, 208, 209])
 functions = Array[int]([0, 16, 88])
 
 [obj type="OScriptGraph" id="OScriptGraph_ymqtv"]
 graph_name = &"server_fire"
-offset = Vector2(3981.54833984375, -575.7451171875)
-zoom = 0.9090908765792847
+offset = Vector2(3024.54833984375, -254.54544067382813)
+zoom = 0.9090908765792848
 flags = 22
 nodes = Array[int]([163, 164, 165, 166, 186, 187, 188, 189, 190, 191, 192, 193, 210, 211, 212, 213, 216, 217, 218, 219])
 functions = Array[int]([163])
@@ -1375,7 +1375,7 @@ right_type = 3
 right_type_name = &"float"
 return_type = 3
 id = 81
-position = Vector2(-1180, 1680)
+position = Vector2(-1240, 1720)
 pin_data = Array[Dictionary]([{
 "pin_name": &"a",
 "type": 3,
@@ -3245,8 +3245,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Object",
-"target_class": "Object",
-"dv": null
+"target_class": "Object"
 }, {
 "pin_name": &"method",
 "type": 21,
@@ -3256,8 +3255,7 @@ pin_data = Array[Dictionary]([{
 "pin_name": &"return_value",
 "type": 1,
 "dir": 1,
-"flags": 1026,
-"dv": false
+"flags": 1026
 }])
 
 [obj type="OScriptNodeBranch" id="OScriptNodeBranch_eqw1a"]

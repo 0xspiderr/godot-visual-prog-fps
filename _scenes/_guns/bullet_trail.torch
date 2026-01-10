@@ -25,7 +25,7 @@ id = 17
 
 [obj type="OScriptGraph" id="OScriptGraph_by56l"]
 graph_name = &"EventGraph"
-offset = Vector2(-259.22174072265625, -479.0677795410156)
+offset = Vector2(-229, 0)
 zoom = 0.3504936695098877
 flags = 8
 
@@ -37,7 +37,7 @@ functions = Array[int]([12])
 
 [obj type="OScriptGraph" id="OScriptGraph_v3wk2"]
 graph_name = &"init"
-offset = Vector2(2546.770263671875, -517.8455200195313)
+offset = Vector2(2546.770263671875, -384.711669921875)
 zoom = 1.068643569946289
 flags = 22
 nodes = Array[int]([17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36])
