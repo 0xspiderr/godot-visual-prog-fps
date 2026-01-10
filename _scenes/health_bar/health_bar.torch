@@ -1,0 +1,10 @@
+[orchestration type="OScript" load_steps=2 format=3 uid="uid://bgpix3rkvfa6k"]
+
+[obj type="OScriptGraph" id="OScriptGraph_l4dva"]
+graph_name = &"EventGraph"
+zoom = 1.4641001224517822
+flags = 8
+
+[resource]
+base_type = &"ProgressBar"
+graphs = Array[OScriptGraph]([SubResource("OScriptGraph_l4dva")])

@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://re874jahqghw"]
+[gd_scene load_steps=11 format=3 uid="uid://re874jahqghw"]
 
 [ext_resource type="Script" uid="uid://brdlonvlivfhq" path="res://_scenes/_player/player.torch" id="1_0jjom"]
 [ext_resource type="Script" uid="uid://dto4bgxd03djq" path="res://_scenes/_player/player_input.torch" id="2_0jjom"]
 [ext_resource type="PackedScene" uid="uid://6s5t6dwugms2" path="res://_scenes/_guns/gun.tscn" id="3_fp7a6"]
+[ext_resource type="PackedScene" uid="uid://b60reob62tbut" path="res://_scenes/health_bar/health_bar.tscn" id="4_ymqtv"]
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_0jjom"]
 properties/0/path = NodePath(".:player_id")
@@ -66,3 +67,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24931526, 1, -0.9787208)
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.71457815, 0, 0.0024084663, 0, 0.32881522, 0, -0.0068471953, 0, 0.25134924, 0, 1.4824837, -0.39528707)
 mesh = SubResource("BoxMesh_fp7a6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HealthBar" parent="CanvasLayer" instance=ExtResource("4_ymqtv")]
+visible = false
+offset_left = 1796.0001
+offset_top = 793.0
+offset_right = 1933.0001
+offset_bottom = 820.0
+rotation = 4.712389
+scale = Vector2(4, 2.5)
