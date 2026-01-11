@@ -63,14 +63,14 @@ id = 78
 [obj type="OScriptGraph" id="OScriptGraph_qjg7x"]
 graph_name = &"EventGraph"
 offset = Vector2(2066.07275390625, 763.0325927734375)
-zoom = 0.9090908765792847
+zoom = 0.9090908765792848
 flags = 8
 nodes = Array[int]([0, 1, 2, 3, 4, 28, 29, 30, 31, 32, 33, 34, 42, 43, 44, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 91])
 functions = Array[int]([0, 44])
 
 [obj type="OScriptGraph" id="OScriptGraph_eqw1a"]
 graph_name = &"take_damage"
-offset = Vector2(662.073974609375, -494.37274169921875)
+offset = Vector2(662.073974609375, 0)
 zoom = 1.4641001224517822
 flags = 22
 nodes = Array[int]([5, 6, 7, 8, 9, 10, 11, 12])
@@ -78,7 +78,7 @@ functions = Array[int]([5])
 
 [obj type="OScriptGraph" id="OScriptGraph_l4dva"]
 graph_name = &"_get_nearest_player"
-offset = Vector2(-13.9471435546875, -590.6631469726563)
+offset = Vector2(-13.9471435546875, -264.4627380371094)
 zoom = 0.8264460563659668
 flags = 22
 nodes = Array[int]([13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27])
@@ -86,7 +86,7 @@ functions = Array[int]([13])
 
 [obj type="OScriptGraph" id="OScriptGraph_dy72c"]
 graph_name = &"_update_target_location"
-offset = Vector2(221.9000244140625, -252.82501220703125)
+offset = Vector2(221.9000244140625, -22)
 zoom = 1.100000023841858
 flags = 22
 nodes = Array[int]([35, 36, 37, 38, 39, 40, 41])
@@ -94,8 +94,8 @@ functions = Array[int]([35])
 
 [obj type="OScriptGraph" id="OScriptGraph_fmwsm"]
 graph_name = &"deal_damage"
-offset = Vector2(1909.92431640625, -511.2377014160156)
-zoom = 0.9090908765792847
+offset = Vector2(1909.92431640625, 0)
+zoom = 0.9090908765792848
 flags = 22
 nodes = Array[int]([78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 92, 93])
 functions = Array[int]([78])
@@ -216,8 +216,7 @@ pin_data = Array[Dictionary]([{
 "pin_name": &"return_value",
 "type": 1,
 "dir": 1,
-"flags": 1026,
-"dv": false
+"flags": 1026
 }])
 
 [obj type="OScriptNodeFunctionEntry" id="OScriptNodeFunctionEntry_fmwsm"]
@@ -422,8 +421,7 @@ pin_data = Array[Dictionary]([{
 "dir": 1,
 "flags": 2,
 "label": "SceneTree",
-"target_class": "SceneTree",
-"dv": null
+"target_class": "SceneTree"
 }])
 
 [obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_tmnqp"]
@@ -458,8 +456,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "SceneTree",
-"target_class": "SceneTree",
-"dv": null
+"target_class": "SceneTree"
 }, {
 "pin_name": &"group",
 "type": 21,
@@ -470,7 +467,6 @@ pin_data = Array[Dictionary]([{
 "type": 28,
 "dir": 1,
 "flags": 1026,
-"dv": [],
 "hint": 31,
 "hint_string": "Node"
 }])
@@ -525,8 +521,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node3D",
-"target_class": "Node3D",
-"dv": null
+"target_class": "Node3D"
 }, {
 "pin_name": &"global_position",
 "type": 9,
@@ -546,8 +541,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }])
 
 [obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_bxxyn"]
@@ -579,8 +573,7 @@ pin_data = Array[Dictionary]([{
 "pin_name": &"target",
 "type": 9,
 "flags": 2058,
-"label": "Vector3",
-"dv": Vector3(0, 0, 0)
+"label": "Vector3"
 }, {
 "pin_name": &"to",
 "type": 9,
@@ -590,8 +583,7 @@ pin_data = Array[Dictionary]([{
 "pin_name": &"return_value",
 "type": 3,
 "dir": 1,
-"flags": 1026,
-"dv": 0.0
+"flags": 1026
 }])
 
 [obj type="OScriptNodePropertyGet" id="OScriptNodePropertyGet_qjg7x"]
@@ -613,8 +605,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node3D",
-"target_class": "Node3D",
-"dv": null
+"target_class": "Node3D"
 }, {
 "pin_name": &"global_position",
 "type": 9,
@@ -660,19 +651,16 @@ position = Vector2(1720, -120)
 pin_data = Array[Dictionary]([{
 "pin_name": &"a",
 "type": 3,
-"flags": 2,
-"dv": 0.0
+"flags": 2
 }, {
 "pin_name": &"b",
 "type": 3,
-"flags": 2,
-"dv": 0.0
+"flags": 2
 }, {
 "pin_name": &"result",
 "type": 1,
 "dir": 1,
-"flags": 2,
-"dv": false
+"flags": 2
 }])
 
 [obj type="OScriptNodeVariableGet" id="OScriptNodeVariableGet_30r81"]
@@ -805,8 +793,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2,
-"target_class": "Timer",
-"dv": null
+"target_class": "Timer"
 }])
 
 [obj type="OScriptNodePropertySet" id="OScriptNodePropertySet_tfse5"]
@@ -832,8 +819,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Timer",
-"target_class": "Timer",
-"dv": null
+"target_class": "Timer"
 }, {
 "pin_name": &"wait_time",
 "type": 3,
@@ -869,8 +855,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Timer",
-"target_class": "Timer",
-"dv": null
+"target_class": "Timer"
 }, {
 "pin_name": &"autostart",
 "type": 1,
@@ -921,8 +906,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Object",
-"target_class": "Object",
-"dv": null
+"target_class": "Object"
 }, {
 "pin_name": &"signal",
 "type": 21,
@@ -985,14 +969,12 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node",
-"target_class": "Node",
-"dv": null
+"target_class": "Node"
 }, {
 "pin_name": &"node",
 "type": 24,
 "flags": 2,
-"target_class": "Node",
-"dv": null
+"target_class": "Node"
 }, {
 "pin_name": &"force_readable_name",
 "type": 1,
@@ -1017,8 +999,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }])
 
 [obj type="OScriptNodeFunctionEntry" id="OScriptNodeFunctionEntry_fvhdw"]
@@ -1084,8 +1065,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node3D",
-"target_class": "Node3D",
-"dv": null
+"target_class": "Node3D"
 }, {
 "pin_name": &"global_position",
 "type": 9,
@@ -1127,8 +1107,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "NavigationAgent3D",
-"dv": null
+"target_class": "NavigationAgent3D"
 }])
 
 [obj type="OScriptNodePropertySet" id="OScriptNodePropertySet_vn7p6"]
@@ -1153,8 +1132,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "NavigationAgent3D",
-"target_class": "NavigationAgent3D",
-"dv": null
+"target_class": "NavigationAgent3D"
 }, {
 "pin_name": &"target_position",
 "type": 9,
@@ -1173,8 +1151,7 @@ position = Vector2(2740, 560)
 pin_data = Array[Dictionary]([{
 "pin_name": &"object",
 "type": 24,
-"flags": 2,
-"dv": null
+"flags": 2
 }, {
 "pin_name": &"method",
 "type": 21,
@@ -1224,8 +1201,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "NavigationAgent3D",
-"dv": null
+"target_class": "NavigationAgent3D"
 }])
 
 [obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_iy6fv"]
@@ -1247,14 +1223,12 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "NavigationAgent3D",
-"target_class": "NavigationAgent3D",
-"dv": null
+"target_class": "NavigationAgent3D"
 }, {
 "pin_name": &"return_value",
 "type": 9,
 "dir": 1,
-"flags": 1026,
-"dv": Vector3(0, 0, 0)
+"flags": 1026
 }])
 
 [obj type="OScriptNodePropertyGet" id="OScriptNodePropertyGet_d2yv6"]
@@ -1276,8 +1250,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node3D",
-"target_class": "Node3D",
-"dv": null
+"target_class": "Node3D"
 }, {
 "pin_name": &"global_position",
 "type": 9,
@@ -1297,8 +1270,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }])
 
 [obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_wo8du"]
@@ -1330,8 +1302,7 @@ pin_data = Array[Dictionary]([{
 "pin_name": &"target",
 "type": 9,
 "flags": 2058,
-"label": "Vector3",
-"dv": Vector3(0, 0, 0)
+"label": "Vector3"
 }, {
 "pin_name": &"to",
 "type": 9,
@@ -1341,8 +1312,7 @@ pin_data = Array[Dictionary]([{
 "pin_name": &"return_value",
 "type": 9,
 "dir": 1,
-"flags": 1026,
-"dv": Vector3(0, 0, 0)
+"flags": 1026
 }])
 
 [obj type="OScriptNodePropertySet" id="OScriptNodePropertySet_n3f3b"]
@@ -1368,8 +1338,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "CharacterBody3D",
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }, {
 "pin_name": &"velocity",
 "type": 9,
@@ -1393,8 +1362,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }])
 
 [obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_uvbi3"]
@@ -1423,8 +1391,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "CharacterBody3D",
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }, {
 "pin_name": &"return_value",
 "type": 1,
@@ -1442,8 +1409,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }])
 
 [obj type="OScriptNodeOperator" id="OScriptNodeOperator_l4dva"]
@@ -1460,19 +1426,16 @@ position = Vector2(3140, 1960)
 pin_data = Array[Dictionary]([{
 "pin_name": &"a",
 "type": 2,
-"flags": 2,
-"dv": 0
+"flags": 2
 }, {
 "pin_name": &"b",
 "type": 9,
-"flags": 2,
-"dv": Vector3(0, 0, 0)
+"flags": 2
 }, {
 "pin_name": &"result",
 "type": 9,
 "dir": 1,
-"flags": 2,
-"dv": Vector3(0, 0, 0)
+"flags": 2
 }])
 
 [obj type="OScriptNodeVariableGet" id="OScriptNodeVariableGet_fpbr3"]
@@ -1545,8 +1508,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "CharacterBody3D",
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }, {
 "pin_name": &"velocity",
 "type": 9,
@@ -1569,8 +1531,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }])
 
 [obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_ktg24"]
@@ -1599,8 +1560,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "CharacterBody3D",
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }, {
 "pin_name": &"return_value",
 "type": 1,
@@ -1622,19 +1582,16 @@ position = Vector2(880, 1740)
 pin_data = Array[Dictionary]([{
 "pin_name": &"a",
 "type": 3,
-"flags": 2,
-"dv": 0.0
+"flags": 2
 }, {
 "pin_name": &"b",
 "type": 3,
-"flags": 2,
-"dv": 0.0
+"flags": 2
 }, {
 "pin_name": &"result",
 "type": 3,
 "dir": 1,
-"flags": 2,
-"dv": 0.0
+"flags": 2
 }])
 
 [obj type="OScriptNodeVariableGet" id="OScriptNodeVariableGet_fmwsm"]
@@ -1687,19 +1644,16 @@ position = Vector2(1180, 1500)
 pin_data = Array[Dictionary]([{
 "pin_name": &"a",
 "type": 3,
-"flags": 2,
-"dv": 0.0
+"flags": 2
 }, {
 "pin_name": &"b",
 "type": 3,
-"flags": 2,
-"dv": 0.0
+"flags": 2
 }, {
 "pin_name": &"result",
 "type": 1,
 "dir": 1,
-"flags": 2,
-"dv": false
+"flags": 2
 }])
 
 [obj type="OScriptNodePropertyGet" id="OScriptNodePropertyGet_2pjfy"]
@@ -1721,8 +1675,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node3D",
-"target_class": "Node3D",
-"dv": null
+"target_class": "Node3D"
 }, {
 "pin_name": &"global_position",
 "type": 9,
@@ -1742,8 +1695,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }])
 
 [obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_a44up"]
@@ -1775,8 +1727,7 @@ pin_data = Array[Dictionary]([{
 "pin_name": &"target",
 "type": 9,
 "flags": 2058,
-"label": "Vector3",
-"dv": Vector3(0, 0, 0)
+"label": "Vector3"
 }, {
 "pin_name": &"to",
 "type": 9,
@@ -1786,8 +1737,7 @@ pin_data = Array[Dictionary]([{
 "pin_name": &"return_value",
 "type": 3,
 "dir": 1,
-"flags": 1026,
-"dv": 0.0
+"flags": 1026
 }])
 
 [obj type="OScriptNodeVariableGet" id="OScriptNodeVariableGet_h8nh4"]
@@ -1821,8 +1771,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node3D",
-"target_class": "Node3D",
-"dv": null
+"target_class": "Node3D"
 }, {
 "pin_name": &"global_position",
 "type": 9,
@@ -1842,8 +1791,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }])
 
 [obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_a0o65"]
@@ -1903,8 +1851,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "CharacterBody3D",
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }, {
 "pin_name": &"velocity",
 "type": 9,
@@ -2052,8 +1999,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Object",
-"target_class": "Object",
-"dv": null
+"target_class": "Object"
 }, {
 "pin_name": &"method",
 "type": 21,
@@ -2063,8 +2009,7 @@ pin_data = Array[Dictionary]([{
 "pin_name": &"return_value",
 "type": 1,
 "dir": 1,
-"flags": 1026,
-"dv": false
+"flags": 1026
 }])
 
 [obj type="OScriptNodeCallBuiltinFunction" id="OScriptNodeCallBuiltinFunction_qjg7x"]
@@ -2140,8 +2085,7 @@ pin_data = Array[Dictionary]([{
 "pin_name": &"target",
 "type": 24,
 "flags": 2,
-"target_class": "Object",
-"dv": null
+"target_class": "Object"
 }, {
 "pin_name": &"signal_name",
 "type": 4,
@@ -2181,8 +2125,7 @@ pin_data = Array[Dictionary]([{
 "dir": 1,
 "flags": 2,
 "label": "SceneTree",
-"target_class": "SceneTree",
-"dv": null
+"target_class": "SceneTree"
 }])
 
 [obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_1fcyk"]
@@ -2228,8 +2171,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "SceneTree",
-"target_class": "SceneTree",
-"dv": null
+"target_class": "SceneTree"
 }, {
 "pin_name": &"time_sec",
 "type": 3,
@@ -2258,7 +2200,6 @@ pin_data = Array[Dictionary]([{
 "flags": 2,
 "label": "SceneTreeTimer",
 "target_class": "SceneTreeTimer",
-"dv": null,
 "hint": 17,
 "hint_string": "SceneTreeTimer"
 }])

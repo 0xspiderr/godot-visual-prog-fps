@@ -2,6 +2,7 @@
 
 [obj type="OScriptGraph" id="OScriptGraph_l4dva"]
 graph_name = &"EventGraph"
+offset = Vector2(-6, 0)
 zoom = 1.4641001224517822
 flags = 8
 

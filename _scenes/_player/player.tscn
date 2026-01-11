@@ -21,6 +21,12 @@ properties/3/replication_mode = 1
 properties/4/path = NodePath("Camera3D:rotation")
 properties/4/spawn = false
 properties/4/replication_mode = 2
+properties/5/path = NodePath(".:is_reloading")
+properties/5/spawn = false
+properties/5/replication_mode = 2
+properties/6/path = NodePath(".:current_ammo")
+properties/6/spawn = false
+properties/6/replication_mode = 2
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_xt7i4"]
 properties/0/path = NodePath("PlayerInputSync:direction")
@@ -29,6 +35,9 @@ properties/0/replication_mode = 2
 properties/1/path = NodePath("PlayerInputSync:look")
 properties/1/spawn = false
 properties/1/replication_mode = 1
+properties/2/path = NodePath("PlayerInputSync:reload")
+properties/2/spawn = false
+properties/2/replication_mode = 2
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vpg6s"]
 
@@ -71,10 +80,17 @@ mesh = SubResource("BoxMesh_fp7a6")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HealthBar" parent="CanvasLayer" instance=ExtResource("4_ymqtv")]
-visible = false
-offset_left = 1796.0001
+offset_left = 1741.0001
 offset_top = 793.0
-offset_right = 1933.0001
+offset_right = 1878.0001
 offset_bottom = 820.0
 rotation = 4.712389
 scale = Vector2(4, 2.5)
+
+[node name="AmmoLabel" type="Label" parent="CanvasLayer"]
+offset_left = 1692.0
+offset_top = 914.0
+offset_right = 1880.0
+offset_bottom = 969.0
+theme_override_font_sizes/font_size = 40
+text = "AMMO:10"
