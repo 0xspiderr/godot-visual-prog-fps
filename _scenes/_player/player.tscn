@@ -80,6 +80,7 @@ mesh = SubResource("BoxMesh_fp7a6")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HealthBar" parent="CanvasLayer" instance=ExtResource("4_ymqtv")]
+visible = false
 offset_left = 1741.0001
 offset_top = 793.0
 offset_right = 1878.0001
@@ -88,6 +89,7 @@ rotation = 4.712389
 scale = Vector2(4, 2.5)
 
 [node name="AmmoLabel" type="Label" parent="CanvasLayer"]
+visible = false
 offset_left = 1692.0
 offset_top = 914.0
 offset_right = 1880.0

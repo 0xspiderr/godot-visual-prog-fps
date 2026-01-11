@@ -82,7 +82,7 @@ id = 100
 
 [obj type="OScriptGraph" id="OScriptGraph_k8brf"]
 graph_name = &"EventGraph"
-offset = Vector2(2467.6533203125, -43.474822998046875)
+offset = Vector2(2467.6533203125, 0)
 zoom = 0.683013379573822
 flags = 8
 nodes = Array[int]([0, 1, 3, 5, 6, 7, 8, 9, 10, 11, 13, 14, 57, 58, 59, 69, 70, 83, 84, 85, 87, 88, 89, 90, 91, 113, 114, 115, 116, 117, 118, 119, 120])
@@ -90,15 +90,15 @@ functions = Array[int]([0])
 
 [obj type="OScriptGraph" id="OScriptGraph_fvhdw"]
 graph_name = &"_on_peer_connected"
-offset = Vector2(-348.46636962890625, -472.61767578125)
-zoom = 0.9090908765792847
+offset = Vector2(-90.90908813476563, 0)
+zoom = 0.9090908765792848
 flags = 22
 nodes = Array[int]([4, 78, 79])
 functions = Array[int]([4])
 
 [obj type="OScriptGraph" id="OScriptGraph_0f0dc"]
 graph_name = &"_register_peer"
-offset = Vector2(703.4461669921875, -630.9338989257813)
+offset = Vector2(703.4461669921875, -247.93386840820313)
 zoom = 0.8264462351799011
 flags = 22
 nodes = Array[int]([12, 15, 16, 18, 20, 71, 76])
@@ -113,7 +113,7 @@ knots = Array[Dictionary]([{
 
 [obj type="OScriptGraph" id="OScriptGraph_8rnnb"]
 graph_name = &"host"
-offset = Vector2(803.1590576171875, -428.14996337890625)
+offset = Vector2(803.1590576171875, -75.1314468383789)
 zoom = 0.7513144612312317
 flags = 22
 nodes = Array[int]([22, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39])
@@ -133,7 +133,7 @@ knots = Array[Dictionary]([{
 
 [obj type="OScriptGraph" id="OScriptGraph_vu3qr"]
 graph_name = &"_on_connected_to_server"
-offset = Vector2(47.926513671875, -486.5185241699219)
+offset = Vector2(47.926513671875, -181.81817626953125)
 zoom = 0.8264462351799011
 flags = 22
 nodes = Array[int]([60, 61, 62, 63, 66, 68, 74, 75])
@@ -141,15 +141,15 @@ functions = Array[int]([60])
 
 [obj type="OScriptGraph" id="OScriptGraph_i3agv"]
 graph_name = &"load_game"
-offset = Vector2(-272.5, -428.5)
-zoom = 1.2100000381469727
+offset = Vector2(-145.20001220703125, -24.200000762939453)
+zoom = 1.2100000381469729
 flags = 22
 nodes = Array[int]([80, 81, 82])
 functions = Array[int]([80])
 
 [obj type="OScriptGraph" id="OScriptGraph_561wg"]
 graph_name = &"peer_loaded"
-offset = Vector2(-126.1162109375, -519.1484375)
+offset = Vector2(-126.1162109375, -95.6218490600586)
 zoom = 0.6830132007598877
 flags = 22
 nodes = Array[int]([100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 123, 124, 127, 128, 129, 130])

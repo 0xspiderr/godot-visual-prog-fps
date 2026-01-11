@@ -60,8 +60,7 @@ pin_data = Array[Dictionary]([{
 "dir": 1,
 "flags": 2,
 "label": "SceneTree",
-"target_class": "SceneTree",
-"dv": null
+"target_class": "SceneTree"
 }])
 
 [obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_t33dl"]
@@ -99,14 +98,12 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "SceneTree",
-"target_class": "SceneTree",
-"dv": null
+"target_class": "SceneTree"
 }, {
 "pin_name": &"packed_scene",
 "type": 24,
 "flags": 2,
 "target_class": "PackedScene",
-"dv": null,
 "hint": 17,
 "hint_string": "PackedScene"
 }, {
@@ -130,7 +127,7 @@ pin_data = Array[Dictionary]([{
 "flags": 2050,
 "label": "res://_scenes/_lobby/lobby_ui.tscn",
 "target_class": "PackedScene",
-"dv": "",
+"dv": "res://_scenes/_lobby/lobby_ui.tscn",
 "gdv": ""
 }])
 
@@ -144,8 +141,7 @@ pin_data = Array[Dictionary]([{
 "dir": 1,
 "flags": 2050,
 "label": "Lobby",
-"target_class": "Node",
-"dv": null
+"target_class": "Node"
 }])
 
 [obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_cibim"]
@@ -171,8 +167,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node",
-"target_class": "Node",
-"dv": null
+"target_class": "Node"
 }])
 
 [obj type="OScriptNodeEvent" id="OScriptNodeEvent_cibim"]
@@ -212,8 +207,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node",
-"target_class": "Node",
-"dv": null
+"target_class": "Node"
 }, {
 "pin_name": &"game_scene_path",
 "type": 4,
@@ -280,8 +274,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node",
-"target_class": "Node",
-"dv": null
+"target_class": "Node"
 }, {
 "pin_name": &"peers",
 "type": 27,
