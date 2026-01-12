@@ -107,15 +107,15 @@ id = 294
 
 [obj type="OScriptGraph" id="OScriptGraph_x8yju"]
 graph_name = &"EventGraph"
-offset = Vector2(-3199.134765625, 5016.2841796875)
-zoom = 1.1755083799362183
+offset = Vector2(-1848.1773681640625, 2714.764892578125)
+zoom = 0.660712718963623
 flags = 8
 nodes = Array[int]([0, 4, 5, 7, 8, 9, 10, 11, 16, 17, 18, 19, 23, 25, 26, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 42, 43, 44, 45, 46, 48, 52, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 74, 76, 78, 79, 80, 81, 84, 85, 86, 87, 88, 89, 90, 91, 92, 94, 96, 97, 98, 99, 146, 147, 148, 149, 150, 151, 153, 154, 155, 156, 157, 159, 160, 161, 162, 173, 174, 175, 176, 177, 178, 184, 185, 202, 203, 204, 205, 206, 207, 208, 209, 234, 235, 239, 240, 241, 242, 243, 244, 245, 246, 263, 264, 265, 266, 287, 288, 294, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307])
 functions = Array[int]([0, 16, 88, 294])
 
 [obj type="OScriptGraph" id="OScriptGraph_ymqtv"]
 graph_name = &"server_fire"
-offset = Vector2(2027.021484375, -617.4048461914063)
+offset = Vector2(2027.021484375, -231.4048614501953)
 zoom = 0.8264459371566772
 flags = 22
 nodes = Array[int]([163, 164, 165, 166, 186, 187, 188, 189, 190, 191, 192, 193, 210, 211, 212, 213, 216, 217, 218, 219, 267, 268, 269, 270, 271, 272, 273, 274])
@@ -4626,8 +4626,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }])
 
 [obj type="OScriptNodeSceneNode" id="OScriptNodeSceneNode_gm4no"]
@@ -4784,8 +4783,7 @@ pin_data = Array[Dictionary]([{
 "pin_name": &"result",
 "type": 1,
 "dir": 1,
-"flags": 2,
-"dv": false
+"flags": 2
 }])
 
 [obj type="OScriptNodePropertyGet" id="OScriptNodePropertyGet_8p1m2"]
@@ -4808,8 +4806,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node",
-"target_class": "Node",
-"dv": null
+"target_class": "Node"
 }, {
 "pin_name": &"multiplayer",
 "type": 24,

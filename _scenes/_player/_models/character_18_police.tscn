@@ -1,0 +1,71 @@
+[gd_scene load_steps=9 format=3 uid="uid://c28jfoce0r8tt"]
+
+[ext_resource type="PackedScene" uid="uid://dignh6nkr7w44" path="res://_assets/_player/Character_18_Police.fbx" id="1_8dt34"]
+[ext_resource type="AnimationLibrary" uid="uid://dh4lnp0507wgu" path="res://_assets/_player/_animations/player_animations.res" id="2_s8dxh"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_s8dxh"]
+animation = &"pistol_idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_q1njx"]
+animation = &"pistol_walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ghk48"]
+advance_mode = 2
+advance_condition = &"is_moving"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qyld6"]
+advance_mode = 2
+advance_condition = &"is_idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_me5f3"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_s8dxh"]
+states/Start/position = Vector2(237.33333, 118.39506)
+states/pistol_idle/node = SubResource("AnimationNodeAnimation_s8dxh")
+states/pistol_idle/position = Vector2(406, 119.259254)
+states/pistol_walk/node = SubResource("AnimationNodeAnimation_q1njx")
+states/pistol_walk/position = Vector2(620.6667, 119.33333)
+transitions = ["pistol_idle", "pistol_walk", SubResource("AnimationNodeStateMachineTransition_ghk48"), "pistol_walk", "pistol_idle", SubResource("AnimationNodeStateMachineTransition_qyld6"), "Start", "pistol_idle", SubResource("AnimationNodeStateMachineTransition_me5f3")]
+
+[node name="Character_18_Police" instance=ExtResource("1_8dt34")]
+
+[node name="GeneralSkeleton" parent="." index="0"]
+bones/0/position = Vector3(-0.002913259, 2.610668, 0.011227494)
+bones/0/rotation = Quaternion(0.038039293, -0.45345396, -0.045486968, 0.8893051)
+bones/1/rotation = Quaternion(0.023359576, 0.059029795, 0.026367884, 0.99763453)
+bones/2/rotation = Quaternion(0.023273498, 0.068758905, -0.001945738, 0.99736)
+bones/3/rotation = Quaternion(0.023938758, 0.06868456, -0.00349183, 0.99734515)
+bones/4/rotation = Quaternion(0.10299608, 0.063265145, -0.032111343, 0.99214834)
+bones/5/rotation = Quaternion(0.0061566914, 0.17388661, 0.06954516, 0.9822877)
+bones/7/rotation = Quaternion(0.48589388, 0.47991577, 0.47772855, -0.55259705)
+bones/8/rotation = Quaternion(0.064443275, 0.8699557, 0.19601177, 0.4478879)
+bones/9/rotation = Quaternion(0.06410848, -0.97040313, 0.09917483, 0.21064743)
+bones/10/rotation = Quaternion(-0.35387897, 0.76860964, -0.32414025, 0.4230155)
+bones/11/rotation = Quaternion(0.21538045, 0.020629808, 0.0625938, 0.9743037)
+bones/12/rotation = Quaternion(0.45448005, 0.13904312, 0.17414638, 0.8624314)
+bones/13/rotation = Quaternion(0.14753453, 0.17033826, 0.09126345, 0.96999454)
+bones/15/rotation = Quaternion(0.46810544, -0.63759595, -0.33456317, -0.51226574)
+bones/16/rotation = Quaternion(-0.4304003, 0.65668136, -0.05695583, -0.61666954)
+bones/17/rotation = Quaternion(-0.01085059, 0.7842597, -0.0362149, 0.6192799)
+bones/18/rotation = Quaternion(-0.3723701, -0.69019103, 0.29471573, 0.54600334)
+bones/19/rotation = Quaternion(0.23345245, 0.01710561, -0.086366504, 0.968374)
+bones/20/rotation = Quaternion(0.29855004, -0.15841831, -0.098991066, 0.9359339)
+bones/21/rotation = Quaternion(0.41594374, 0.005740375, -0.17258374, 0.8928454)
+bones/23/rotation = Quaternion(0.120929405, 0.2673233, 0.94187057, -0.1636898)
+bones/24/rotation = Quaternion(-0.024952136, 0.9695768, -0.2268845, 0.08844025)
+bones/25/rotation = Quaternion(-0.008778506, 0.7404435, -0.66669303, 0.084774755)
+bones/28/rotation = Quaternion(-0.12551717, 0.13459967, 0.9808432, 0.063837156)
+bones/29/rotation = Quaternion(-0.0044980794, 0.98005015, -0.18555152, 0.07107911)
+bones/30/rotation = Quaternion(0.018475775, 0.66614544, -0.7325567, -0.13881485)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+&"": ExtResource("2_s8dxh")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2"]
+tree_root = SubResource("AnimationNodeStateMachine_s8dxh")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/is_idle = false
+parameters/conditions/is_moving = false
