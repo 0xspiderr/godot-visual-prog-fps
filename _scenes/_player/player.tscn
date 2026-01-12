@@ -43,8 +43,9 @@ properties/2/replication_mode = 2
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vpg6s"]
 height = 2.4
 
-[node name="Player" type="CharacterBody3D" groups=["players"]]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("anim_tree") groups=["players"]]
 script = ExtResource("1_0jjom")
+anim_tree = NodePath("Character_18_Police/AnimationTree")
 
 [node name="ServerSync" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_0jjom")
@@ -58,7 +59,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
 shape = SubResource("CapsuleShape3D_vpg6s")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.985701, -0.1578815)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0669785, -0.33408386)
 
 [node name="Gun" parent="." instance=ExtResource("3_fp7a6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.016518742, 1.741705, -0.9787208)
@@ -85,3 +86,40 @@ text = "AMMO:10"
 
 [node name="Character_18_Police" parent="." instance=ExtResource("5_nw736")]
 transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 0, 0, 0)
+
+[node name="GeneralSkeleton" parent="Character_18_Police" index="0"]
+bones/0/position = Vector3(-0.009405773, 2.6151783, 0.008733494)
+bones/0/rotation = Quaternion(0.03720474, -0.45201796, -0.04583733, 0.89005315)
+bones/1/rotation = Quaternion(0.021698494, 0.058971792, 0.025270391, 0.9977039)
+bones/2/rotation = Quaternion(0.022612238, 0.068657205, -0.0020987093, 0.9973818)
+bones/3/rotation = Quaternion(0.023697041, 0.0686347, -0.0037564996, 0.9973533)
+bones/4/rotation = Quaternion(0.10401857, 0.0632221, -0.031908303, 0.99205095)
+bones/5/rotation = Quaternion(0.008837464, 0.17372707, 0.06938714, 0.9823066)
+bones/7/rotation = Quaternion(0.48625875, 0.47952408, 0.47758257, -0.5527423)
+bones/8/rotation = Quaternion(0.06414866, 0.8718678, 0.19406846, 0.44504938)
+bones/9/rotation = Quaternion(0.06412346, -0.97042143, 0.09918632, 0.21055308)
+bones/10/rotation = Quaternion(-0.35499293, 0.76549405, -0.32382575, 0.42794386)
+bones/11/rotation = Quaternion(0.21538045, 0.020629808, 0.0625938, 0.9743037)
+bones/12/rotation = Quaternion(0.45448005, 0.13904312, 0.17414638, 0.8624314)
+bones/13/rotation = Quaternion(0.14753453, 0.17033826, 0.09126345, 0.96999454)
+bones/15/rotation = Quaternion(0.4674158, -0.63800955, -0.33177388, -0.51419115)
+bones/16/rotation = Quaternion(-0.43267542, 0.65290314, -0.060214974, -0.6187759)
+bones/17/rotation = Quaternion(-0.012134507, 0.7795565, -0.035046898, 0.62523293)
+bones/18/rotation = Quaternion(-0.3708768, -0.6862177, 0.29443425, 0.55214506)
+bones/19/rotation = Quaternion(0.23345245, 0.01710561, -0.086366504, 0.968374)
+bones/20/rotation = Quaternion(0.29855004, -0.15841831, -0.098991066, 0.9359339)
+bones/21/rotation = Quaternion(0.41594374, 0.005740375, -0.17258374, 0.8928454)
+bones/23/rotation = Quaternion(0.12037614, 0.26189613, 0.94350874, -0.16343568)
+bones/24/rotation = Quaternion(-0.024999483, 0.9714172, -0.218938, 0.0882601)
+bones/25/rotation = Quaternion(-0.008843151, 0.742453, -0.6644039, 0.08516426)
+bones/26/rotation = Quaternion(0, 1, 0, 0)
+bones/28/rotation = Quaternion(-0.12594564, 0.12850277, 0.98167515, 0.06275952)
+bones/29/rotation = Quaternion(-0.0044964016, 0.98139787, -0.17833012, 0.07096796)
+bones/30/rotation = Quaternion(0.016147105, 0.66770226, -0.7310464, -0.13958578)
+bones/31/rotation = Quaternion(0, 1, 0, 0)
+
+[node name="AnimationTree" parent="Character_18_Police" index="2"]
+parameters/conditions/is_grounded = false
+parameters/conditions/is_idle = false
+
+[editable path="Character_18_Police"]

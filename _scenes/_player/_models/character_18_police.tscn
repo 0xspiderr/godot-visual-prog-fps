@@ -1,10 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://c28jfoce0r8tt"]
+[gd_scene load_steps=14 format=3 uid="uid://c28jfoce0r8tt"]
 
 [ext_resource type="PackedScene" uid="uid://dignh6nkr7w44" path="res://_assets/_player/Character_18_Police.fbx" id="1_8dt34"]
 [ext_resource type="AnimationLibrary" uid="uid://dh4lnp0507wgu" path="res://_assets/_player/_animations/player_animations.res" id="2_s8dxh"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_s8dxh"]
 animation = &"pistol_idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ghk48"]
+animation = &"pistol_jump"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_q1njx"]
 animation = &"pistol_walk"
@@ -20,52 +23,79 @@ advance_condition = &"is_idle"
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_me5f3"]
 advance_mode = 2
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_00dla"]
+xfade_time = 0.1
+advance_mode = 2
+advance_condition = &"is_in_air"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_rgf7y"]
+xfade_time = 0.1
+advance_mode = 2
+advance_condition = &"is_in_air"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qrley"]
+xfade_time = 0.1
+advance_mode = 2
+advance_condition = &"is_grounded"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1xg8x"]
+xfade_time = 0.1
+advance_mode = 2
+advance_condition = &"is_grounded"
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_s8dxh"]
 states/Start/position = Vector2(237.33333, 118.39506)
 states/pistol_idle/node = SubResource("AnimationNodeAnimation_s8dxh")
 states/pistol_idle/position = Vector2(406, 119.259254)
+states/pistol_jump/node = SubResource("AnimationNodeAnimation_ghk48")
+states/pistol_jump/position = Vector2(498, 233.33334)
 states/pistol_walk/node = SubResource("AnimationNodeAnimation_q1njx")
 states/pistol_walk/position = Vector2(620.6667, 119.33333)
-transitions = ["pistol_idle", "pistol_walk", SubResource("AnimationNodeStateMachineTransition_ghk48"), "pistol_walk", "pistol_idle", SubResource("AnimationNodeStateMachineTransition_qyld6"), "Start", "pistol_idle", SubResource("AnimationNodeStateMachineTransition_me5f3")]
+transitions = ["pistol_idle", "pistol_walk", SubResource("AnimationNodeStateMachineTransition_ghk48"), "pistol_walk", "pistol_idle", SubResource("AnimationNodeStateMachineTransition_qyld6"), "Start", "pistol_idle", SubResource("AnimationNodeStateMachineTransition_me5f3"), "pistol_idle", "pistol_jump", SubResource("AnimationNodeStateMachineTransition_00dla"), "pistol_walk", "pistol_jump", SubResource("AnimationNodeStateMachineTransition_rgf7y"), "pistol_jump", "pistol_walk", SubResource("AnimationNodeStateMachineTransition_qrley"), "pistol_jump", "pistol_idle", SubResource("AnimationNodeStateMachineTransition_1xg8x")]
 
 [node name="Character_18_Police" instance=ExtResource("1_8dt34")]
 
 [node name="GeneralSkeleton" parent="." index="0"]
-bones/0/position = Vector3(-0.002913259, 2.610668, 0.011227494)
-bones/0/rotation = Quaternion(0.038039293, -0.45345396, -0.045486968, 0.8893051)
-bones/1/rotation = Quaternion(0.023359576, 0.059029795, 0.026367884, 0.99763453)
-bones/2/rotation = Quaternion(0.023273498, 0.068758905, -0.001945738, 0.99736)
-bones/3/rotation = Quaternion(0.023938758, 0.06868456, -0.00349183, 0.99734515)
-bones/4/rotation = Quaternion(0.10299608, 0.063265145, -0.032111343, 0.99214834)
-bones/5/rotation = Quaternion(0.0061566914, 0.17388661, 0.06954516, 0.9822877)
-bones/7/rotation = Quaternion(0.48589388, 0.47991577, 0.47772855, -0.55259705)
-bones/8/rotation = Quaternion(0.064443275, 0.8699557, 0.19601177, 0.4478879)
-bones/9/rotation = Quaternion(0.06410848, -0.97040313, 0.09917483, 0.21064743)
-bones/10/rotation = Quaternion(-0.35387897, 0.76860964, -0.32414025, 0.4230155)
-bones/11/rotation = Quaternion(0.21538045, 0.020629808, 0.0625938, 0.9743037)
-bones/12/rotation = Quaternion(0.45448005, 0.13904312, 0.17414638, 0.8624314)
-bones/13/rotation = Quaternion(0.14753453, 0.17033826, 0.09126345, 0.96999454)
-bones/15/rotation = Quaternion(0.46810544, -0.63759595, -0.33456317, -0.51226574)
-bones/16/rotation = Quaternion(-0.4304003, 0.65668136, -0.05695583, -0.61666954)
-bones/17/rotation = Quaternion(-0.01085059, 0.7842597, -0.0362149, 0.6192799)
-bones/18/rotation = Quaternion(-0.3723701, -0.69019103, 0.29471573, 0.54600334)
-bones/19/rotation = Quaternion(0.23345245, 0.01710561, -0.086366504, 0.968374)
-bones/20/rotation = Quaternion(0.29855004, -0.15841831, -0.098991066, 0.9359339)
-bones/21/rotation = Quaternion(0.41594374, 0.005740375, -0.17258374, 0.8928454)
-bones/23/rotation = Quaternion(0.120929405, 0.2673233, 0.94187057, -0.1636898)
-bones/24/rotation = Quaternion(-0.024952136, 0.9695768, -0.2268845, 0.08844025)
-bones/25/rotation = Quaternion(-0.008778506, 0.7404435, -0.66669303, 0.084774755)
-bones/28/rotation = Quaternion(-0.12551717, 0.13459967, 0.9808432, 0.063837156)
-bones/29/rotation = Quaternion(-0.0044980794, 0.98005015, -0.18555152, 0.07107911)
-bones/30/rotation = Quaternion(0.018475775, 0.66614544, -0.7325567, -0.13881485)
+bones/0/position = Vector3(-0.0029130243, 2.6106656, 0.011228656)
+bones/0/rotation = Quaternion(0.038039934, -0.45345426, -0.04548833, 0.88930476)
+bones/1/rotation = Quaternion(0.023359496, 0.059029967, 0.02636937, 0.9976344)
+bones/2/rotation = Quaternion(0.023273505, 0.06875887, -0.0019457415, 0.99735993)
+bones/3/rotation = Quaternion(0.023938758, 0.06868465, -0.0034918264, 0.99734515)
+bones/4/rotation = Quaternion(0.102996066, 0.063265175, -0.03211136, 0.99214834)
+bones/5/rotation = Quaternion(0.0061566876, 0.17388661, 0.06954516, 0.9822877)
+bones/7/rotation = Quaternion(0.48589396, 0.47991574, 0.4777285, -0.55259705)
+bones/8/rotation = Quaternion(0.06444324, 0.86995554, 0.19601177, 0.44788814)
+bones/9/rotation = Quaternion(0.064108506, -0.9704031, 0.09917477, 0.21064761)
+bones/10/rotation = Quaternion(-0.353879, 0.76860964, -0.32414016, 0.42301565)
+bones/11/rotation = Quaternion(0.21538027, 0.020629914, 0.062593855, 0.9743038)
+bones/12/rotation = Quaternion(0.45448, 0.13904323, 0.17414643, 0.8624315)
+bones/13/rotation = Quaternion(0.14753456, 0.17033817, 0.09126342, 0.96999466)
+bones/15/rotation = Quaternion(0.46810538, -0.63759595, -0.3345632, -0.51226586)
+bones/16/rotation = Quaternion(-0.43040043, 0.65668124, -0.056955874, -0.6166696)
+bones/17/rotation = Quaternion(-0.010850623, 0.7842595, -0.036214847, 0.61928004)
+bones/18/rotation = Quaternion(-0.37237024, -0.69019085, 0.294716, 0.54600316)
+bones/19/rotation = Quaternion(0.2334524, 0.017105594, -0.08636658, 0.968374)
+bones/20/rotation = Quaternion(0.29854992, -0.1584182, -0.09899093, 0.935934)
+bones/21/rotation = Quaternion(0.41594368, 0.005740382, -0.17258367, 0.8928454)
+bones/23/rotation = Quaternion(0.12092592, 0.26734233, 0.94186425, -0.16369705)
+bones/24/rotation = Quaternion(-0.024955345, 0.9695721, -0.22690238, 0.088445015)
+bones/25/rotation = Quaternion(-0.008777045, 0.74038625, -0.66675687, 0.084772944)
+bones/26/rotation = Quaternion(-1.3170888e-08, 1, -0.00013196467, -2.6341775e-09)
+bones/28/rotation = Quaternion(-0.1255174, 0.13460115, 0.98084295, 0.063836105)
+bones/29/rotation = Quaternion(-0.0044985637, 0.9800494, -0.18555504, 0.071080014)
+bones/30/rotation = Quaternion(0.01847585, 0.66614413, -0.732558, -0.13881475)
+bones/31/rotation = Quaternion(-5.268356e-08, 1, 7.748604e-07, 2.1073426e-08)
 
 [node name="AnimationPlayer" parent="." index="1"]
 libraries = {
 &"": ExtResource("2_s8dxh")
 }
+speed_scale = 1.5
 
 [node name="AnimationTree" type="AnimationTree" parent="." index="2"]
 tree_root = SubResource("AnimationNodeStateMachine_s8dxh")
 anim_player = NodePath("../AnimationPlayer")
-parameters/conditions/is_idle = false
+parameters/conditions/is_grounded = true
+parameters/conditions/is_idle = true
+parameters/conditions/is_in_air = false
 parameters/conditions/is_moving = false
