@@ -1,8 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://6s5t6dwugms2"]
 
 [ext_resource type="Script" uid="uid://p1rr1y8yta4h" path="res://_scenes/_guns/gun.torch" id="1_adhah"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_xywfx"]
+[ext_resource type="PackedScene" uid="uid://cd1bw468t24wu" path="res://_scenes/_guns/_models/glock.tscn" id="2_o8fpq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_adhah"]
 albedo_color = Color(1, 1, 0.7490196, 1)
@@ -36,12 +35,8 @@ section_rings = 5
 script = ExtResource("1_adhah")
 gun_barrel_end = NodePath("GunBarrel")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.2382868, 0, 0, 0, 0.21244287, 0, 0, 0, 1, 0, 0, 0)
-mesh = SubResource("BoxMesh_xywfx")
-
 [node name="GunBarrel" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.51005423)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.043904588, -0.11340317)
 
 [node name="MuzzleFlash" type="GPUParticles3D" parent="GunBarrel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.14373851)
@@ -56,3 +51,6 @@ local_coords = true
 transform_align = 3
 process_material = SubResource("ParticleProcessMaterial_v6jub")
 draw_pass_1 = SubResource("TubeTrailMesh_adhah")
+
+[node name="glock" parent="." instance=ExtResource("2_o8fpq")]
+transform = Transform3D(-2.6226832e-09, 0, 0.06, 0, 0.06, 0, -0.06, 0, -2.6226832e-09, 0, 0, 0)
