@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgg3ey3r3voxl"]
+
+[ext_resource type="PackedScene" uid="uid://bqw15m0t711xo" path="res://_assets/_enemy/maxdamage_zombie-low-poly.gltf" id="1_7ubn8"]
+
+[node name="maxdamage_zombie-low-poly" instance=ExtResource("1_7ubn8")]
+transform = Transform3D(-1.5, 0, -1.3113416e-07, 0, 1.5, 0, 1.3113416e-07, 0, -1.5, 0, 0, 0)
