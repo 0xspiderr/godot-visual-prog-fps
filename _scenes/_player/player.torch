@@ -127,8 +127,8 @@ functions = Array[int]([0, 16, 88, 294])
 
 [obj type="OScriptGraph" id="OScriptGraph_ymqtv"]
 graph_name = &"server_fire"
-offset = Vector2(-55.6483154296875, -872.21142578125)
-zoom = 0.7513144612312317
+offset = Vector2(-697.9513549804688, -710.5279541015625)
+zoom = 0.3504936695098877
 flags = 22
 nodes = Array[int]([163, 164, 165, 166, 186, 187, 188, 189, 190, 191, 192, 193, 210, 211, 212, 213, 216, 217, 218, 219, 267, 268, 269, 270, 271, 272, 273, 274, 357, 358, 359, 360, 361, 365, 366, 367, 368, 371, 372])
 functions = Array[int]([163])
@@ -4040,7 +4040,6 @@ pin_data = Array[Dictionary]([{
 "dir": 1,
 "flags": 2050,
 "label": "MAX_AMMO",
-"dv": 0,
 "usage": 4102
 }])
 
@@ -4533,7 +4532,6 @@ pin_data = Array[Dictionary]([{
 "dir": 1,
 "flags": 2050,
 "label": "MAX_AMMO",
-"dv": 0,
 "usage": 4102
 }])
 

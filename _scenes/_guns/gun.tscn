@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://6s5t6dwugms2"]
+[gd_scene load_steps=14 format=3 uid="uid://6s5t6dwugms2"]
 
 [ext_resource type="Script" uid="uid://p1rr1y8yta4h" path="res://_scenes/_guns/gun.torch" id="1_adhah"]
 [ext_resource type="PackedScene" uid="uid://cd1bw468t24wu" path="res://_scenes/_guns/_models/glock.tscn" id="2_o8fpq"]
@@ -34,6 +34,55 @@ sections = 4
 section_length = 0.1
 section_rings = 5
 
+[sub_resource type="Animation" id="Animation_1581e"]
+resource_name = "shoot"
+length = 0.35
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("glock:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.31),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0.01171533, 0.037713647), Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("glock:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.31),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-8.581537e-09, 1.5707964, 0.19760618), Vector3(0, 1.5707964, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("glock:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.059999995, 0.059999995, 0.059999995)]
+}
+
+[sub_resource type="Animation" id="Animation_sp84b"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mte6m"]
+_data = {
+&"RESET": SubResource("Animation_sp84b"),
+&"shoot": SubResource("Animation_1581e")
+}
+
 [node name="Gun" type="Node3D" node_paths=PackedStringArray("gun_barrel_end")]
 script = ExtResource("1_adhah")
 gun_barrel_end = NodePath("GunBarrel")
@@ -56,7 +105,7 @@ process_material = SubResource("ParticleProcessMaterial_v6jub")
 draw_pass_1 = SubResource("TubeTrailMesh_adhah")
 
 [node name="glock" parent="." instance=ExtResource("2_o8fpq")]
-transform = Transform3D(-2.6226832e-09, 0, 0.06, 0, 0.06, 0, -0.06, 0, -2.6226832e-09, 0, 0, 0)
+transform = Transform3D(-2.6727287e-09, 1.0020037e-11, 0.059999995, 0.011779358, 0.058832355, 5.148922e-10, -0.058832355, 0.011779358, -2.6226832e-09, 0, 0.041080467, 0.037713647)
 
 [node name="Shoot" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("3_embfb")
@@ -69,3 +118,8 @@ max_distance = 20.0
 
 [node name="Reload" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("5_sp84b")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_mte6m")
+}
