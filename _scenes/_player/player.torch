@@ -133,8 +133,8 @@ knots = Array[Dictionary]([{
 
 [obj type="OScriptGraph" id="OScriptGraph_433cc"]
 graph_name = &"broadcast_fire_vfx"
-offset = Vector2(468.5618896484375, -305.9256286621094)
-zoom = 0.8264462351799011
+offset = Vector2(-1094.6624755859375, -156.70379638671875)
+zoom = 0.30954796075820923
 flags = 22
 nodes = Array[int]([194, 195, 196, 197, 198, 199, 201, 214, 215, 349])
 functions = Array[int]([194])
