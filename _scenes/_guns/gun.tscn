@@ -1,7 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://6s5t6dwugms2"]
+[gd_scene load_steps=11 format=3 uid="uid://6s5t6dwugms2"]
 
 [ext_resource type="Script" uid="uid://p1rr1y8yta4h" path="res://_scenes/_guns/gun.torch" id="1_adhah"]
 [ext_resource type="PackedScene" uid="uid://cd1bw468t24wu" path="res://_scenes/_guns/_models/glock.tscn" id="2_o8fpq"]
+[ext_resource type="AudioStream" uid="uid://dli51c7q4qhsp" path="res://_assets/_gun/_sounds/gunshot.wav" id="3_embfb"]
+[ext_resource type="AudioStream" uid="uid://c06wtv7tcxoii" path="res://_assets/_gun/_sounds/dryfire.wav" id="4_1581e"]
+[ext_resource type="AudioStream" uid="uid://dhwxh4bxjhn5k" path="res://_assets/_gun/_sounds/reload.wav" id="5_sp84b"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_adhah"]
 albedo_color = Color(1, 1, 0.7490196, 1)
@@ -54,3 +57,15 @@ draw_pass_1 = SubResource("TubeTrailMesh_adhah")
 
 [node name="glock" parent="." instance=ExtResource("2_o8fpq")]
 transform = Transform3D(-2.6226832e-09, 0, 0.06, 0, 0.06, 0, -0.06, 0, -2.6226832e-09, 0, 0, 0)
+
+[node name="Shoot" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_embfb")
+volume_db = -30.0
+max_distance = 20.0
+
+[node name="Dryfire" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_1581e")
+max_distance = 20.0
+
+[node name="Reload" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_sp84b")

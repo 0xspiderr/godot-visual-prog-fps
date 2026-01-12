@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://re874jahqghw"]
+[gd_scene load_steps=10 format=3 uid="uid://re874jahqghw"]
 
 [ext_resource type="Script" uid="uid://brdlonvlivfhq" path="res://_scenes/_player/player.torch" id="1_0jjom"]
 [ext_resource type="Script" uid="uid://dto4bgxd03djq" path="res://_scenes/_player/player_input.torch" id="2_0jjom"]
 [ext_resource type="PackedScene" uid="uid://6s5t6dwugms2" path="res://_scenes/_guns/gun.tscn" id="3_fp7a6"]
 [ext_resource type="PackedScene" uid="uid://b60reob62tbut" path="res://_scenes/health_bar/health_bar.tscn" id="4_ymqtv"]
 [ext_resource type="PackedScene" uid="uid://c28jfoce0r8tt" path="res://_scenes/_player/_models/character_18_police.tscn" id="5_nw736"]
+[ext_resource type="AudioStream" uid="uid://dy55xflgcs75u" path="res://_assets/_player/_sounds/Footstep Stone 3.ogg" id="6_783ln"]
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_0jjom"]
 properties/0/path = NodePath(".:player_id")
@@ -28,6 +29,18 @@ properties/5/replication_mode = 2
 properties/6/path = NodePath(".:current_ammo")
 properties/6/spawn = false
 properties/6/replication_mode = 2
+properties/7/path = NodePath("WalkSound:playing")
+properties/7/spawn = false
+properties/7/replication_mode = 2
+properties/8/path = NodePath("Character_18_Police/GeneralSkeleton/BoneAttachment3D/Gun/Shoot:playing")
+properties/8/spawn = false
+properties/8/replication_mode = 2
+properties/9/path = NodePath("Character_18_Police/GeneralSkeleton/BoneAttachment3D/Gun/Dryfire:playing")
+properties/9/spawn = false
+properties/9/replication_mode = 2
+properties/10/path = NodePath("Character_18_Police/GeneralSkeleton/BoneAttachment3D/Gun/Reload:playing")
+properties/10/spawn = false
+properties/10/replication_mode = 2
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_xt7i4"]
 properties/0/path = NodePath("PlayerInputSync:direction")
@@ -85,38 +98,38 @@ text = "AMMO:10"
 transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 0, 0, 0)
 
 [node name="GeneralSkeleton" parent="Character_18_Police" index="0"]
-bones/0/position = Vector3(-0.0012299307, 2.6004353, 0.0021452934)
-bones/0/rotation = Quaternion(0.03808098, -0.45458546, -0.04738613, 0.8886263)
-bones/1/rotation = Quaternion(0.024676412, 0.058021367, 0.027220305, 0.99763906)
-bones/2/rotation = Quaternion(0.023780558, 0.067999944, -0.0023933426, 0.997399)
-bones/3/rotation = Quaternion(0.024405986, 0.06795455, -0.0041308617, 0.9973813)
-bones/4/rotation = Quaternion(0.10004949, 0.06349294, -0.031851858, 0.99244356)
-bones/5/rotation = Quaternion(0.0049329777, 0.17542028, 0.07140189, 0.9818886)
-bones/7/rotation = Quaternion(0.49286497, 0.47009504, 0.48319185, -0.5501095)
-bones/8/rotation = Quaternion(0.06294483, 0.86751634, 0.19188175, 0.454571)
-bones/9/rotation = Quaternion(0.06514139, -0.9716478, 0.09997299, 0.20411465)
-bones/10/rotation = Quaternion(-0.34073007, 0.7883144, -0.31639105, 0.40293953)
+bones/0/position = Vector3(-0.0021393783, 2.607308, 0.009837591)
+bones/0/rotation = Quaternion(0.037978042, -0.4537155, -0.045758378, 0.8891604)
+bones/1/rotation = Quaternion(0.023821475, 0.058787536, 0.026899964, 0.9976237)
+bones/2/rotation = Quaternion(0.02346122, 0.06857724, -0.0020320548, 0.99736786)
+bones/3/rotation = Quaternion(0.024113484, 0.068523765, -0.003612476, 0.99735147)
+bones/4/rotation = Quaternion(0.102257356, 0.062991835, -0.03209327, 0.99224263)
+bones/5/rotation = Quaternion(0.005905508, 0.17223908, 0.06981985, 0.98256)
+bones/7/rotation = Quaternion(0.48707205, 0.4781415, 0.4791239, -0.55188936)
+bones/8/rotation = Quaternion(0.0634512, 0.8694373, 0.19508725, 0.44943723)
+bones/9/rotation = Quaternion(0.06427697, -0.97060895, 0.09930521, 0.20958364)
+bones/10/rotation = Quaternion(-0.3507205, 0.77289623, -0.3230308, 0.41866186)
 bones/11/rotation = Quaternion(0.21538045, 0.020629808, 0.0625938, 0.9743037)
 bones/12/rotation = Quaternion(0.45448005, 0.13904312, 0.17414638, 0.8624314)
 bones/13/rotation = Quaternion(0.14753453, 0.17033826, 0.09126345, 0.96999454)
-bones/15/rotation = Quaternion(0.46973258, -0.63624614, -0.34002644, -0.508846)
-bones/16/rotation = Quaternion(-0.42683738, 0.66271085, -0.06761617, -0.6115982)
-bones/17/rotation = Quaternion(-0.008911571, 0.79126793, -0.03797346, 0.61022437)
-bones/18/rotation = Quaternion(-0.36934626, -0.70404243, 0.29023874, 0.5326059)
+bones/15/rotation = Quaternion(0.46786892, -0.6378818, -0.3352556, -0.51167303)
+bones/16/rotation = Quaternion(-0.42934334, 0.6575408, -0.059176046, -0.6162813)
+bones/17/rotation = Quaternion(-0.010655968, 0.7849682, -0.03639173, 0.6183745)
+bones/18/rotation = Quaternion(-0.37193933, -0.69284195, 0.2944152, 0.54309374)
 bones/19/rotation = Quaternion(0.23345245, 0.01710561, -0.086366504, 0.968374)
 bones/20/rotation = Quaternion(0.29855004, -0.15841831, -0.098991066, 0.9359339)
 bones/21/rotation = Quaternion(0.41594374, 0.005740375, -0.17258374, 0.8928454)
-bones/23/rotation = Quaternion(0.122020856, 0.2759921, 0.9384303, -0.16819032)
-bones/24/rotation = Quaternion(-0.02569421, 0.96633327, -0.24161103, 0.08464145)
-bones/25/rotation = Quaternion(-0.009500878, 0.73725355, -0.6699034, 0.08715786)
+bones/23/rotation = Quaternion(0.12147916, 0.27032816, 0.940741, -0.16483887)
+bones/24/rotation = Quaternion(-0.024930423, 0.9684703, -0.23222104, 0.086701736)
+bones/25/rotation = Quaternion(-0.0087951915, 0.73903114, -0.66818136, 0.08537706)
 bones/26/rotation = Quaternion(0, 1, 0, 0)
-bones/28/rotation = Quaternion(-0.12426807, 0.14798038, 0.9791371, 0.06284726)
-bones/29/rotation = Quaternion(-0.0067021563, 0.97492546, -0.21062693, 0.07149671)
-bones/30/rotation = Quaternion(0.017279562, 0.65773755, -0.74047726, -0.13702644)
+bones/28/rotation = Quaternion(-0.12550972, 0.13829546, 0.9803194, 0.06399692)
+bones/29/rotation = Quaternion(-0.0053397776, 0.9786102, -0.19295134, 0.07115793)
+bones/30/rotation = Quaternion(0.01842972, 0.66373265, -0.7348515, -0.13824831)
 bones/31/rotation = Quaternion(0, 1, 0, 0)
 
 [node name="BoneAttachment3D" type="BoneAttachment3D" parent="Character_18_Police/GeneralSkeleton" index="1"]
-transform = Transform3D(0.046863254, -0.89467114, 0.44426006, 0.9524485, -0.0940281, -0.28982848, 0.30107415, 0.4367171, 0.84772176, -0.18219586, 3.7343717, 1.2698036)
+transform = Transform3D(0.06064161, -0.8955845, 0.4407391, 0.9592639, -0.069770694, -0.27376032, 0.27592623, 0.4393866, 0.8548709, -0.1860879, 3.7514985, 1.2790347)
 bone_name = "mixamorig_RightHandIndex1"
 bone_idx = 19
 
@@ -126,5 +139,10 @@ transform = Transform3D(-0.15118648, 1.9180479, -0.54610676, 1.7871767, -0.11272
 [node name="AnimationTree" parent="Character_18_Police" index="2"]
 parameters/conditions/is_grounded = false
 parameters/conditions/is_idle = false
+
+[node name="WalkSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_783ln")
+pitch_scale = 0.8
+panning_strength = 3.55
 
 [editable path="Character_18_Police"]
