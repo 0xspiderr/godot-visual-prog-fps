@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dem1gnhl52cad"]
+[gd_scene load_steps=7 format=3 uid="uid://dem1gnhl52cad"]
 
 [ext_resource type="Script" uid="uid://lncp4knkxf7u" path="res://_scenes/_enemy/enemy.torch" id="1_qjg7x"]
 [ext_resource type="PackedScene" uid="uid://cgg3ey3r3voxl" path="res://_scenes/_enemy/_models/maxdamage_zombie_low_poly.tscn" id="2_eqw1a"]
+[ext_resource type="AudioStream" uid="uid://cn2hwyd2ecjh7" path="res://_assets/_enemy/_sounds/zombie_attack.wav" id="3_30r81"]
+[ext_resource type="AudioStream" uid="uid://d1l0lakxosr82" path="res://_assets/_enemy/_sounds/zombie_death.wav" id="3_fmwsm"]
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_qjg7x"]
 properties/0/path = NodePath(".:position")
@@ -16,6 +18,12 @@ properties/2/replication_mode = 2
 properties/3/path = NodePath("maxdamage_zombie-low-poly/AnimationPlayer:speed_scale")
 properties/3/spawn = false
 properties/3/replication_mode = 2
+properties/4/path = NodePath("DeathSound:playing")
+properties/4/spawn = false
+properties/4/replication_mode = 2
+properties/5/path = NodePath("AttackSound:playing")
+properties/5/spawn = false
+properties/5/replication_mode = 2
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2xg73"]
 height = 2.5
@@ -37,5 +45,15 @@ shape = SubResource("CapsuleShape3D_2xg73")
 speed_scale = 1.0
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="AttackSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_30r81")
+volume_db = 2.0
+max_distance = 20.0
+
+[node name="DeathSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_fmwsm")
+volume_db = 2.0
+max_distance = 20.0
 
 [editable path="maxdamage_zombie-low-poly"]
