@@ -90,7 +90,7 @@ functions = Array[int]([6])
 
 [obj type="OScriptGraph" id="OScriptGraph_ymqtv"]
 graph_name = &"rotate_camera"
-offset = Vector2(29.726318359375, -292.11700439453125)
+offset = Vector2(29.726318359375, -13.660264015197754)
 zoom = 0.6830132007598877
 flags = 22
 nodes = Array[int]([67, 69, 70, 75, 76, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 155])
@@ -1511,8 +1511,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node3D",
-"target_class": "Node3D",
-"dv": null
+"target_class": "Node3D"
 }, {
 "pin_name": &"angle",
 "type": 3,
@@ -1607,8 +1606,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node3D",
-"target_class": "Node3D",
-"dv": null
+"target_class": "Node3D"
 }, {
 "pin_name": &"rotation",
 "type": 9,
@@ -1762,8 +1760,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node3D",
-"target_class": "Node3D",
-"dv": null
+"target_class": "Node3D"
 }, {
 "pin_name": &"rotation",
 "type": 9,
@@ -2242,14 +2239,12 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node3D",
-"target_class": "Node3D",
-"dv": null
+"target_class": "Node3D"
 }, {
 "pin_name": &"cam",
 "type": 24,
 "flags": 2,
 "target_class": "Camera3D",
-"dv": null,
 "hint": 34,
 "hint_string": "Camera3D",
 "usage": 4102
@@ -2544,8 +2539,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node3D",
-"target_class": "Node3D",
-"dv": null
+"target_class": "Node3D"
 }])
 
 [obj type="OScriptNodePropertyGet" id="OScriptNodePropertyGet_fp7a6"]
@@ -2567,8 +2561,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node3D",
-"target_class": "Node3D",
-"dv": null
+"target_class": "Node3D"
 }, {
 "pin_name": &"shot_start",
 "type": 9,
@@ -2597,8 +2590,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node3D",
-"target_class": "Node3D",
-"dv": null
+"target_class": "Node3D"
 }, {
 "pin_name": &"shot_end",
 "type": 9,
@@ -2638,8 +2630,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node3D",
-"target_class": "Node3D",
-"dv": null
+"target_class": "Node3D"
 }, {
 "pin_name": &"vfx_start_pos",
 "type": 9,
@@ -2672,8 +2663,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node3D",
-"target_class": "Node3D",
-"dv": null
+"target_class": "Node3D"
 }, {
 "pin_name": &"gun_barrel_end",
 "type": 24,
@@ -2829,8 +2819,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "Camera3D",
-"dv": null
+"target_class": "Camera3D"
 }])
 
 [obj type="OScriptNodeSceneNode" id="OScriptNodeSceneNode_uhsyf"]
@@ -2843,8 +2832,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "Camera3D",
-"dv": null
+"target_class": "Camera3D"
 }])
 
 [obj type="OScriptNodeSceneNode" id="OScriptNodeSceneNode_783ln"]
@@ -2857,8 +2845,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "Node3D",
-"dv": null
+"target_class": "Node3D"
 }])
 
 [obj type="OScriptNodeSceneNode" id="OScriptNodeSceneNode_jibhk"]
@@ -2871,8 +2858,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "Node3D",
-"dv": null
+"target_class": "Node3D"
 }])
 
 [obj type="OScriptNodeBranch" id="OScriptNodeBranch_783ln"]
@@ -2907,8 +2893,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }])
 
 [obj type="OScriptNodeSequence" id="OScriptNodeSequence_y6ngt"]
@@ -2946,8 +2931,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "CharacterBody3D",
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }, {
 "pin_name": &"current_ammo",
 "type": 2,
@@ -2971,8 +2955,7 @@ position = Vector2(-2200, 3600)
 pin_data = Array[Dictionary]([{
 "pin_name": &"a",
 "type": 2,
-"flags": 2,
-"dv": 0
+"flags": 2
 }, {
 "pin_name": &"b",
 "type": 2,
@@ -2982,8 +2965,7 @@ pin_data = Array[Dictionary]([{
 "pin_name": &"result",
 "type": 1,
 "dir": 1,
-"flags": 2,
-"dv": false
+"flags": 2
 }])
 
 [obj type="OScriptVariable" id="OScriptVariable_f3dr1"]

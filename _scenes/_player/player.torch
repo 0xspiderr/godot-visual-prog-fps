@@ -127,7 +127,7 @@ functions = Array[int]([0, 16, 88, 294])
 
 [obj type="OScriptGraph" id="OScriptGraph_ymqtv"]
 graph_name = &"server_fire"
-offset = Vector2(-697.9513549804688, -710.5279541015625)
+offset = Vector2(-697.9513549804688, -308.4344177246094)
 zoom = 0.3504936695098877
 flags = 22
 nodes = Array[int]([163, 164, 165, 166, 186, 187, 188, 189, 190, 191, 192, 193, 210, 211, 212, 213, 216, 217, 218, 219, 267, 268, 269, 270, 271, 272, 273, 274, 357, 358, 359, 360, 361, 365, 366, 367, 368, 371, 372])
@@ -145,7 +145,7 @@ knots = Array[Dictionary]([{
 
 [obj type="OScriptGraph" id="OScriptGraph_433cc"]
 graph_name = &"broadcast_fire_vfx"
-offset = Vector2(-1094.6624755859375, -574.983642578125)
+offset = Vector2(-148.58302307128906, -6.1909589767456055)
 zoom = 0.30954796075820923
 flags = 22
 nodes = Array[int]([194, 195, 196, 197, 198, 199, 201, 214, 215, 349])
@@ -167,7 +167,7 @@ functions = Array[int]([236])
 
 [obj type="OScriptGraph" id="OScriptGraph_783ln"]
 graph_name = &"try_reload"
-offset = Vector2(1119.635986328125, -700.4105834960938)
+offset = Vector2(1119.635986328125, -122.9424057006836)
 zoom = 0.683013379573822
 flags = 22
 nodes = Array[int]([248, 249, 250, 251, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 277, 278, 369, 370])
@@ -175,8 +175,7 @@ functions = Array[int]([248])
 
 [obj type="OScriptGraph" id="OScriptGraph_rq208"]
 graph_name = &"play_footstep"
-offset = Vector2(-491.7371826171875, -357.080078125)
-zoom = 1.2100000381469727
+zoom = 1.2100000381469729
 flags = 22
 nodes = Array[int]([350, 351, 352, 354])
 functions = Array[int]([350])
@@ -332,8 +331,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Camera3D",
-"target_class": "Camera3D",
-"dv": null
+"target_class": "Camera3D"
 }, {
 "pin_name": &"current",
 "type": 1,
@@ -2892,8 +2890,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node3D",
-"target_class": "Node3D",
-"dv": null
+"target_class": "Node3D"
 }, {
 "pin_name": &"vfx_start_pos",
 "type": 9,
@@ -3239,8 +3236,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node3D",
-"target_class": "Node3D",
-"dv": null
+"target_class": "Node3D"
 }, {
 "pin_name": &"gun_barrel_end",
 "type": 24,
@@ -5212,8 +5208,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "Camera3D",
-"dv": null
+"target_class": "Camera3D"
 }])
 
 [obj type="OScriptNodeSceneNode" id="OScriptNodeSceneNode_gpd1u"]
@@ -5226,8 +5221,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "Node3D",
-"dv": null
+"target_class": "Node3D"
 }])
 
 [obj type="OScriptNodeFunctionEntry" id="OScriptNodeFunctionEntry_jibhk"]
@@ -5241,8 +5235,7 @@ pin_data = Array[Dictionary]([{
 "pin_name": &"pitch",
 "type": 3,
 "dir": 1,
-"flags": 2,
-"dv": 0.0
+"flags": 2
 }])
 
 [obj type="OScriptNodeSceneNode" id="OScriptNodeSceneNode_65mag"]
@@ -5255,8 +5248,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "AudioStreamPlayer3D",
-"dv": null
+"target_class": "AudioStreamPlayer3D"
 }])
 
 [obj type="OScriptNodePropertySet" id="OScriptNodePropertySet_gm4no"]
@@ -5282,8 +5274,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "AudioStreamPlayer3D",
-"target_class": "AudioStreamPlayer3D",
-"dv": null
+"target_class": "AudioStreamPlayer3D"
 }, {
 "pin_name": &"pitch_scale",
 "type": 3,
@@ -5325,8 +5316,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "AudioStreamPlayer3D",
-"target_class": "AudioStreamPlayer3D",
-"dv": null
+"target_class": "AudioStreamPlayer3D"
 }, {
 "pin_name": &"from_position",
 "type": 3,
@@ -5366,8 +5356,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "AudioStreamPlayer3D",
-"dv": null
+"target_class": "AudioStreamPlayer3D"
 }])
 
 [obj type="OScriptNodePropertySet" id="OScriptNodePropertySet_xesl1"]
@@ -5393,8 +5382,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "AudioStreamPlayer3D",
-"target_class": "AudioStreamPlayer3D",
-"dv": null
+"target_class": "AudioStreamPlayer3D"
 }, {
 "pin_name": &"pitch_scale",
 "type": 3,
@@ -5439,8 +5427,7 @@ pin_data = Array[Dictionary]([{
 "pin_name": &"return_value",
 "type": 3,
 "dir": 1,
-"flags": 1026,
-"dv": 0.0
+"flags": 1026
 }])
 
 [obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_g4vcl"]
@@ -5471,8 +5458,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "AudioStreamPlayer3D",
-"target_class": "AudioStreamPlayer3D",
-"dv": null
+"target_class": "AudioStreamPlayer3D"
 }, {
 "pin_name": &"from_position",
 "type": 3,
@@ -5490,8 +5476,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "AudioStreamPlayer3D",
-"dv": null
+"target_class": "AudioStreamPlayer3D"
 }])
 
 [obj type="OScriptNodeCallBuiltinFunction" id="OScriptNodeCallBuiltinFunction_sg2er"]
@@ -5551,8 +5536,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "AudioStreamPlayer3D",
-"target_class": "AudioStreamPlayer3D",
-"dv": null
+"target_class": "AudioStreamPlayer3D"
 }, {
 "pin_name": &"pitch_scale",
 "type": 3,
@@ -5594,8 +5578,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "AudioStreamPlayer3D",
-"target_class": "AudioStreamPlayer3D",
-"dv": null
+"target_class": "AudioStreamPlayer3D"
 }, {
 "pin_name": &"from_position",
 "type": 3,
@@ -5613,8 +5596,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "AudioStreamPlayer3D",
-"dv": null
+"target_class": "AudioStreamPlayer3D"
 }])
 
 [obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_sg2er"]
@@ -5645,8 +5627,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "AudioStreamPlayer3D",
-"target_class": "AudioStreamPlayer3D",
-"dv": null
+"target_class": "AudioStreamPlayer3D"
 }, {
 "pin_name": &"from_position",
 "type": 3,
@@ -5664,8 +5645,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "AudioStreamPlayer3D",
-"dv": null
+"target_class": "AudioStreamPlayer3D"
 }])
 
 [obj type="OScriptNodePropertyGet" id="OScriptNodePropertyGet_sg2er"]
@@ -5687,8 +5667,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "AudioStreamPlayer3D",
-"target_class": "AudioStreamPlayer3D",
-"dv": null
+"target_class": "AudioStreamPlayer3D"
 }, {
 "pin_name": &"playing",
 "type": 1,
