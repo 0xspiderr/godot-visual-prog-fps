@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://re874jahqghw"]
+[gd_scene load_steps=11 format=3 uid="uid://re874jahqghw"]
 
 [ext_resource type="Script" uid="uid://brdlonvlivfhq" path="res://_scenes/_player/player.torch" id="1_0jjom"]
 [ext_resource type="Script" uid="uid://dto4bgxd03djq" path="res://_scenes/_player/player_input.torch" id="2_0jjom"]
 [ext_resource type="PackedScene" uid="uid://6s5t6dwugms2" path="res://_scenes/_guns/gun.tscn" id="3_fp7a6"]
+[ext_resource type="Texture2D" uid="uid://daji8qnf878be" path="res://_scenes/_game/kenney_crosshair-pack/PNG/Outline/crosshair009.png" id="4_rq208"]
 [ext_resource type="PackedScene" uid="uid://b60reob62tbut" path="res://_scenes/health_bar/health_bar.tscn" id="4_ymqtv"]
 [ext_resource type="PackedScene" uid="uid://c28jfoce0r8tt" path="res://_scenes/_player/_models/character_18_police.tscn" id="5_nw736"]
 [ext_resource type="AudioStream" uid="uid://dy55xflgcs75u" path="res://_assets/_player/_sounds/Footstep Stone 3.ogg" id="6_783ln"]
@@ -76,21 +77,54 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0669785, -0.33408386)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="HealthBar" parent="CanvasLayer" instance=ExtResource("4_ymqtv")]
-visible = false
-offset_left = 1741.0001
-offset_top = 793.0
-offset_right = 1878.0001
-offset_bottom = 820.0
-rotation = 4.712389
-scale = Vector2(4, 2.5)
+[node name="HUD" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
-[node name="AmmoLabel" type="Label" parent="CanvasLayer"]
-visible = false
-offset_left = 1692.0
-offset_top = 914.0
-offset_right = 1880.0
-offset_bottom = 969.0
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/HUD"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -36.0
+offset_top = -36.0
+offset_right = 36.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_rq208")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/HUD"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -188.0
+offset_top = -30.0
+offset_bottom = 30.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="HealthBar" parent="CanvasLayer/HUD/VBoxContainer" instance=ExtResource("4_ymqtv")]
+custom_minimum_size = Vector2(100, 600)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 8
+fill_mode = 3
+
+[node name="AmmoLabel" type="Label" parent="CanvasLayer/HUD/VBoxContainer"]
+layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "AMMO:10"
 
@@ -98,38 +132,38 @@ text = "AMMO:10"
 transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 0, 0, 0)
 
 [node name="GeneralSkeleton" parent="Character_18_Police" index="0"]
-bones/0/position = Vector3(-0.0010498762, 2.60116, 0.0032267435)
-bones/0/rotation = Quaternion(0.03801564, -0.4544976, -0.047104664, 0.88868886)
-bones/1/rotation = Quaternion(0.024822602, 0.058024943, 0.027268771, 0.9976339)
-bones/2/rotation = Quaternion(0.023914749, 0.06800904, -0.0023439326, 0.99739534)
-bones/3/rotation = Quaternion(0.024533354, 0.06799262, -0.0040548965, 0.9973759)
-bones/4/rotation = Quaternion(0.099921614, 0.06353658, -0.03190455, 0.992452)
-bones/5/rotation = Quaternion(0.0055984566, 0.17525347, 0.07112678, 0.9819348)
-bones/7/rotation = Quaternion(0.49299943, 0.4699826, 0.48301587, -0.55023956)
-bones/8/rotation = Quaternion(0.06325993, 0.86758, 0.19198664, 0.4543616)
-bones/9/rotation = Quaternion(0.06505543, -0.9715458, 0.09990666, 0.20465888)
-bones/10/rotation = Quaternion(-0.3418465, 0.78680396, -0.3167701, 0.40464476)
+bones/0/position = Vector3(-0.004756443, 2.6033604, -0.0003875936)
+bones/0/rotation = Quaternion(0.038985763, -0.45395774, -0.048231766, 0.8888624)
+bones/1/rotation = Quaternion(0.023635434, 0.058260843, 0.026826283, 0.997661)
+bones/2/rotation = Quaternion(0.022926092, 0.06805134, -0.002592418, 0.99741507)
+bones/3/rotation = Quaternion(0.023653926, 0.068179876, -0.004235193, 0.9973836)
+bones/4/rotation = Quaternion(0.100936405, 0.06318296, -0.031510178, 0.9923845)
+bones/5/rotation = Quaternion(0.005994523, 0.17369376, 0.071660735, 0.9821707)
+bones/7/rotation = Quaternion(0.49128813, 0.472063, 0.48293382, -0.5500613)
+bones/8/rotation = Quaternion(0.062790625, 0.86836535, 0.19190595, 0.45295814)
+bones/9/rotation = Quaternion(0.06477204, -0.9712073, 0.09968776, 0.20645426)
+bones/10/rotation = Quaternion(-0.34328055, 0.7837258, -0.31895196, 0.40767887)
 bones/11/rotation = Quaternion(0.21538045, 0.020629808, 0.0625938, 0.9743037)
 bones/12/rotation = Quaternion(0.45448005, 0.13904312, 0.17414638, 0.8624314)
 bones/13/rotation = Quaternion(0.14753453, 0.17033826, 0.09126345, 0.96999454)
-bones/15/rotation = Quaternion(0.46981245, -0.6361591, -0.3397631, -0.50905687)
-bones/16/rotation = Quaternion(-0.42766723, 0.6616959, -0.066826336, -0.61220384)
-bones/17/rotation = Quaternion(-0.009200455, 0.7902304, -0.03771162, 0.6115792)
-bones/18/rotation = Quaternion(-0.3688711, -0.7030916, 0.29043418, 0.5340828)
+bones/15/rotation = Quaternion(0.46805182, -0.6376811, -0.33672738, -0.51078856)
+bones/16/rotation = Quaternion(-0.42756182, 0.6599245, -0.06626048, -0.61424756)
+bones/17/rotation = Quaternion(-0.010037575, 0.78721166, -0.036952943, 0.6154929)
+bones/18/rotation = Quaternion(-0.36957344, -0.7002309, 0.29275757, 0.53608334)
 bones/19/rotation = Quaternion(0.23345245, 0.01710561, -0.086366504, 0.968374)
 bones/20/rotation = Quaternion(0.29855004, -0.15841831, -0.098991066, 0.9359339)
 bones/21/rotation = Quaternion(0.41594374, 0.005740375, -0.17258374, 0.8928454)
-bones/23/rotation = Quaternion(0.12198556, 0.2758051, 0.93857676, -0.16770421)
-bones/24/rotation = Quaternion(-0.025498532, 0.96629417, -0.24172162, 0.08483005)
-bones/25/rotation = Quaternion(-0.009330672, 0.7372768, -0.6699103, 0.08692499)
+bones/23/rotation = Quaternion(0.12209479, 0.27351612, 0.9390113, -0.16893707)
+bones/24/rotation = Quaternion(-0.026145501, 0.96790504, -0.23529987, 0.0843233)
+bones/25/rotation = Quaternion(-0.010202893, 0.73915726, -0.6677672, 0.08734742)
 bones/26/rotation = Quaternion(0, 1, 0, 0)
-bones/28/rotation = Quaternion(-0.12460921, 0.14716198, 0.9791786, 0.06344469)
-bones/29/rotation = Quaternion(-0.0066820877, 0.9752299, -0.20919964, 0.07153668)
-bones/30/rotation = Quaternion(0.017787663, 0.6585402, -0.73976785, -0.13693818)
+bones/28/rotation = Quaternion(-0.12419948, 0.14435299, 0.9798159, 0.060808852)
+bones/29/rotation = Quaternion(-0.007570127, 0.9762493, -0.2044954, 0.0711463)
+bones/30/rotation = Quaternion(0.015172608, 0.6594061, -0.7390116, -0.13716935)
 bones/31/rotation = Quaternion(0, 1, 0, 0)
 
 [node name="BoneAttachment3D" type="BoneAttachment3D" parent="Character_18_Police/GeneralSkeleton" index="1"]
-transform = Transform3D(0.0487263, -0.89439505, 0.44461596, 0.9529272, -0.09174386, -0.28898603, 0.29925847, 0.4377679, 0.84782314, -0.18247218, 3.7349749, 1.2712018)
+transform = Transform3D(0.058467377, -0.89535433, 0.4415, 0.9525618, -0.082281016, -0.29301134, 0.298676, 0.43768758, 0.84806955, -0.18052931, 3.7381594, 1.2713431)
 bone_name = "mixamorig_RightHandIndex1"
 bone_idx = 19
 

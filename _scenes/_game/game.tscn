@@ -1,7 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://qfbnpinb1fjh"]
+[gd_scene load_steps=10 format=3 uid="uid://qfbnpinb1fjh"]
 
 [ext_resource type="Script" uid="uid://dufijv5a0i3ms" path="res://_scenes/_game/game.torch" id="1_rqurh"]
-[ext_resource type="Texture2D" uid="uid://daji8qnf878be" path="res://_scenes/_game/kenney_crosshair-pack/PNG/Outline/crosshair009.png" id="2_561wg"]
 [ext_resource type="Texture2D" uid="uid://dviegyw3ycy2l" path="res://addons/kenney_prototype_textures/dark/texture_08.png" id="2_g37hr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rqurh"]
@@ -108,23 +107,6 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 2
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/UI"]
-custom_minimum_size = Vector2(48, 48)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-texture = ExtResource("2_561wg")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
