@@ -27,6 +27,8 @@ window/size/viewport_height=1080
 [global_group]
 
 players=""
+death_camera=""
+spawn_points=""
 
 [input]
 

@@ -36,7 +36,7 @@ id = 19
 
 [obj type="OScriptGraph" id="OScriptGraph_xywfx"]
 graph_name = &"EventGraph"
-offset = Vector2(480.4801025390625, -24)
+offset = Vector2(480.4801025390625, 0)
 flags = 8
 nodes = Array[int]([19, 20, 21, 33, 34])
 functions = Array[int]([19])
