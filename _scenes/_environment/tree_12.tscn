@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8xwpwvx8i8mc"]
+
+[ext_resource type="PackedScene" uid="uid://cg6kvpv8lcan8" path="res://_assets/_trees/models/tree12.fbx" id="1_mepe1"]
+[ext_resource type="Texture2D" uid="uid://bx3k3ahqaqfv3" path="res://_assets/_trees/textures/tree12.png" id="2_va24o"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_14i3g"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("2_va24o")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mepe1"]
+
+[node name="tree12" instance=ExtResource("1_mepe1")]
+
+[node name="tree12" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_14i3g")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tree12" index="0"]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tree12/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 6, 0, 0, 0, 1, 0, 2.9598098, 4.822142e-07)
+shape = SubResource("BoxShape3D_mepe1")

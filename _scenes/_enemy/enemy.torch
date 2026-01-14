@@ -106,7 +106,7 @@ functions = Array[int]([13])
 
 [obj type="OScriptGraph" id="OScriptGraph_dy72c"]
 graph_name = &"_update_target_location"
-offset = Vector2(-206.85940551757813, -266.18182373046875)
+offset = Vector2(0, -18.18181800842285)
 zoom = 0.9090908765792848
 flags = 22
 nodes = Array[int]([35, 36, 37, 38, 39, 40, 41])

@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8rrp4s8haeg8"]
+
+[ext_resource type="Texture2D" uid="uid://byivkq5ck6gox" path="res://_assets/_trees/textures/bush02.png" id="1_tem3v"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_yci01"]
+size = Vector2(100, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b12ek"]
+shading_mode = 2
+albedo_texture = ExtResource("1_tem3v")
+uv1_scale = Vector3(5, 5, 1)
+grow_amount = 0.245
+distance_fade_mode = 3
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tem3v"]
+points = PackedVector3Array(50, 5, 0, 50, -5, 0, -50, 5, 0, -50, -5, 0)
+
+[node name="StaticBody3D" type="StaticBody3D"]
+collision_layer = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("QuadMesh_yci01")
+surface_material_override/0 = SubResource("StandardMaterial3D_b12ek")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_tem3v")
