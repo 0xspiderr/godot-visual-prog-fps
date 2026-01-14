@@ -75,8 +75,8 @@ id = 104
 
 [obj type="OScriptGraph" id="OScriptGraph_0txgl"]
 graph_name = &"EventGraph"
-offset = Vector2(-2154.082275390625, 2690.007080078125)
-zoom = 0.7513144612312317
+offset = Vector2(-900.186279296875, -224.241455078125)
+zoom = 0.5644736289978027
 flags = 8
 nodes = Array[int]([0, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 27, 29, 30, 31, 33, 34, 35, 36, 37, 38, 40, 41, 42, 43, 44, 45, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 65, 66, 93, 96, 97, 98, 99, 100, 101, 102, 104, 106, 108, 109, 110, 118, 119, 120, 121, 122, 124, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 138, 139, 140, 141, 142, 143, 145, 148, 153, 156, 157, 158, 159, 160, 162, 163, 166, 167, 168, 169])
 functions = Array[int]([0, 16, 44, 104])
@@ -2893,8 +2893,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }])
 
 [obj type="OScriptNodePropertyGet" id="OScriptNodePropertyGet_jsh5u"]
@@ -2950,8 +2949,7 @@ pin_data = Array[Dictionary]([{
 "pin_name": &"result",
 "type": 1,
 "dir": 1,
-"flags": 2,
-"dv": false
+"flags": 2
 }])
 
 [obj type="OScriptNodeOperator" id="OScriptNodeOperator_uhsyf"]
@@ -2966,14 +2964,12 @@ position = Vector2(-2820, 3680)
 pin_data = Array[Dictionary]([{
 "pin_name": &"a",
 "type": 1,
-"flags": 2,
-"dv": false
+"flags": 2
 }, {
 "pin_name": &"result",
 "type": 1,
 "dir": 1,
-"flags": 2,
-"dv": false
+"flags": 2
 }])
 
 [obj type="OScriptNodeOperator" id="OScriptNodeOperator_jibhk"]
@@ -2990,19 +2986,16 @@ position = Vector2(-2440, 3560)
 pin_data = Array[Dictionary]([{
 "pin_name": &"a",
 "type": 1,
-"flags": 2,
-"dv": false
+"flags": 2
 }, {
 "pin_name": &"b",
 "type": 1,
-"flags": 2,
-"dv": false
+"flags": 2
 }, {
 "pin_name": &"result",
 "type": 1,
 "dir": 1,
-"flags": 2,
-"dv": false
+"flags": 2
 }])
 
 [obj type="OScriptNodePropertyGet" id="OScriptNodePropertyGet_1obox"]
@@ -3024,8 +3017,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "CharacterBody3D",
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }, {
 "pin_name": &"is_reloading",
 "type": 1,

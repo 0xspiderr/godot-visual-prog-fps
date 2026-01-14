@@ -82,7 +82,7 @@ id = 112
 
 [obj type="OScriptGraph" id="OScriptGraph_qjg7x"]
 graph_name = &"EventGraph"
-offset = Vector2(653.5096435546875, -67.84466552734375)
+offset = Vector2(653.5096435546875, 0)
 zoom = 0.7298980951309204
 flags = 8
 nodes = Array[int]([0, 1, 2, 3, 4, 28, 29, 30, 31, 32, 33, 34, 42, 43, 44, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 91, 94, 95, 96, 111, 113, 114, 124, 125, 144, 145, 146, 149, 150, 151, 152])
@@ -98,7 +98,7 @@ functions = Array[int]([5])
 
 [obj type="OScriptGraph" id="OScriptGraph_l4dva"]
 graph_name = &"_get_nearest_player"
-offset = Vector2(-1988.1287841796875, -756.7229614257813)
+offset = Vector2(-1988.1287841796875, -653.3998413085938)
 zoom = 1.209999680519104
 flags = 22
 nodes = Array[int]([13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 147, 148, 153, 154])
@@ -106,15 +106,15 @@ functions = Array[int]([13])
 
 [obj type="OScriptGraph" id="OScriptGraph_dy72c"]
 graph_name = &"_update_target_location"
-offset = Vector2(11.140594482421875, -387.2388610839844)
-zoom = 0.9090908765792847
+offset = Vector2(11.140594482421875, -18.18181800842285)
+zoom = 0.9090908765792848
 flags = 22
 nodes = Array[int]([35, 36, 37, 38, 39, 40, 41])
 functions = Array[int]([35])
 
 [obj type="OScriptGraph" id="OScriptGraph_fmwsm"]
 graph_name = &"deal_damage"
-offset = Vector2(-522.0066528320313, -255.35003662109375)
+offset = Vector2(-263.22393798828125, 0)
 zoom = 0.5483831763267517
 flags = 22
 nodes = Array[int]([78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 92, 93, 97, 115, 116, 130, 131, 132, 133, 134, 135, 136, 137])
@@ -3438,8 +3438,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Object",
-"target_class": "Object",
-"dv": null
+"target_class": "Object"
 }, {
 "pin_name": &"property",
 "type": 21,
@@ -3527,8 +3526,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Object",
-"target_class": "Object",
-"dv": null
+"target_class": "Object"
 }, {
 "pin_name": &"property",
 "type": 21,
