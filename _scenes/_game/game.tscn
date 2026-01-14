@@ -21,7 +21,6 @@ background_mode = 2
 sky = SubResource("Sky_561wg")
 ambient_light_source = 3
 ambient_light_color = Color(0.5186321, 0.29878843, 0.3796431, 1)
-ambient_light_sky_contribution = 0.4
 ambient_light_energy = 0.0
 tonemap_mode = 2
 ssao_enabled = true
@@ -95,32 +94,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 23.024609)
 
 [node name="Marker3D5" type="Marker3D" parent="SpawnPoints"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.262379, 0, 16.372856)
-
-[node name="EnemySpawnPoints" type="Node" parent="."]
-
-[node name="Marker3D" type="Marker3D" parent="EnemySpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.547375, 0, 0)
-
-[node name="Marker3D2" type="Marker3D" parent="EnemySpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.210735, 0, 42.440254)
-
-[node name="Marker3D3" type="Marker3D" parent="EnemySpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 54.234554)
-
-[node name="Marker3D4" type="Marker3D" parent="EnemySpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, 52.55579)
-
-[node name="Marker3D5" type="Marker3D" parent="EnemySpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.37924, 0, 0)
-
-[node name="Marker3D6" type="Marker3D" parent="EnemySpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, -51.689026)
-
-[node name="Marker3D7" type="Marker3D" parent="EnemySpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -51.37103)
-
-[node name="Marker3D8" type="Marker3D" parent="EnemySpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -51.47519)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -256,8 +229,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.606407, 0, 1.7828903)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.254486, 0, 27.798145)
 
 [node name="DeathCamera" type="Camera3D" parent="." groups=["death_camera"]]
-transform = Transform3D(0.78273124, -0.21294428, 0.58479625, -0.11380721, 0.8748251, 0.47088104, -0.6118658, -0.43512732, 0.66051835, 25.267887, 19.229046, 31.813068)
+transform = Transform3D(0.7843218, -0.2921942, 0.5472311, 2.232062e-08, 0.882127, 0.47101197, -0.6203541, -0.36942488, 0.6918714, 25.267887, 19.229046, 31.813068)
 environment = SubResource("Environment_fpbr3")
+fov = 90.0
 
 [node name="Walls" type="Node" parent="."]
 
@@ -308,3 +282,29 @@ transform = Transform3D(-0.016300708, 0, -0.99986714, 0, 1, 0, 0.99986714, 0, -0
 
 [node name="StaticBody3D8" parent="Walls" instance=ExtResource("5_fpbr3")]
 transform = Transform3D(0.52382237, 0, -0.8518276, 0, 1, 0, 0.8518276, 0, 0.52382237, 44.900017, 4.2810307, -25.951992)
+
+[node name="EnemySpawnPoints" type="Node" parent="."]
+
+[node name="Marker3D" type="Marker3D" parent="EnemySpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.547, 0.5, 0)
+
+[node name="Marker3D2" type="Marker3D" parent="EnemySpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.211, 0.5, 42.44)
+
+[node name="Marker3D3" type="Marker3D" parent="EnemySpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 54.235)
+
+[node name="Marker3D4" type="Marker3D" parent="EnemySpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0.5, 52.556)
+
+[node name="Marker3D5" type="Marker3D" parent="EnemySpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.379, 0.5, 0)
+
+[node name="Marker3D6" type="Marker3D" parent="EnemySpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0.5, -51.689)
+
+[node name="Marker3D7" type="Marker3D" parent="EnemySpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -51.371)
+
+[node name="Marker3D8" type="Marker3D" parent="EnemySpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0.5, -51.475)
