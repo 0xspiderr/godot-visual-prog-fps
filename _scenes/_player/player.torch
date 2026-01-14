@@ -202,7 +202,7 @@ functions = Array[int]([350])
 
 [obj type="OScriptGraph" id="OScriptGraph_tfse5"]
 graph_name = &"broadcast_death_state"
-offset = Vector2(2911.333984375, -242.98098754882813)
+offset = Vector2(2911.333984375, -199.0631103515625)
 zoom = 0.663543701171875
 flags = 22
 nodes = Array[int]([375, 376, 377, 378, 379, 380, 381, 382, 397, 398, 399, 400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 469, 470, 471, 472, 473, 474, 475, 476, 477, 478, 479, 480])
@@ -210,7 +210,7 @@ functions = Array[int]([375])
 
 [obj type="OScriptGraph" id="OScriptGraph_1obox"]
 graph_name = &"respawn"
-offset = Vector2(2246.847900390625, -408.83758544921875)
+offset = Vector2(2246.847900390625, -156.8376007080078)
 zoom = 0.6032215356826782
 flags = 22
 nodes = Array[int]([417, 428, 429, 445, 451, 452, 453, 454, 455, 456, 457, 458, 459, 460, 461, 467, 468])
@@ -5763,8 +5763,7 @@ pin_data = Array[Dictionary]([{
 "pin_name": &"result",
 "type": 1,
 "dir": 1,
-"flags": 2,
-"dv": false
+"flags": 2
 }])
 
 [obj type="OScriptNodeSceneNode" id="OScriptNodeSceneNode_2pjfy"]
@@ -7269,8 +7268,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "MultiplayerSynchronizer",
-"dv": null
+"target_class": "MultiplayerSynchronizer"
 }])
 
 [obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_d0l2x"]
@@ -7300,8 +7298,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node",
-"target_class": "Node",
-"dv": null
+"target_class": "Node"
 }, {
 "pin_name": &"enable",
 "type": 1,
@@ -7336,8 +7333,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node",
-"target_class": "Node",
-"dv": null
+"target_class": "Node"
 }, {
 "pin_name": &"enable",
 "type": 1,
@@ -7372,8 +7368,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node",
-"target_class": "Node",
-"dv": null
+"target_class": "Node"
 }, {
 "pin_name": &"enable",
 "type": 1,
@@ -7426,8 +7421,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "MultiplayerSynchronizer",
-"dv": null
+"target_class": "MultiplayerSynchronizer"
 }])
 
 [obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_134si"]
@@ -7510,8 +7504,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }])
 
 [obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_4x4ev"]
@@ -7541,8 +7534,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node",
-"target_class": "Node",
-"dv": null
+"target_class": "Node"
 }, {
 "pin_name": &"enable",
 "type": 1,
@@ -7577,8 +7569,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node",
-"target_class": "Node",
-"dv": null
+"target_class": "Node"
 }, {
 "pin_name": &"enable",
 "type": 1,

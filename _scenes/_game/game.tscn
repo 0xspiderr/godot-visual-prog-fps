@@ -1,11 +1,15 @@
-[gd_scene load_steps=10 format=3 uid="uid://qfbnpinb1fjh"]
+[gd_scene load_steps=11 format=3 uid="uid://qfbnpinb1fjh"]
 
 [ext_resource type="Script" uid="uid://dufijv5a0i3ms" path="res://_scenes/_game/game.torch" id="1_rqurh"]
-[ext_resource type="Texture2D" uid="uid://dviegyw3ycy2l" path="res://addons/kenney_prototype_textures/dark/texture_08.png" id="2_g37hr"]
+[ext_resource type="Texture2D" uid="uid://daoascac22nto" path="res://_assets/_ground/grass_02.png" id="2_561wg"]
+[ext_resource type="PackedScene" uid="uid://cipnsr4i5btjg" path="res://_scenes/_environment/bush_01.tscn" id="3_g37hr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rqurh"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+sky_top_color = Color(0.32868737, 0.1798028, 0.22188231, 1)
+sky_horizon_color = Color(0.11245821, 0.032843318, 0.016124416, 1)
+sky_curve = 0.08919062
+ground_bottom_color = Color(0.22877565, 0, 0.0030999333, 1)
+ground_horizon_color = Color(0.10413029, 0.0029941485, 0.022757137, 1)
 
 [sub_resource type="Sky" id="Sky_561wg"]
 sky_material = SubResource("ProceduralSkyMaterial_rqurh")
@@ -13,21 +17,36 @@ sky_material = SubResource("ProceduralSkyMaterial_rqurh")
 [sub_resource type="Environment" id="Environment_g37hr"]
 background_mode = 2
 sky = SubResource("Sky_561wg")
+ambient_light_source = 3
+ambient_light_color = Color(0.5186321, 0.29878843, 0.3796431, 1)
+ambient_light_sky_contribution = 0.4
+ambient_light_energy = 0.0
 tonemap_mode = 2
+ssao_enabled = true
+fog_light_color = Color(0.37289938, 0.40472645, 0.45424438, 1)
+fog_light_energy = 0.42
+fog_density = 0.1191
+fog_height = 4.0
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.25
+volumetric_fog_albedo = Color(0.37917995, 0.37917972, 0.37918, 1)
+volumetric_fog_emission = Color(0.18805924, 0.08651566, 0.060410984, 1)
+volumetric_fog_sky_affect = 0.9
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_g37hr"]
-vertices = PackedVector3Array(-24.5, 1, -24.5, -24.5, 1, 24.5, 24.5, 1, 24.5, 24.5, 1, -24.5)
+vertices = PackedVector3Array(-149.5, 2, -149.5, -149.5, 2, 149.5, 149.5, 2, 149.5, 149.5, 2, -149.5)
 polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rqurh"]
-size = Vector3(50, 1, 50)
+size = Vector3(300, 0, 300)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_rqurh"]
-size = Vector2(50, 50)
+size = Vector2(300, 300)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l4dva"]
-albedo_texture = ExtResource("2_g37hr")
-uv1_scale = Vector3(50, 50, 50)
+albedo_color = Color(0.88364196, 0.7130425, 0.7438937, 1)
+albedo_texture = ExtResource("2_561wg")
+uv1_scale = Vector3(100, 100, 100)
 
 [node name="Game" type="Node3D"]
 script = ExtResource("1_rqurh")
@@ -46,6 +65,8 @@ environment = SubResource("Environment_g37hr")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_color = Color(0.8601456, 0.6701343, 0.7337308, 1)
+light_energy = 0.6
 shadow_enabled = true
 
 [node name="Players" type="Node" parent="."]
@@ -109,7 +130,8 @@ size_flags_vertical = 3
 mouse_filter = 2
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+visible = false
 navigation_mesh = SubResource("NavigationMesh_g37hr")
 
 [node name="Environment" type="Node" parent="NavigationRegion3D"]
@@ -123,5 +145,77 @@ shape = SubResource("BoxShape3D_rqurh")
 mesh = SubResource("PlaneMesh_rqurh")
 surface_material_override/0 = SubResource("StandardMaterial3D_l4dva")
 
+[node name="bush01" parent="NavigationRegion3D/Environment" instance=ExtResource("3_g37hr")]
+transform = Transform3D(0.2, 0, 0, 0, 0.22, 0, 0, 0, 0.2, 0, -0.011704415, 0)
+
+[node name="bush02" parent="NavigationRegion3D/Environment" instance=ExtResource("3_g37hr")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -10.840397, -0.011704415, 3.092945)
+
+[node name="bush19" parent="NavigationRegion3D/Environment" instance=ExtResource("3_g37hr")]
+transform = Transform3D(0.5, 0, 0, 0, 0.55, 0, 0, 0, 0.5, -35.558754, -0.011704415, -3.6040087)
+
+[node name="bush03" parent="NavigationRegion3D/Environment" instance=ExtResource("3_g37hr")]
+transform = Transform3D(0.3, 0, 0, 0, 0.33, 0, 0, 0, 0.3, -2.9890366, -0.011704415, 13.288664)
+
+[node name="bush17" parent="NavigationRegion3D/Environment" instance=ExtResource("3_g37hr")]
+transform = Transform3D(0.4, 0, 0, 0, 0.44, 0, 0, 0, 0.4, -23.72648, -0.011704415, 13.288664)
+
+[node name="bush22" parent="NavigationRegion3D/Environment" instance=ExtResource("3_g37hr")]
+transform = Transform3D(0.2, 0, 0, 0, 0.22, 0, 0, 0, 0.2, -36.72648, -0.011704415, 11.221882)
+
+[node name="bush18" parent="NavigationRegion3D/Environment" instance=ExtResource("3_g37hr")]
+transform = Transform3D(0.2, 0, 0, 0, 0.22, 0, 0, 0, 0.2, -13.834721, -0.011704415, 26.98423)
+
+[node name="bush04" parent="NavigationRegion3D/Environment" instance=ExtResource("3_g37hr")]
+transform = Transform3D(0.2, 0, 0, 0, 0.22, 0, 0, 0, 0.2, 8.046886, -0.011704415, 17.111334)
+
+[node name="bush21" parent="NavigationRegion3D/Environment" instance=ExtResource("3_g37hr")]
+transform = Transform3D(0.2, 0, 0, 0, 0.22, 0, 0, 0, 0.2, 8.046886, -0.011704415, 27.494009)
+
+[node name="bush05" parent="NavigationRegion3D/Environment" instance=ExtResource("3_g37hr")]
+transform = Transform3D(0.2, 0, 0, 0, 0.22, 0, 0, 0, 0.2, 8.046886, -0.011704415, -14.4547825)
+
+[node name="bush23" parent="NavigationRegion3D/Environment" instance=ExtResource("3_g37hr")]
+transform = Transform3D(0.5, 0, 0, 0, 0.55, 0, 0, 0, 0.5, 11.833635, -0.011704415, -35.96965)
+
+[node name="bush24" parent="NavigationRegion3D/Environment" instance=ExtResource("3_g37hr")]
+transform = Transform3D(0.2, 0, 0, 0, 0.22, 0, 0, 0, 0.2, 27.141335, -0.011704415, -35.96965)
+
+[node name="bush06" parent="NavigationRegion3D/Environment" instance=ExtResource("3_g37hr")]
+transform = Transform3D(0.35, 0, 0, 0, 0.385, 0, 0, 0, 0.35, 13.561879, -0.011704415, -14.4547825)
+
+[node name="bush07" parent="NavigationRegion3D/Environment" instance=ExtResource("3_g37hr")]
+transform = Transform3D(0.35, 0, 0, 0, 0.385, 0, 0, 0, 0.35, 13.561879, -0.011704415, 5.0720615)
+
+[node name="bush08" parent="NavigationRegion3D/Environment" instance=ExtResource("3_g37hr")]
+transform = Transform3D(0.2, 0, 0, 0, 0.22, 0, 0, 0, 0.2, 10.561879, -0.011704415, 9.140469)
+
+[node name="bush09" parent="NavigationRegion3D/Environment" instance=ExtResource("3_g37hr")]
+transform = Transform3D(0.4, 0, 0, 0, 0.44, 0, 0, 0, 0.4, -1.6633673, -0.011704415, -9.835915)
+
+[node name="bush10" parent="NavigationRegion3D/Environment" instance=ExtResource("3_g37hr")]
+transform = Transform3D(0.35, 0, 0, 0, 0.385, 0, 0, 0, 0.35, -13.087102, -0.011704415, -9.835915)
+
+[node name="bush11" parent="NavigationRegion3D/Environment" instance=ExtResource("3_g37hr")]
+transform = Transform3D(0.2, 0, 0, 0, 0.22, 0, 0, 0, 0.2, -13.087102, -0.011704415, -26.123028)
+
+[node name="bush20" parent="NavigationRegion3D/Environment" instance=ExtResource("3_g37hr")]
+transform = Transform3D(0.4, 0, 0, 0, 0.44, 0, 0, 0, 0.4, -33.71933, -0.011704415, -23.561237)
+
+[node name="bush12" parent="NavigationRegion3D/Environment" instance=ExtResource("3_g37hr")]
+transform = Transform3D(0.291, 0, 0, 0, 0.32, 0, 0, 0, 0.291, -1.0584631, -0.011704415, -26.123028)
+
+[node name="bush13" parent="NavigationRegion3D/Environment" instance=ExtResource("3_g37hr")]
+transform = Transform3D(0.2, 0, 0, 0, 0.22, 0, 0, 0, 0.2, 29.01619, -0.011704415, -26.123028)
+
+[node name="bush14" parent="NavigationRegion3D/Environment" instance=ExtResource("3_g37hr")]
+transform = Transform3D(0.2, 0, 0, 0, 0.22, 0, 0, 0, 0.2, 29.01619, -0.011704415, -11.768255)
+
+[node name="bush15" parent="NavigationRegion3D/Environment" instance=ExtResource("3_g37hr")]
+transform = Transform3D(0.25, 0, 0, 0, 0.275, 0, 0, 0, 0.25, 24.07459, -0.011704415, 2.4777708)
+
+[node name="bush16" parent="NavigationRegion3D/Environment" instance=ExtResource("3_g37hr")]
+transform = Transform3D(0.2, 0, 0, 0, 0.22, 0, 0, 0, 0.2, 24.07459, -0.011704415, 12.649102)
+
 [node name="DeathCamera" type="Camera3D" parent="." groups=["death_camera"]]
-transform = Transform3D(1, 0, 0, 0, 0.8518915, 0.5237183, 0, -0.5237183, 0.8518915, 0, 17.061543, 29.553822)
+transform = Transform3D(1, 0, 0, 0, 0.8518915, 0.5237183, 0, -0.5237183, 0.8518915, 0, 20.061543, 29.553822)

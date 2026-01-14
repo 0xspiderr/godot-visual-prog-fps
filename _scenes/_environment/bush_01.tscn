@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cipnsr4i5btjg"]
+
+[ext_resource type="PackedScene" uid="uid://d0pawkka0or1h" path="res://_assets/_trees/models/bush01.fbx" id="1_lgsg7"]
+[ext_resource type="Texture2D" uid="uid://b6diwiuumum8w" path="res://_assets/_trees/textures/bush01.png" id="2_p60w5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3lw8t"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("2_p60w5")
+
+[node name="bush01" instance=ExtResource("1_lgsg7")]
+transform = Transform3D(0.2, 0, 0, 0, 0.22, 0, 0, 0, 0.2, 0, 0, 0)
+
+[node name="bush01" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_3lw8t")
