@@ -36,6 +36,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="SingleBtn" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 theme = ExtResource("3_nnbar")
 theme_override_font_sizes/font_size = 80
