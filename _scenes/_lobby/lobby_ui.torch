@@ -1,4 +1,4 @@
-[orchestration type="OScript" load_steps=76 format=3 uid="uid://boydb6g0tf2jw"]
+[orchestration type="OScript" load_steps=81 format=3 uid="uid://boydb6g0tf2jw"]
 
 [obj type="OScriptFunction" id="OScriptFunction_0txgl"]
 guid = "29E64DBF-07C1-4E26-B020-F09A84A71415"
@@ -37,13 +37,20 @@ method = {
 }
 id = 108
 
+[obj type="OScriptFunction" id="OScriptFunction_e7ysg"]
+guid = "5AFEFFA4-19EB-4710-BEA3-5BD2D5D0925F"
+method = {
+"name": &"_on_back_btn_pressed"
+}
+id = 112
+
 [obj type="OScriptGraph" id="OScriptGraph_tvhnv"]
 graph_name = &"EventGraph"
-offset = Vector2(-677.2603759765625, 309.30035400390625)
-zoom = 0.6830131411552429
+offset = Vector2(1228.3201904296875, -28.692474365234375)
+zoom = 1.0686439275741577
 flags = 8
-nodes = Array[int]([0, 1, 2, 4, 5, 6, 7, 9, 10, 11, 18, 19, 20, 21, 23, 24, 25, 26, 27, 28, 30, 31, 32, 39, 40, 43, 44, 45, 51, 53, 55, 56, 58, 59, 69, 70, 86, 88, 90, 92, 94, 95, 96, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111])
-functions = Array[int]([0, 1, 56, 108])
+nodes = Array[int]([0, 1, 2, 4, 5, 6, 7, 9, 10, 11, 18, 19, 20, 21, 23, 24, 25, 26, 27, 28, 30, 31, 32, 39, 40, 43, 44, 45, 51, 53, 55, 56, 58, 59, 69, 70, 86, 88, 90, 92, 94, 95, 96, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115])
+functions = Array[int]([0, 1, 56, 108, 112])
 knots = Array[Dictionary]([{
 "id": 144115359874547755,
 "points": PackedVector2Array(1700, 720)
@@ -1432,7 +1439,7 @@ pin_data = Array[Dictionary]([{
 node_path = NodePath("%IPDialogue")
 target_class_name = "AcceptDialog"
 id = 106
-position = Vector2(1660, 300)
+position = Vector2(1540, 240)
 pin_data = Array[Dictionary]([{
 "pin_name": &"%IPDialogue",
 "type": 24,
@@ -1547,9 +1554,111 @@ pin_data = Array[Dictionary]([{
 "dv": ""
 }])
 
+[obj type="OScriptNodeEvent" id="OScriptNodeEvent_i3agv"]
+function_id = "5AFEFFA4-19EB-4710-BEA3-5BD2D5D0925F"
+id = 112
+position = Vector2(-560, 2160)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}])
+
+[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_tbfbc"]
+function_name = &"get_tree"
+target_class_name = "Node"
+target_type = 24
+flags = 522
+method = {
+"name": &"get_tree",
+"return": {
+"type": 24,
+"class_name": &"SceneTree"
+},
+"flags": 5
+}
+chain = false
+id = 113
+position = Vector2(-480, 2400)
+pin_data = Array[Dictionary]([{
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "Node",
+"target_class": "Node"
+}, {
+"pin_name": &"return_value",
+"type": 24,
+"dir": 1,
+"flags": 2,
+"label": "SceneTree",
+"target_class": "SceneTree"
+}])
+
+[obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_kt5u2"]
+function_name = &"change_scene_to_file"
+target_class_name = "SceneTree"
+target_type = 24
+flags = 520
+method = {
+"name": &"change_scene_to_file",
+"return": {
+"type": 2,
+"class_name": &"Error",
+"usage": 65542
+},
+"args": [{
+"name": &"path",
+"type": 4
+}]
+}
+chain = false
+id = 114
+position = Vector2(60, 2140)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}, {
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "SceneTree",
+"target_class": "SceneTree"
+}, {
+"pin_name": &"path",
+"type": 4,
+"flags": 2,
+"dv": ""
+}, {
+"pin_name": &"return_value",
+"type": 2,
+"dir": 1,
+"flags": 33554434,
+"label": "Error",
+"target_class": "Error",
+"usage": 65542
+}])
+
+[obj type="OScriptNodeResourcePath" id="OScriptNodeResourcePath_f8he6"]
+path = "res://_scenes/_main_menu/main_menu.tscn"
+id = 115
+position = Vector2(-740, 2300)
+pin_data = Array[Dictionary]([{
+"pin_name": &"path",
+"type": 4,
+"dir": 1,
+"flags": 2050,
+"label": "res://_scenes/_main_menu/main_menu.tscn",
+"dv": ""
+}])
+
 [resource]
 base_type = &"Control"
-functions = Array[OScriptFunction]([SubResource("OScriptFunction_0txgl"), SubResource("OScriptFunction_isaxa"), SubResource("OScriptFunction_ly424"), SubResource("OScriptFunction_uepm5"), SubResource("OScriptFunction_xxwjk")])
-connections = Array[int]([18, 0, 4, 0, 6, 0, 5, 0, 9, 0, 7, 0, 102, 0, 9, 0, 4, 0, 11, 0, 0, 0, 18, 0, 9, 0, 19, 0, 19, 0, 20, 0, 103, 0, 23, 0, 23, 0, 24, 0, 24, 0, 25, 0, 1, 0, 26, 0, 26, 0, 30, 0, 28, 0, 31, 0, 23, 0, 32, 0, 44, 0, 40, 0, 104, 0, 43, 0, 30, 0, 44, 0, 43, 0, 45, 0, 26, 1, 51, 0, 44, 1, 53, 0, 18, 1, 55, 0, 56, 0, 59, 0, 63, 0, 64, 0, 60, 0, 65, 0, 70, 0, 69, 0, 76, 0, 72, 0, 65, 0, 76, 0, 72, 0, 77, 0, 77, 1, 82, 0, 77, 0, 84, 0, 88, 0, 86, 0, 11, 0, 88, 0, 94, 0, 90, 0, 90, 0, 92, 0, 40, 0, 94, 0, 108, 0, 110, 0, 2, 0, 4, 1, 7, 0, 5, 1, 10, 0, 11, 1, 20, 0, 18, 1, 25, 0, 26, 1, 27, 0, 30, 1, 32, 0, 31, 1, 39, 0, 40, 1, 45, 0, 44, 1, 105, 0, 51, 1, 106, 0, 53, 1, 107, 0, 55, 1, 58, 0, 59, 1, 97, 0, 65, 1, 76, 1, 72, 1, 64, 0, 76, 1, 72, 1, 77, 1, 98, 0, 84, 1, 99, 0, 86, 1, 100, 0, 88, 1, 101, 0, 90, 1, 96, 0, 92, 1, 95, 0, 94, 1, 109, 0, 110, 1, 5, 0, 4, 2, 31, 0, 30, 2, 43, 0, 40, 2, 79, 0, 77, 2, 82, 0, 84, 2, 69, 0, 59, 3, 111, 0, 110, 3])
-nodes = Array[OScriptNode]([SubResource("OScriptNodeEvent_dy72c"), SubResource("OScriptNodeEvent_fvhdw"), SubResource("OScriptNodeAutoload_ly424"), SubResource("OScriptNodePropertySet_ly424"), SubResource("OScriptNodeMakeDictionary_uepm5"), SubResource("OScriptNodeComposeFrom_8rnnb"), SubResource("OScriptNodeComposeFrom_vu3qr"), SubResource("OScriptNodePropertyGet_8tft5"), SubResource("OScriptNodeAutoload_uepm5"), SubResource("OScriptNodeCallMemberFunction_8rnnb"), SubResource("OScriptNodeBranch_ly424"), SubResource("OScriptNodeCallMemberFunction_uepm5"), SubResource("OScriptNodeOperator_8rnnb"), SubResource("OScriptNodeComment_ly424"), SubResource("OScriptNodePropertyGet_uepm5"), SubResource("OScriptNodeCallMemberFunction_vu3qr"), SubResource("OScriptNodeOperator_6f16p"), SubResource("OScriptNodeBranch_8tft5"), SubResource("OScriptNodeAutoload_8rnnb"), SubResource("OScriptNodeComposeFrom_6f16p"), SubResource("OScriptNodePropertySet_uepm5"), SubResource("OScriptNodeMakeDictionary_8rnnb"), SubResource("OScriptNodeComposeFrom_8tft5"), SubResource("OScriptNodeAutoload_vu3qr"), SubResource("OScriptNodeCallMemberFunction_6f16p"), SubResource("OScriptNodePropertyGet_8rnnb"), SubResource("OScriptNodeBranch_uepm5"), SubResource("OScriptNodeCallMemberFunction_ly424"), SubResource("OScriptNodeCallMemberFunction_0sjfg"), SubResource("OScriptNodeCallMemberFunction_idc83"), SubResource("OScriptNodeCallMemberFunction_q3swe"), SubResource("OScriptNodeEvent_vu3qr"), SubResource("OScriptNodeAutoload_6f16p"), SubResource("OScriptNodeCallMemberFunction_xt1uf"), SubResource("OScriptNodeFunctionEntry_gf7p2"), SubResource("OScriptNodeAutoload_i802b"), SubResource("OScriptNodePropertyGet_jamr8"), SubResource("OScriptNodeCallMemberFunction_nfp51"), SubResource("OScriptNodeComposeFrom_ly424"), SubResource("OScriptNodeSelf_uepm5"), SubResource("OScriptNodeForEach_wm80e"), SubResource("OScriptNodeCallMemberFunction_gf7p2"), SubResource("OScriptNodeCallMemberFunction_wm80e"), SubResource("OScriptNodeComposeFrom_jamr8"), SubResource("OScriptNodeComposeFrom_0txgl"), SubResource("OScriptNodeCallMemberFunction_i802b"), SubResource("OScriptNodeCallMemberFunction_832xk"), SubResource("OScriptNodeCallMemberFunction_jamr8"), SubResource("OScriptNodeCallMemberFunction_82htt"), SubResource("OScriptNodeCallMemberFunction_fitqh"), SubResource("OScriptNodeCallMemberFunction_r2vpw"), SubResource("OScriptNodeSceneNode_82htt"), SubResource("OScriptNodeSceneNode_idc83"), SubResource("OScriptNodeSceneNode_q3swe"), SubResource("OScriptNodeSceneNode_m4ua7"), SubResource("OScriptNodeSceneNode_fitqh"), SubResource("OScriptNodeSceneNode_0sjfg"), SubResource("OScriptNodeSceneNode_832xk"), SubResource("OScriptNodeSceneNode_6f16p"), SubResource("OScriptNodeSceneNode_ly424"), SubResource("OScriptNodeSceneNode_uepm5"), SubResource("OScriptNodeSceneNode_8rnnb"), SubResource("OScriptNodeSceneNode_vu3qr"), SubResource("OScriptNodeSceneNode_8tft5"), SubResource("OScriptNodeEvent_rqurh"), SubResource("OScriptNodeAutoload_561wg"), SubResource("OScriptNodeCallMemberFunction_e7ysg"), SubResource("OScriptNodeComposeFrom_i3agv")])
+functions = Array[OScriptFunction]([SubResource("OScriptFunction_0txgl"), SubResource("OScriptFunction_isaxa"), SubResource("OScriptFunction_ly424"), SubResource("OScriptFunction_uepm5"), SubResource("OScriptFunction_xxwjk"), SubResource("OScriptFunction_e7ysg")])
+connections = Array[int]([18, 0, 4, 0, 6, 0, 5, 0, 9, 0, 7, 0, 102, 0, 9, 0, 4, 0, 11, 0, 0, 0, 18, 0, 9, 0, 19, 0, 19, 0, 20, 0, 103, 0, 23, 0, 23, 0, 24, 0, 24, 0, 25, 0, 1, 0, 26, 0, 26, 0, 30, 0, 28, 0, 31, 0, 23, 0, 32, 0, 44, 0, 40, 0, 104, 0, 43, 0, 30, 0, 44, 0, 43, 0, 45, 0, 26, 1, 51, 0, 44, 1, 53, 0, 18, 1, 55, 0, 56, 0, 59, 0, 63, 0, 64, 0, 60, 0, 65, 0, 70, 0, 69, 0, 76, 0, 72, 0, 65, 0, 76, 0, 72, 0, 77, 0, 77, 1, 82, 0, 77, 0, 84, 0, 88, 0, 86, 0, 11, 0, 88, 0, 94, 0, 90, 0, 90, 0, 92, 0, 40, 0, 94, 0, 108, 0, 110, 0, 112, 0, 114, 0, 2, 0, 4, 1, 7, 0, 5, 1, 10, 0, 11, 1, 20, 0, 18, 1, 25, 0, 26, 1, 27, 0, 30, 1, 32, 0, 31, 1, 39, 0, 40, 1, 45, 0, 44, 1, 105, 0, 51, 1, 106, 0, 53, 1, 107, 0, 55, 1, 58, 0, 59, 1, 97, 0, 65, 1, 76, 1, 72, 1, 64, 0, 76, 1, 72, 1, 77, 1, 98, 0, 84, 1, 99, 0, 86, 1, 100, 0, 88, 1, 101, 0, 90, 1, 96, 0, 92, 1, 95, 0, 94, 1, 109, 0, 110, 1, 113, 0, 114, 1, 5, 0, 4, 2, 31, 0, 30, 2, 43, 0, 40, 2, 79, 0, 77, 2, 82, 0, 84, 2, 115, 0, 114, 2, 69, 0, 59, 3, 111, 0, 110, 3])
+nodes = Array[OScriptNode]([SubResource("OScriptNodeEvent_dy72c"), SubResource("OScriptNodeEvent_fvhdw"), SubResource("OScriptNodeAutoload_ly424"), SubResource("OScriptNodePropertySet_ly424"), SubResource("OScriptNodeMakeDictionary_uepm5"), SubResource("OScriptNodeComposeFrom_8rnnb"), SubResource("OScriptNodeComposeFrom_vu3qr"), SubResource("OScriptNodePropertyGet_8tft5"), SubResource("OScriptNodeAutoload_uepm5"), SubResource("OScriptNodeCallMemberFunction_8rnnb"), SubResource("OScriptNodeBranch_ly424"), SubResource("OScriptNodeCallMemberFunction_uepm5"), SubResource("OScriptNodeOperator_8rnnb"), SubResource("OScriptNodeComment_ly424"), SubResource("OScriptNodePropertyGet_uepm5"), SubResource("OScriptNodeCallMemberFunction_vu3qr"), SubResource("OScriptNodeOperator_6f16p"), SubResource("OScriptNodeBranch_8tft5"), SubResource("OScriptNodeAutoload_8rnnb"), SubResource("OScriptNodeComposeFrom_6f16p"), SubResource("OScriptNodePropertySet_uepm5"), SubResource("OScriptNodeMakeDictionary_8rnnb"), SubResource("OScriptNodeComposeFrom_8tft5"), SubResource("OScriptNodeAutoload_vu3qr"), SubResource("OScriptNodeCallMemberFunction_6f16p"), SubResource("OScriptNodePropertyGet_8rnnb"), SubResource("OScriptNodeBranch_uepm5"), SubResource("OScriptNodeCallMemberFunction_ly424"), SubResource("OScriptNodeCallMemberFunction_0sjfg"), SubResource("OScriptNodeCallMemberFunction_idc83"), SubResource("OScriptNodeCallMemberFunction_q3swe"), SubResource("OScriptNodeEvent_vu3qr"), SubResource("OScriptNodeAutoload_6f16p"), SubResource("OScriptNodeCallMemberFunction_xt1uf"), SubResource("OScriptNodeFunctionEntry_gf7p2"), SubResource("OScriptNodeAutoload_i802b"), SubResource("OScriptNodePropertyGet_jamr8"), SubResource("OScriptNodeCallMemberFunction_nfp51"), SubResource("OScriptNodeComposeFrom_ly424"), SubResource("OScriptNodeSelf_uepm5"), SubResource("OScriptNodeForEach_wm80e"), SubResource("OScriptNodeCallMemberFunction_gf7p2"), SubResource("OScriptNodeCallMemberFunction_wm80e"), SubResource("OScriptNodeComposeFrom_jamr8"), SubResource("OScriptNodeComposeFrom_0txgl"), SubResource("OScriptNodeCallMemberFunction_i802b"), SubResource("OScriptNodeCallMemberFunction_832xk"), SubResource("OScriptNodeCallMemberFunction_jamr8"), SubResource("OScriptNodeCallMemberFunction_82htt"), SubResource("OScriptNodeCallMemberFunction_fitqh"), SubResource("OScriptNodeCallMemberFunction_r2vpw"), SubResource("OScriptNodeSceneNode_82htt"), SubResource("OScriptNodeSceneNode_idc83"), SubResource("OScriptNodeSceneNode_q3swe"), SubResource("OScriptNodeSceneNode_m4ua7"), SubResource("OScriptNodeSceneNode_fitqh"), SubResource("OScriptNodeSceneNode_0sjfg"), SubResource("OScriptNodeSceneNode_832xk"), SubResource("OScriptNodeSceneNode_6f16p"), SubResource("OScriptNodeSceneNode_ly424"), SubResource("OScriptNodeSceneNode_uepm5"), SubResource("OScriptNodeSceneNode_8rnnb"), SubResource("OScriptNodeSceneNode_vu3qr"), SubResource("OScriptNodeSceneNode_8tft5"), SubResource("OScriptNodeEvent_rqurh"), SubResource("OScriptNodeAutoload_561wg"), SubResource("OScriptNodeCallMemberFunction_e7ysg"), SubResource("OScriptNodeComposeFrom_i3agv"), SubResource("OScriptNodeEvent_i3agv"), SubResource("OScriptNodeCallMemberFunction_tbfbc"), SubResource("OScriptNodeCallMemberFunction_kt5u2"), SubResource("OScriptNodeResourcePath_f8he6")])
 graphs = Array[OScriptGraph]([SubResource("OScriptGraph_tvhnv"), SubResource("OScriptGraph_8rnnb")])

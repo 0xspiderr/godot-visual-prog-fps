@@ -1,10 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://b64fo023b0300"]
+[gd_scene load_steps=8 format=3 uid="uid://b64fo023b0300"]
 
 [ext_resource type="Script" uid="uid://boydb6g0tf2jw" path="res://_scenes/_lobby/lobby_ui.torch" id="1_e7ysg"]
+[ext_resource type="Texture2D" uid="uid://bbprelehkfeev" path="res://_scenes/_main_menu/menu_screen.png" id="2_i3agv"]
+[ext_resource type="Theme" uid="uid://quj45f31tn5y" path="res://_scenes/_main_menu/main_menu.tres" id="3_tbfbc"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ly424"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8rnnb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tbfbc"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uepm5"]
 
@@ -16,6 +20,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_e7ysg")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_i3agv")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -31,9 +44,11 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="HSeparator3" type="HSeparator" parent="HBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(700, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.5
+theme_override_constants/separation = 4
 theme_override_styles/separator = SubResource("StyleBoxEmpty_ly424")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/HBoxContainer2"]
@@ -50,40 +65,81 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_8rnnb")
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 size_flags_vertical = 4
-theme_override_font_sizes/font_size = 32
+theme = ExtResource("3_tbfbc")
+theme_override_font_sizes/font_size = 64
 text = "Host"
+
+[node name="VSeparator3" type="VSeparator" parent="HBoxContainer/HBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_constants/separation = 10
+theme_override_styles/separator = SubResource("StyleBoxEmpty_tbfbc")
 
 [node name="JoinBtn" type="Button" parent="HBoxContainer/HBoxContainer2/VBoxContainer"]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 size_flags_vertical = 4
-theme_override_font_sizes/font_size = 32
+theme = ExtResource("3_tbfbc")
+theme_override_font_sizes/font_size = 64
 text = "Join"
+
+[node name="VSeparator4" type="VSeparator" parent="HBoxContainer/HBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_constants/separation = 10
+theme_override_styles/separator = SubResource("StyleBoxEmpty_tbfbc")
 
 [node name="NameLineEdit" type="LineEdit" parent="HBoxContainer/HBoxContainer2/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(400, 80)
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
+theme = ExtResource("3_tbfbc")
+theme_override_font_sizes/font_size = 64
 placeholder_text = "Name"
 alignment = 1
+
+[node name="VSeparator5" type="VSeparator" parent="HBoxContainer/HBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_constants/separation = 10
+theme_override_styles/separator = SubResource("StyleBoxEmpty_tbfbc")
 
 [node name="IPLineEdit" type="LineEdit" parent="HBoxContainer/HBoxContainer2/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(400, 80)
 layout_mode = 2
 size_flags_vertical = 4
-theme_override_font_sizes/font_size = 32
+theme = ExtResource("3_tbfbc")
+theme_override_font_sizes/font_size = 64
 text = "127.0.0.1"
 placeholder_text = "enter IP address"
 alignment = 1
 
+[node name="VSeparator6" type="VSeparator" parent="HBoxContainer/HBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_constants/separation = 10
+theme_override_styles/separator = SubResource("StyleBoxEmpty_tbfbc")
+
+[node name="BackBtn" type="Button" parent="HBoxContainer/HBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(400, 80)
+layout_mode = 2
+theme = ExtResource("3_tbfbc")
+theme_override_font_sizes/font_size = 64
+text = "Back to menu"
+
 [node name="NameDialogue" type="AcceptDialog" parent="HBoxContainer/HBoxContainer2/VBoxContainer"]
 unique_name_in_owner = true
+oversampling_override = 1.0
+size = Vector2i(468, 162)
+theme = ExtResource("3_tbfbc")
 dialog_text = "You must enter a name"
 
 [node name="IPDialogue" type="AcceptDialog" parent="HBoxContainer/HBoxContainer2/VBoxContainer"]
 unique_name_in_owner = true
+oversampling_override = 1.0
+size = Vector2i(682, 162)
+theme = ExtResource("3_tbfbc")
 dialog_text = "You must enter a valid ip address"
 
 [node name="VSeparator" type="VSeparator" parent="HBoxContainer/HBoxContainer2/VBoxContainer"]
@@ -93,6 +149,7 @@ size_flags_stretch_ratio = 0.5
 theme_override_styles/separator = SubResource("StyleBoxEmpty_8rnnb")
 
 [node name="HSeparator2" type="HSeparator" parent="HBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(700, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.5
@@ -149,4 +206,5 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_uepm5")
 
 [connection signal="pressed" from="HBoxContainer/HBoxContainer2/VBoxContainer/HostBtn" to="." method="_on_host_btn_pressed"]
 [connection signal="pressed" from="HBoxContainer/HBoxContainer2/VBoxContainer/JoinBtn" to="." method="_on_join_btn_pressed"]
+[connection signal="pressed" from="HBoxContainer/HBoxContainer2/VBoxContainer/BackBtn" to="." method="_on_back_btn_pressed"]
 [connection signal="pressed" from="HBoxContainer/HBoxContainer/VBoxContainer2/StartGameBtn" to="." method="_on_start_game_btn_pressed"]

@@ -1,9 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://cgg3ey3r3voxl"]
+[gd_scene load_steps=5 format=3 uid="uid://cgg3ey3r3voxl"]
 
 [ext_resource type="PackedScene" uid="uid://bqw15m0t711xo" path="res://_assets/_enemy/maxdamage_zombie-low-poly.gltf" id="1_7ubn8"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7ubn8"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_4ua0d"]
+sky_material = SubResource("ProceduralSkyMaterial_7ubn8")
+
+[sub_resource type="Environment" id="Environment_hhque"]
+background_mode = 2
+sky = SubResource("Sky_4ua0d")
+tonemap_mode = 2
+
 [node name="maxdamage_zombie-low-poly" instance=ExtResource("1_7ubn8")]
 transform = Transform3D(-1.5, 0, -1.3113416e-07, 0, 1.5, 0, 1.3113416e-07, 0, -1.5, 0, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0"]
+environment = SubResource("Environment_hhque")
 
 [node name="Skeleton3D" parent="Armature" index="0"]
 bones/1/rotation = Quaternion(0.7132641, 0.021456331, -0.021064842, 0.7002501)
@@ -34,5 +49,5 @@ bones/46/rotation = Quaternion(0.021261461, 0.7067871, 0.70678705, -0.021261519)
 bones/50/rotation = Quaternion(-0.6707269, -0.060753997, -0.016190637, 0.7390347)
 bones/52/rotation = Quaternion(-0.6759996, 0.05978013, 0.021944316, 0.73414534)
 
-[node name="AnimationPlayer" parent="." index="1"]
+[node name="AnimationPlayer" parent="." index="2"]
 speed_scale = 2.5

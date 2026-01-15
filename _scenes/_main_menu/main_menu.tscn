@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://blw2kl7oauvyn"]
+[gd_scene load_steps=5 format=3 uid="uid://blw2kl7oauvyn"]
 
 [ext_resource type="Script" uid="uid://bex735yaqnctq" path="res://_scenes/_main_menu/main_menu.torch" id="1_gqsry"]
+[ext_resource type="Texture2D" uid="uid://bbprelehkfeev" path="res://_scenes/_main_menu/menu_screen.png" id="2_cibim"]
+[ext_resource type="Theme" uid="uid://quj45f31tn5y" path="res://_scenes/_main_menu/main_menu.tres" id="3_nnbar"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vlspf"]
 
@@ -12,6 +14,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gqsry")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_cibim")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -29,7 +37,8 @@ grow_vertical = 2
 
 [node name="SingleBtn" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
+theme = ExtResource("3_nnbar")
+theme_override_font_sizes/font_size = 80
 text = "Singleplayer"
 
 [node name="VSeparator" type="VSeparator" parent="VBoxContainer"]
@@ -40,7 +49,8 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_vlspf")
 
 [node name="MultiplayerBtn" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
+theme = ExtResource("3_nnbar")
+theme_override_font_sizes/font_size = 80
 text = "Multiplayer"
 
 [connection signal="pressed" from="VBoxContainer/SingleBtn" to="." method="_on_single_btn_pressed"]

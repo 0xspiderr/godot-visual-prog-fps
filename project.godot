@@ -30,6 +30,10 @@ players=""
 death_camera=""
 spawn_points=""
 
+[gui]
+
+theme/custom_font="uid://cu78p3fodg4h4"
+
 [input]
 
 mouse_select={

@@ -1,0 +1,23 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://quj45f31tn5y"]
+
+[ext_resource type="StyleBox" uid="uid://bql12xh82ia32" path="res://_scenes/_main_menu/new_style_box_flat.tres" id="1_33r1t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_terfw"]
+bg_color = Color(0.23788202, 1.2032687e-07, 4.2114408e-08, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0.2957011, 0, 0.012525835, 0.6)
+shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iommk"]
+bg_color = Color(0.20258361, 0.006240928, 0.08127453, 1)
+
+[resource]
+default_font_size = 64
+Button/font_sizes/font_size = 64
+Button/fonts/font = null
+Button/styles/hover = SubResource("StyleBoxFlat_terfw")
+Button/styles/normal = ExtResource("1_33r1t")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_iommk")
