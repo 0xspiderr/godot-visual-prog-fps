@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://qfbnpinb1fjh"]
+[gd_scene load_steps=15 format=3 uid="uid://qfbnpinb1fjh"]
 
 [ext_resource type="Script" uid="uid://dufijv5a0i3ms" path="res://_scenes/_game/game.torch" id="1_rqurh"]
 [ext_resource type="Texture2D" uid="uid://daoascac22nto" path="res://_assets/_ground/grass_02.png" id="2_561wg"]
 [ext_resource type="PackedScene" uid="uid://cipnsr4i5btjg" path="res://_scenes/_environment/bush_01.tscn" id="3_g37hr"]
 [ext_resource type="PackedScene" uid="uid://c8xwpwvx8i8mc" path="res://_scenes/_environment/tree_12.tscn" id="4_l4dva"]
 [ext_resource type="PackedScene" uid="uid://b8rrp4s8haeg8" path="res://_scenes/_environment/walls.tscn" id="5_fpbr3"]
+[ext_resource type="AudioStream" uid="uid://dn53ddy1ctpnx" path="res://_scenes/_environment/ambient.wav" id="6_5pt6u"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rqurh"]
 sky_top_color = Color(0.32868737, 0.1798028, 0.22188231, 1)
@@ -308,3 +309,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -51.371)
 
 [node name="Marker3D8" type="Marker3D" parent="EnemySpawnPoints"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0.5, -51.475)
+
+[node name="AmbientSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_5pt6u")
+autoplay = true

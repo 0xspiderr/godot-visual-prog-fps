@@ -42,7 +42,7 @@ functions = Array[int]([0])
 
 [obj type="OScriptGraph" id="OScriptGraph_561wg"]
 graph_name = &"spawn_players"
-offset = Vector2(-752.72998046875, -409.88482666015625)
+offset = Vector2(-696.6736450195313, -245.8848114013672)
 zoom = 0.683013379573822
 flags = 22
 nodes = Array[int]([15, 16, 22, 23, 26, 27, 28, 39, 41, 42, 43, 45, 46, 47, 48, 49, 50, 51, 52, 53])
@@ -54,7 +54,7 @@ knots = Array[Dictionary]([{
 
 [obj type="OScriptGraph" id="OScriptGraph_l4dva"]
 graph_name = &"spawn_enemies"
-offset = Vector2(309.3175048828125, -434.9796447753906)
+offset = Vector2(309.3175048828125, -41.052642822265625)
 zoom = 0.5131580233573914
 flags = 22
 nodes = Array[int]([55, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 72, 73])
@@ -1478,8 +1478,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2,
-"target_class": "CharacterBody3D",
-"dv": null
+"target_class": "CharacterBody3D"
 }])
 
 [obj type="OScriptNodeCallMemberFunction" id="OScriptNodeCallMemberFunction_bxxyn"]
@@ -1586,8 +1585,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node",
-"target_class": "Node",
-"dv": null
+"target_class": "Node"
 }, {
 "pin_name": &"include_internal",
 "type": 1,
@@ -1598,7 +1596,6 @@ pin_data = Array[Dictionary]([{
 "type": 28,
 "dir": 1,
 "flags": 1026,
-"dv": [],
 "hint": 31,
 "hint_string": "Node"
 }])
@@ -2078,8 +2075,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "dir": 1,
 "flags": 2050,
-"target_class": "Node",
-"dv": null
+"target_class": "Node"
 }])
 
 [obj type="OScriptNodeBranch" id="OScriptNodeBranch_fpbr3"]
@@ -2124,14 +2120,12 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node",
-"target_class": "Node",
-"dv": null
+"target_class": "Node"
 }, {
 "pin_name": &"return_value",
 "type": 1,
 "dir": 1,
-"flags": 1026,
-"dv": false
+"flags": 1026
 }])
 
 [obj type="OScriptNodePropertyGet" id="OScriptNodePropertyGet_5pt6u"]
@@ -2154,8 +2148,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node3D",
-"target_class": "Node3D",
-"dv": null
+"target_class": "Node3D"
 }, {
 "pin_name": &"position",
 "type": 9,
@@ -2190,8 +2183,7 @@ pin_data = Array[Dictionary]([{
 "type": 24,
 "flags": 2050,
 "label": "Node3D",
-"target_class": "Node3D",
-"dv": null
+"target_class": "Node3D"
 }, {
 "pin_name": &"position",
 "type": 9,
