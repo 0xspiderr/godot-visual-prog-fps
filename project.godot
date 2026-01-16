@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="godot_visual_prog_fps"
+config/name="zombie_forest"
 run/main_scene="uid://blw2kl7oauvyn"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="uid://c4bkaxy6oyyij"
